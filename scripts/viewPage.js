@@ -22,11 +22,20 @@ const petListObjectTagTemplate = `
   <span class="tag">PET_TAG_WILL_GO_HERE</span>
 `
 
-const getPetsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=available';
+    const getPetsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=team2';
 
-fetch(getPetsUrl, {headers: {'Content-Type': 'application/json'}})
-  .then((response) => response.json())
+fetch(getPetsUrl, {
+  headers: {
+    'Content-Type': 'application/json',
+    'Transfer-Encoding':'chunked',
+    'Accept-Encoding':'gzip, deflate, br'
+  }
+})
+  .then((response) => 
+    response.json()
+  )
   .then((pets) => {
+    console.log(pets)
     let petsHTML = '';
 
     pets.forEach((pet) => {
@@ -46,6 +55,7 @@ fetch(getPetsUrl, {headers: {'Content-Type': 'application/json'}})
 
       let petHTML = petListObjectTemplate;
       // We use the regular expression in this case to cover multiple occurrences in text.
+      console.log(pet.id)
       petHTML = petHTML.replace(/PET_ID_WILL_GO_HERE/g, pet.id)
       petHTML = petHTML.replace('PET_NAME_WILL_GO_HERE', pet.name)
       petHTML = petHTML.replace('PET_TAGS_WILL_GO_HERE', petTags)
