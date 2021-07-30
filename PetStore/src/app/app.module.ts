@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PetsListComponent } from './pets-list/pets-list.component';
 
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { PetDetailsComponent } from './pet-details/pet-details.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetsListComponent
+    PetsListComponent,
+    PetDetailsComponent
   ],
   imports: [
     BrowserModule,
