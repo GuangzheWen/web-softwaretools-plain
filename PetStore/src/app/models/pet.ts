@@ -1,14 +1,14 @@
 export interface Pet {
     id: number,
-    category: {
+    category?: {
       id: number,
       name: string
     },
     name: string,
-    photoUrls: [
+    photoUrls?: [
         string
     ],
-    tags: [
+    tags?: [
       {
         id: number,
         name: string
