@@ -1,1 +1,9 @@
-<p>pets-list works!</p>
+<table>
+    <ul>
+        <li *ngFor="let pet of pets">
+            <div>{{ pet.id }}</div>
+            <div>{{ pet.name }}</div>
+            <div>{{ pet.status }}</div>
+        </li>
+    </ul>
+</table>
