@@ -1,1 +1,15 @@
-<p>pet-details works!</p>
+<!-- pet detials -->
+<div *ngIf="pet">
+    <h2>{{ pet.name }} Details</h2>
+    <div>
+        <div>
+            <span>id:</span>{{ pet.id }}
+        </div>
+        <div>
+            <span>status:</span>{{ pet.status }}
+        </div>
+        <div>
+            <input [(ngModel)]="pet.name" placeholder="name">
+        </div>
+    </div>
+</div>
