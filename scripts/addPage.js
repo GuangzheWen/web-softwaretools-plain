@@ -36,3 +36,6 @@ function handleSubmit(event) {
 }
 
 document.getElementById('addPetForm').addEventListener('submit', handleSubmit, true);
+
+
+

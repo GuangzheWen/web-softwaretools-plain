@@ -1,11 +1,4 @@
 
-// import axios from 'axios'
-
-import jsonBig from '../node_modules/json-bigint'
-
-var json = '{ "value" : 9223372036854775807, "v2": 123 }'
-
-console.log(jsonBig.parse(json))
 
 
 const postPetUrl = 'https://petstore.swagger.io/v2/pet'
