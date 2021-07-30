@@ -1,9 +1,27 @@
+<!-- pet detials -->
+<div *ngIf="selectedPet">
+    <h2>{{ selectedPet.name }} Details</h2>
+    <div>
+        <div>
+            <span>id:</span>{{ selectedPet.id }}
+        </div>
+        <div>
+            <span>status:</span>{{ selectedPet.status }}
+        </div>
+        <div>
+            <input [(ngModel)]="selectedPet.name" placeholder="name">
+        </div>
+    </div>
+</div>
+
+
+
+
+
 <table>
     <ul>
-        <li *ngFor="let pet of pets">
-            <div>{{ pet.id }}</div>
+        <li *ngFor="let pet of pets" (click)="onSelect(pet)">
             <div>{{ pet.name }}</div>
-            <div>{{ pet.status }}</div>
         </li>
     </ul>
 </table>
