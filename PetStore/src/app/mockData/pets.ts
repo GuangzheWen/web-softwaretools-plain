@@ -21,10 +21,7 @@ export const pets: Pet[] = [
     },
     {
         id: 10000002,
-        category: {
-            id: 0,
-            name: 'cat'
-            },
+
         name: 'test02',
         photoUrls: [
                 'string'
