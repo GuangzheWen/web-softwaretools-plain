@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Pet } from '../models/pet';
-import { pets } from '../mockData/pets';
+import { PetService } from '../service/pet.service';
+
 
 
 @Component({
@@ -15,17 +17,23 @@ import { pets } from '../mockData/pets';
 export class PetsListComponent implements OnInit {
 
   // mock static data 
-  pets: Pet[] = pets
+  pets: Pet[] = []
   selectedPet?: Pet
 
   onSelect(pet: Pet){
     this.selectedPet = pet
-    console.log(1)
   }
 
-  constructor() { }
+  getPets(){
+    this.pets = this.petservice.getPets();
+  }
+
+  constructor(
+    private petservice:PetService
+  ) { }
 
   ngOnInit(): void {
+    this.getPets();
   }
 
 }
