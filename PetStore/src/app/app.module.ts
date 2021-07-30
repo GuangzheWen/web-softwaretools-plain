@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PetsListComponent } from './pets-list/pets-list.component';
 
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { PetsListComponent } from './pets-list/pets-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
