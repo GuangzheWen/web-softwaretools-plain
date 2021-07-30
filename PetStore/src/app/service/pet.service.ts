@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Observable, of } from 'rxjs';
+
 import { Pet } from '../models/pet';
 import { pets } from '../mockData/pets';
 
@@ -9,8 +11,9 @@ import { pets } from '../mockData/pets';
 })
 export class PetService {
 
-  getPets(): Pet[]{
-    return pets
+  getPets(): Observable<Pet[]> {
+    const petsBack = of(pets);
+    return petsBack;
   }
   constructor() { }
 }

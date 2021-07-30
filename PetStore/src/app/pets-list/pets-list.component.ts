@@ -25,7 +25,11 @@ export class PetsListComponent implements OnInit {
   }
 
   getPets(){
-    this.pets = this.petservice.getPets();
+    this.petservice.getPets()
+    .subscribe(pets => {
+      this.pets = pets
+    })
+    ;
   }
 
   constructor(
