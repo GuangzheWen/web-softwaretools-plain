@@ -78,5 +78,10 @@ In order to maximize the profits of pet stores, we must really understand the ne
 #### Meeting Log
 
 #### Technical Log
+**31st July:** As planned yesterday, we use property " status" as our group's exclusive channel to mark our pets. (Because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to simplify debugging for the time being) (because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to temporarily simplify the debugging process and make the data more intuitive).
+Secondly, we are still using angular framework as a front-end framework, which is more stable and easier to use, and its framework allows us to better apply MVC theory. We will gradually improve the View at a later stage.
+Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add value (+2 here to try and avoid another bug) to the new pet.
+Fourthly, we have unfortunately and fortunately found another bug. when sending the same request every second, we get two responses that change periodically, like when we send RRRRRRR and get, ABABABAB. looks like some thing like odd/even response. still don't know why, but Based on our last experience of fixing a bug for 4 hours to no avail, we decided to leave it alone for now and lower its priority to more important functions.
+To sum up: we have implemented add, delete, change and check, five functions, where the query can be done by id for a single pet, but also past the pets list.
 
 # Continuous Integration
