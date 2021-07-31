@@ -10,6 +10,8 @@ import { PetDetailsComponent } from './pet-details/pet-details.component';
 import { MessagesComponent } from './messages/messages.component';
 import { CustomerSideComponent } from './customer-side/customer-side.component'; // <-- NgModel lives here
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { CustomerSideComponent } from './customer-side/customer-side.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
