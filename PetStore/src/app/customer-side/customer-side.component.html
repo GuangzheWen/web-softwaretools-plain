@@ -1,1 +1,11 @@
-<p>customer-side works!</p>
+<h1>
+    Customer side
+</h1>
+
+<div>
+    <a *ngFor="let pet of pets" routerLink="/detail/{{pet.id}}"  >
+        <div>
+            {{ pet.name }}
+        </div>
+    </a>
+</div>

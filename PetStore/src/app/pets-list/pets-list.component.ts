@@ -19,12 +19,6 @@ export class PetsListComponent implements OnInit {
 
   // mock static data 
   pets: Pet[] = []
-  selectedPet?: Pet
-
-  onSelect(pet: Pet){
-    this.selectedPet = pet
-    this.messageService.add(`PetsComponent: Selected pet id=${pet.id}`);
-  }
 
   getPets(){
     this.petservice.getPets()

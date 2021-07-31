@@ -1,10 +1,12 @@
 <!-- Showing pets list -->
 <table>
     <ul>
-        <li *ngFor="let pet of pets" (click)="onSelect(pet)">
-            <div>{{ pet.name }}</div>
+        <li *ngFor="let pet of pets">
+            <a routerLink="/detail/{{pet.id}}">
+                <div>{{ pet.name }}</div>
+            </a>
         </li>
     </ul>
 </table>
 
-<app-pet-details [pet]="selectedPet"></app-pet-details>
+
