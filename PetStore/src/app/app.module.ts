@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PetsListComponent } from './pets-list/pets-list.component';
 
 import { FormsModule } from '@angular/forms';
-import { PetDetailsComponent } from './pet-details/pet-details.component'; // <-- NgModel lives here
+import { PetDetailsComponent } from './pet-details/pet-details.component';
+import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     PetsListComponent,
-    PetDetailsComponent
+    PetDetailsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
