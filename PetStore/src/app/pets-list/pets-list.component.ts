@@ -19,9 +19,10 @@ export class PetsListComponent implements OnInit {
 
   // mock static data 
   pets: Pet[] = []
+  idArray: number[] = []
 
   getPets(){
-    this.petservice.getPets()
+    this.petService.getPets()
     .subscribe(pets => {
       this.pets = pets
     })
@@ -29,12 +30,28 @@ export class PetsListComponent implements OnInit {
   }
 
   constructor(
-    private petservice:PetService,
+    private petService:PetService,
     private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
     this.getPets();
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    let id = 0
+    let status = 'team2'
+    if (!name) { return; }
+    
+    this.pets.map(pet => {
+      this.idArray.push(pet.id)
+    })
+    id = Math.max(...this.idArray) + 2
+    this.petService.addPet({ name, id, status } as Pet)
+      .subscribe(pet => {
+        this.pets.push(pet);
+      });
   }
 
 }

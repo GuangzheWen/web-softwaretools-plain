@@ -9,13 +9,17 @@ import { MessageService } from './message.service';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, max, tap } from 'rxjs/operators';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PetService {
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   private baseUrl = 'https://petstore.swagger.io/v2/pet'
   private petsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=team2';  // URL to web api
@@ -46,6 +50,22 @@ export class PetService {
     )
   }
 
+  /** PUT: update the pet on the server */
+  updatePet(pet: Pet): Observable<any> {
+    return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
+      tap(_ => this.log(`updated pet id=${pet.id}`)),
+      catchError(this.handleError<any>('updatePet'))
+    );
+  }
+
+  /** POST: add a new pet to the server */
+  addPet(pet: Pet): Observable<Pet> {
+    return this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).pipe(
+      tap((newPet: Pet) => this.log(`added pet w/ id=${newPet.id}`)),
+      catchError(this.handleError<Pet>('addPet'))
+    );
+  }
+
 
   constructor(
     private http: HttpClient,
@@ -58,22 +78,24 @@ export class PetService {
   }
 
   /**
- * Handle Http operation that failed.
- * Let the app continue.
- * @param operation - name of the operation that failed
- * @param result - optional value to return as the observable result
- */
-private handleError<T>(operation = 'operation', result?: T) {
-  return (error: any): Observable<T> => {
+   * Handle Http operation that failed.
+   * Let the app continue.
+   * @param operation - name of the operation that failed
+   * @param result - optional value to return as the observable result
+   */
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
 
-    // TODO: send the error to remote logging infrastructure
-    console.error(error); // log to console instead
+      // TODO: send the error to remote logging infrastructure
+      console.error(error); // log to console instead
 
-    // TODO: better job of transforming error for user consumption
-    this.log(`${operation} failed: ${error.message}`);
+      // TODO: better job of transforming error for user consumption
+      this.log(`${operation} failed: ${error.message}`);
 
-    // Let the app keep running by returning an empty result.
-    return of(result as T);
-  };
-}
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
+  }
+
+
 }

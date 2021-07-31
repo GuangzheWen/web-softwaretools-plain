@@ -9,4 +9,9 @@
     </ul>
 </table>
 
+<!-- add new pet -->
+<div>
+    <input #petName/>
+    <button (click)="add(petName.value) ; petName.value = '' ">Add</button>
+</div>
 
