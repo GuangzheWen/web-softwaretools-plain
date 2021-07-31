@@ -7,14 +7,16 @@ import { PetsListComponent } from './pets-list/pets-list.component';
 
 import { FormsModule } from '@angular/forms';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { MessagesComponent } from './messages/messages.component';
+import { CustomerSideComponent } from './customer-side/customer-side.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     PetsListComponent,
     PetDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    CustomerSideComponent
   ],
   imports: [
     BrowserModule,
