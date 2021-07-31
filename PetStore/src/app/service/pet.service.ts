@@ -7,28 +7,73 @@ import { pets } from '../mockData/pets';
 
 import { MessageService } from './message.service';
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { catchError, map, tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PetService {
 
+  private baseUrl = 'https://petstore.swagger.io/v2/pet'
+  private petsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=team2';  // URL to web api
+
   // get all pets
   getPets(): Observable<Pet[]> {
-    const petsBack = of(pets);
-    this.messageService.add(`fetch pets`)
-    return petsBack;
+    // Seems like some bug with api, response has two side(A/B), 
+    // you will get like ABABABA when you request same api again and again
+    // just like it has odd/even side
+    // so before return target response, 
+    this.http.get(this.petsUrl).subscribe()
+    this.http.get<Pet[]>(this.petsUrl)
+    return this.http.get<Pet[]>(this.petsUrl)
+    .pipe(
+      tap(_ => this.log('fetched pets')),
+      catchError(this.handleError<Pet[]>('getPets', []))
+    );
   }
 
   // get pet by id
   getPet(id: number): Observable<Pet> {
-    const pet = pets.find(p => p.id === id)!
-    this.messageService.add(`fetched pet with id: ${id}`)
-    return of(pet)
+    const url = `${this.baseUrl}/${id}`
+    this.http.get(url).subscribe()
+    return this.http.get<Pet>(url)
+    .pipe(
+      tap(_ => this.log(`fetched pet id=${id}`)),
+      catchError(this.handleError<Pet>(`getPet id=${id}`))
+    )
   }
 
 
   constructor(
+    private http: HttpClient,
     private messageService: MessageService
   ) { }
+
+  /** Log a PetService message with the MessageService */
+  private log(message: string) {
+    this.messageService.add(`PetService: ${message}`);
+  }
+
+  /**
+ * Handle Http operation that failed.
+ * Let the app continue.
+ * @param operation - name of the operation that failed
+ * @param result - optional value to return as the observable result
+ */
+private handleError<T>(operation = 'operation', result?: T) {
+  return (error: any): Observable<T> => {
+
+    // TODO: send the error to remote logging infrastructure
+    console.error(error); // log to console instead
+
+    // TODO: better job of transforming error for user consumption
+    this.log(`${operation} failed: ${error.message}`);
+
+    // Let the app keep running by returning an empty result.
+    return of(result as T);
+  };
+}
 }
