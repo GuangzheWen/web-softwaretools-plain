@@ -66,6 +66,15 @@ export class PetService {
     );
   }
 
+  /** DELETE: delete the hero from the server */
+  deletePet(id: number): Observable<Pet> {
+    const url = `${this.baseUrl}/${id}`;
+
+    return this.http.delete<Pet>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted pet id=${id}`)),
+      catchError(this.handleError<Pet>('deletePet'))
+    );
+  }
 
   constructor(
     private http: HttpClient,

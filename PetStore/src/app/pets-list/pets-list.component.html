@@ -3,8 +3,11 @@
     <ul>
         <li *ngFor="let pet of pets">
             <a routerLink="/detail/{{pet.id}}">
-                <div>{{ pet.name }}</div>
+                <span>{{ pet.name }}</span>
             </a>
+            <span style="width: 40px;">&nbsp;</span>
+            <button title="delete pet"
+                (click)="delete(pet)">x</button>
         </li>
     </ul>
 </table>

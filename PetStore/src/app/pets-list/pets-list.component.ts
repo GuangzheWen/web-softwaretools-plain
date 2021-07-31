@@ -54,4 +54,9 @@ export class PetsListComponent implements OnInit {
       });
   }
 
+  delete(pet: Pet): void {
+    this.pets = this.pets.filter(p => p !== pet);
+    this.petService.deletePet(pet.id).subscribe();
+  }
+
 }
