@@ -6,5 +6,5 @@ Secondly, After we collected informations from customers who interviewed, we fou
 
 
 # Objectives
-
+By 14th August, we decided to spend 8 hours a day to build a website.
 # System Design
