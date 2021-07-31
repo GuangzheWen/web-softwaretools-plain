@@ -94,8 +94,20 @@ Attendees: Guangzhe Wen, Chongyan Qi, Jiangqi Lou, Alfymora Joseph, Gang Li
 The Meeting Point:
 
 1. Wenzhe has shared the current API test progress and is ready to start new features development.
+
 2. Each member described the results of their user interview in detail.
-3. Prior to the meeting, Jiangqi had summarized several user stories based on user interview data, and we discussed the feasibility of these requirements during the meeting. Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. The feature of authenticating users as sellers or buyers, which is the foundational feature for the other features, is decided as our goal of sprint 2.
+
+3. Prior to the meeting, Jiangqi had summarized several user stories based on user interview data, and we discussed the feasibility of these requirements during the meeting. 
+
+   | User Stories                                                 | Comments                                                     |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | As a new customer, I want there are enough user reviews so that I could know if it's a reliable pet store. | Great demand. In fact, there are many shopping sites that also have reviews. But we didn't find that functionality in the API, so we couldn't do it in this project. |
+   | As Bruce, I want the owner to upload pictures of pets, so I could see pets' appearance and health that are of importance when deciding which one to buy. | The group agreed that pictures of pets were essential to the site. Nothing shows a pet's characteristics more intuitively than a picture. |
+   | As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing. | A website that fails to modify information about pets can be a disaster for pet stores. Because none of us can guarantee that information about pets will never change. |
+   | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
+   | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
+
+   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. 
 
 #### Technical Log
 
@@ -104,6 +116,86 @@ Secondly, we are still using angular framework as a front-end framework, which i
 Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add value (+2 here to try and avoid another bug) to the new pet.
 Fourthly, we have unfortunately and fortunately found another bug. when sending the same request every second, we get two responses that change periodically, like when we send RRRRRRR and get, ABABABAB. looks like some thing like odd/even response. still don't know why, but Based on our last experience of fixing a bug for 4 hours to no avail, we decided to leave it alone for now and lower its priority to more important functions.
 To sum up: we have implemented add, delete, change and check, five functions, where the query can be done by id for a single pet, but also past the pets list.
+
+#### The Results of User Research
+
+##### Interview Questions
+
+1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
+
+   If the interviewww said filters, ask: Can you list some of the filter conditions that you usually use? (tags, catepories, status, inventories etc.) 
+
+2. Do reviews section important for you? Why?
+
+3. Which one do you prefer to sign up to use the website? Compusory or optional? Why?
+
+4. What will make you trust the website to add your personal details for signing up? Positive reviews, Best Selling, or More ads and marketing?
+
+5. Do you want to see some pets’ food suggestion or other advice for pets? Why?
+
+6. Do you recommend any different feature that you think will value the pets shop website? 
+
+##### The Answers
+
+###### Interviewee 1
+
+1. image, categories 
+
+2. Yes, because reviews reflect reality about an unknown store. Based on the reviews I can find out if the owner of the shop is a popular one, you know, like how good the pre-sales service is in relation to that. I can also find out about other buyers' shopping experiences, so I can predict my shopping experience and decide whether to deal here or not.  
+
+3. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online. 
+
+4. Positive reviews 
+
+5. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food. 
+
+6. Suggested features. I would like to be able to categorise the species so that I can focus more on the type of pet I like. 
+
+###### Interviewee 2
+
+1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, colour, best seller) make my life easier and save my time while I am looking for a pet online. 
+
+2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny. 
+
+3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be catious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process. 
+
+4. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well. 
+
+5. I think I do. I believe that getting to know more about the pet who I am going to live with on daily basis is extremely important for me as a customer such as their food, medications, trained or not. 
+
+6. As a customer, I always make sure to see interactions from the website management before, during and after sales. Answering customers’ questions who are planning to buy and also, answering and showing help for customers who has issues after sale such as delivery, medications, refund, deliveries. 
+
+###### Interviewee 3
+
+1. image is the most helpful, honestly the appearance of a pet determines whether I want to buy or not. I can't imagine without pictures, how should people decide
+
+2. For the pet store review, I think it's important. Because I need user reviews to know if it's a reliable pet store. But the site was developed by the store and I don't think it will be objective. As for comments about pets, I don't think it matters. Because every pet is an independent individual, I think the pet that users buy will be different from the pet that I buy.
+
+3. Optional. I figured when I decided to place an order, I was going to pick it up at a pet store. So just send a confirmation email to my email address. There's no need to log in.
+
+4. Best Selling.
+
+5. Yes, but it could be optional. I could search some information from Google. But if the website provides, better.
+
+6. I want to know the details of the pets. Like their birthday, personality and so on.
+
+###### Interviewee 4
+
+1. As a customer, I surely believe showing images is most important feature because it gives me a first impression. I want the owner to upload pictures of pets, so I could see pets' appearance and health, which are of importance when choosing.
+2. Absolutely. I could learn a lot from comments on this pet store, such as pet status and services.
+3. It depends. When I just skim the information of lovely pets, I do not want to be asked to sign up. But if I choose one to buy, I really need to create an account to follow my order, which might be critical when I need help.
+4. Best Selling. Data never tell lies. People will not buy it if the quality disappoint them.
+5. Certainly. We could understand their habits by the video.
+6. Comments on pets from the owner of this pet shop. On the one hand, we can focus on points he emphasizes since he adopts them for a while and know them better. On the other hand, we can discover how patient the owner is. Pets are more lively if them have patient owner.
+
+###### Interviewee 5
+
+1. There is no doubt that I think the pet image is an important basis for selection. I need images to confirm the appearance and health of my pet. If possible, it is best to use multi angle images.
+2. Of course. A pet store with a good reputation will let me rest assured to choose my pet. I will pay attention to the opinions of customers in reviews. This will tell me whether the actual pet is as shown in the image, or whether the price is reasonable.
+3. Optional. I think everyone has the right to browse pet images and information through the website. However, you must register an account to buy pets. This will ensure that the transaction is fair and open.
+4. More ads and marketing. I think advertisements seen in well-known TV programs or magazines will have higher credibility. On this basis, I will pay attention to the sales and evaluation of pet stores.
+5. It will be better. But I don't think it's necessary.
+6. Yes. I hope the website can provide rich suggestions about my pet. I think the website should also provide effective quarantine certificates. I need to make sure that pets are free from infectious diseases.
 
 ### Sprint 2: Features Development
 
