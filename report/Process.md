@@ -1,5 +1,12 @@
 # Group Working
 
+Our group choose Agile software development to improve the effectiveness of software development professionals, teams. Agile software development methods support a broad range of the software development life cycle, but we decide to use Scrum as our development frameworks because it is suitable for the teams of only 5 people.
+
+Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+
+Owing to remote cooperation, we use online meeting instead of the Daily Stand-up Meeting in the scrum, which is held through the group based on the Microsoft Teams.
+Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
+
 # Team Roles
 
 # Sprints
