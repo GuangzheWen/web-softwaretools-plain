@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { CustomerSideComponent } from './customer-side/customer-side.component'; // <-- NgModel lives here
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     PetsListComponent,
     PetDetailsComponent,
     MessagesComponent,
-    CustomerSideComponent
+    CustomerSideComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
