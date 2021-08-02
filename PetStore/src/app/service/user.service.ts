@@ -19,6 +19,7 @@ export class UserService {
 
   private baseUrl = 'https://petstore.swagger.io/v2/user'
 
+  // create a new user account
   addUser(user: User): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, user, this.httpOptions)
       .pipe(
@@ -29,6 +30,32 @@ export class UserService {
         }),
         catchError(this.handleError<ApiResponse>('addUser'))
       )
+  }
+
+  // login check 
+  login(user: User) : Observable<ApiResponse>  {
+    let url = `${this.baseUrl}/login?${user.username}:${user.password}`
+    return this.http.get<ApiResponse>(url, this.httpOptions)
+    .pipe(
+      tap(res => {
+        if (res.code == 200){
+          this.log(`user with username: ${user.username} logged in succeed`)
+        }
+      }),
+      catchError(this.handleError<ApiResponse>('user login'))
+    )
+  }
+
+  // get user info by username
+  getUser(useranme: string): Observable<User> {
+    let url = `${this.baseUrl}/${useranme}`
+    return this.http.get<User>(url, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} info shows here`)
+      }),
+      catchError(this.handleError<User>('user info'))
+    )
   }
 
   constructor(

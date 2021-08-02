@@ -12,6 +12,8 @@ import { CustomerSideComponent } from './customer-side/customer-side.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserRegisterComponent } from './user-register/user-register.component';
     PetDetailsComponent,
     MessagesComponent,
     CustomerSideComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    UserLoginComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
