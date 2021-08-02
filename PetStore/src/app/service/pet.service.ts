@@ -52,6 +52,7 @@ export class PetService {
 
   /** PUT: update the pet on the server */
   updatePet(pet: Pet): Observable<any> {
+    this.http.put(this.baseUrl, pet, this.httpOptions)
     return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
       tap(_ => this.log(`updated pet id=${pet.id}`)),
       catchError(this.handleError<any>('updatePet'))
@@ -60,6 +61,7 @@ export class PetService {
 
   /** POST: add a new pet to the server */
   addPet(pet: Pet): Observable<Pet> {
+    this.http.post<Pet>(this.baseUrl, pet, this.httpOptions)
     return this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).pipe(
       tap((newPet: Pet) => this.log(`added pet w/ id=${newPet.id}`)),
       catchError(this.handleError<Pet>('addPet'))
@@ -69,7 +71,7 @@ export class PetService {
   /** DELETE: delete the hero from the server */
   deletePet(id: number): Observable<Pet> {
     const url = `${this.baseUrl}/${id}`;
-
+    this.http.delete<Pet>(url, this.httpOptions)
     return this.http.delete<Pet>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted pet id=${id}`)),
       catchError(this.handleError<Pet>('deletePet'))
