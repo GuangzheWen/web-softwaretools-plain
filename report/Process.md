@@ -15,6 +15,7 @@ At our group's first meeting, we discussed and compared several different agile 
    Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
 2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it. 
+![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg) 
 
    - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint. 
 
@@ -249,7 +250,7 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 
 
-### Sprint 3: Authenticating Users
+### Sprint 3: XXXXXXXXX
 
 #### User Stories
 
