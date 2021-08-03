@@ -40,14 +40,17 @@ export class PetsListComponent implements OnInit {
 
   add(name: string): void {
     name = name.trim();
-    let id = 0
+    let id = 10000001
     let status = 'team2'
     if (!name) { return; }
     
-    this.pets.map(pet => {
-      this.idArray.push(pet.id)
-    })
-    id = Math.max(...this.idArray) + 2
+    if (this.pets.length > 0){
+      this.pets.map(pet => {
+        this.idArray.push(pet.id)
+      })
+      id = Math.max(...this.idArray) + 1
+    }
+    
     this.petService.addPet({ name, id, status } as Pet)
       .subscribe(pet => {
         this.pets.push(pet);
