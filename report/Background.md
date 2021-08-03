@@ -10,6 +10,6 @@ To maximise the benefits to the pet shop owner, the system is focus on two parts
 
 # Objectives
 
-By 14th August, we decided to spend 8 hours a day to build a website.
+By 14th August, we decided to spend 8 hours a day to build the website, we agreed that the image is one of the most effective features. We divided in teams to work in the design and to kknow how to apply this feature in the website.
 
 # System Design
