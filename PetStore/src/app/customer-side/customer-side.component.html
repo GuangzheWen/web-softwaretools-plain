@@ -3,13 +3,16 @@
         Customer side
     </h1>
     
-    <div>
-        <a *ngFor="let pet of pets" routerLink="/detail/{{pet.id}}"  >
-            <div>
+
+        <div *ngFor="let pet of pets" >
+
                 {{ pet.name }}
-            </div>
-        </a>
-    </div>
+                {{ pet.id }}
+        
+                
+
+        </div>
+
 
 
     <app-user-register></app-user-register>

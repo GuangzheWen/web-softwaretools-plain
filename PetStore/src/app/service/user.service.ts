@@ -58,6 +58,32 @@ export class UserService {
     )
   }
 
+  // Modify User
+  modifyUser(user: User): Observable<User>{
+    let url = `${this.baseUrl}/${user.username}`
+    return this.http.put<User>(url, user, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} updated`)
+      }),
+      catchError(this.handleError<User>('user info updated'))
+    )
+  }
+
+  // delete user
+  deleteUser(user: User): Observable<User>{
+    let url = `${this.baseUrl}/${user.username}`
+    this.http.delete<User>(url, this.httpOptions).subscribe()
+    return this.http.delete<User>(url, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} updated`)
+      }),
+      catchError(this.handleError<User>('user info updated'))
+    )
+
+  }
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService

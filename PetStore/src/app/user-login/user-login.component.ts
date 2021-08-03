@@ -29,7 +29,7 @@ export class UserLoginComponent implements OnInit {
     this.userService.login({username, password} as User)
     .subscribe(res => {
       if (res.code == 200){
-        console.log(res)
+        // console.log(res)
         this.status = true
       }
     })

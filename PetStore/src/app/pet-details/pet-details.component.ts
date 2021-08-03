@@ -39,8 +39,9 @@ export class PetDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  save(): void {
+  save(url: string): void {
     if (this.pet) {
+      this.pet.photoUrls?.push(url)
       this.petService.updatePet(this.pet)
         .subscribe(() => this.goBack());
     }

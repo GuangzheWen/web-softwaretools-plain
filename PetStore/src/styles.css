@@ -12,3 +12,10 @@
     border-radius: 2px;
     background-color: rgb(243, 242, 242);
 }
+
+img {
+    height: 100px;
+    width: auto;
+    aspect-ratio:initial;
+}
+

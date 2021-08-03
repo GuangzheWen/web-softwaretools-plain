@@ -1,11 +1,36 @@
 <div class="container">
-    <div *ngIf="user">
-        <p>username: {{user.username}}</p>
-        <p>first name: {{user.firstName}}</p>
-        <p>last name: {{user.lastName}}</p>
-        <p>email: {{user.email}}</p>
-        <p>phone: {{user.phone}}</p>
-        <p>password: {{user.password}}</p>
+    <div *ngIf="!modify">
+        <div *ngIf="user">
+            <p>username: {{user.username}}</p>
+            <p>first name: {{user.firstName}}</p>
+            <p>last name: {{user.lastName}}</p>
+            <p>email: {{user.email}}</p>
+            <p>phone: {{user.phone}}</p>
+            <p>password: {{user.password}}</p>
+        </div>
+        <button (click)="modify=true">Modify info</button>
+    </div>
+    
+    <div *ngIf="modify">
+        <div *ngIf="user">
+            <p>username: {{user.username}}</p>
+            <input [(ngModel)]="user.username" value="user.username">
+            <p>first name: {{user.firstName}}</p>
+            <input [(ngModel)]="user.firstName" value="user.firstName">
+            <p>last name: {{user.lastName}}</p>
+            <input [(ngModel)]="user.lastName" value="user.lastName">
+            <p>email: {{user.email}}</p>
+            <input [(ngModel)]="user.email" value="user.email">
+            <p>phone: {{user.phone}}</p>
+            <input [(ngModel)]="user.phone" value="user.phone">
+            <p>password: {{user.password}}</p>
+            <input [(ngModel)]="user.password" value="user.password">
+        </div>
+        <button (click)="modify=false; modifyUser()">save</button>
+        <a routerLink="/">
+            <button  (click)="deleteUser()">delete account</button>
+        </a>
+        
     </div>
 
 </div>

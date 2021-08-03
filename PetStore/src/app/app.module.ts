@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { HostAdminComponent } from './host-admin/host-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     CustomerSideComponent,
     UserRegisterComponent,
     UserLoginComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    HostAdminComponent
   ],
   imports: [
     BrowserModule,

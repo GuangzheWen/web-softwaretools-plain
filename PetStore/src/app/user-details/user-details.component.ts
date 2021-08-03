@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { User } from '../models/user';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-details',
@@ -12,8 +12,13 @@ export class UserDetailsComponent implements OnInit {
 
   @Input() loginUsername?:string
   user?: User
+  modify: boolean = false
+
+
+
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -24,5 +29,16 @@ export class UserDetailsComponent implements OnInit {
       .subscribe(user => {
         this.user = user
       })
+  }
+
+  modifyUser() {
+    this.userService.modifyUser(this.user!)
+    .subscribe()
+  }
+
+  deleteUser() {
+    this.userService.deleteUser(this.user!)
+    .subscribe()
+
   }
 }

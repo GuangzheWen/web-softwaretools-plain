@@ -9,12 +9,19 @@
         <div>
             <span>status:</span>{{ pet.status }}
         </div>
+        <div *ngIf="pet.photoUrls">
+            <img src="{{ pet.photoUrls[0] }}" alt="cannot load image" >
+        </div>
         <div>
             <input [(ngModel)]="pet.name" placeholder="name">
+            <input #imgUrl>
         </div>
     </div>
+
+
+    <button (click)="save(imgUrl.value)">save</button>
+</div>
+<button (click)="goBack()">go back</button>
+
 </div>
 
-<button (click)="goBack()">go back</button>
-<button (click)="save()">save</button>
-</div>
