@@ -1,11 +1,38 @@
 # Group Working
 
-Our group choose Agile software development to improve the effectiveness of software development professionals, teams. Agile software development methods support a broad range of the software development life cycle, but we decide to use Scrum as our development frameworks because it is suitable for the teams of only 5 people.
+**Agile Scrum methodology**
 
-Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on. 
 
-Owing to remote cooperation, we use online meeting instead of the Daily Stand-up Meeting in the scrum, which is held through the group based on the Microsoft Teams.
-Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
+1. Scrum is well suited to teams with five members. 
+
+   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations. 
+
+   - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research. 
+
+   - One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
+
+   Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
+
+2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it. 
+
+   - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint. 
+
+   - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes. 
+
+   - Review Meeting: At the end of the sprint, we held review meeting, which evaluate the work we had done and enables us to reflect and improve.
+
+**Communication Channel**
+
+Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it. 
+
+Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
+
+**Special Methods**
+
+- We use Office365 to design the quesionnare. Team members could comment on it and edit it.
+- We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
+- We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
 
 # Team Roles
 
@@ -77,13 +104,13 @@ The alternative, a curveball approach, is to generate our own ids as part of the
 
 #### High level overview
 
-In order to maximize the profits of pet stores, we must really understand the needs of customers. So in this sprint, finding out what the users want is the goal of our five team members. On the other hand, the technical staff needs to fix bugs in the functionality already implemented in the current site. Because if it is not fixed, it will adversely affect the features that may need to be added later.
+Unlike usual, our team's user research will also serve as our Sprint. As a short-term project, getting Product Backlog is not only the work of Product Owner, but also worth participating in by all team members. In order to maximize the profits of pet stores, we must really understand the needs of customers. So in this sprint, finding out what the users want is the goal of our five team members, and put the needs of users into our Product Backlog. On the other hand, the technical staff needs to fix bugs in the functionality already implemented in the current site. Because if it is not fixed, it will adversely affect the features that may need to be added later.
 
 #### Highlights
 
 1. Through user interviews, we need to initially understand what the main needs of users are when using the Pet Shop website, and through analysis, we need to generate a list of website features that users need.
 2. The list of features obtained from the first step needs to be presented on a questionnaire and voted on by potential users in order to obtain the priority of the features in their minds.
-3. Based on the results of user voting, the team needs to discuss whether the requirements are reasonable and whether the technology can be implemented.
+3. Based on the results of user voting, the team needs to discuss whether the requirements are reasonable and whether the technology can be implemented. Put the results into our Product Backlog.
 4. Fix the bugs caused by accuracy issues on the current website.
 
 #### Meeting Log
@@ -114,7 +141,7 @@ The Meeting Point:
    | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
    | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
 
-   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. 
+   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
 
 #### Technical Log
 
@@ -204,7 +231,25 @@ To sum up: we have optimized add, delete and search three features, which is imp
 5. It will be better. But I don't think it's necessary.
 6. Yes. I hope the website can provide rich suggestions about my pet. I think the website should also provide effective quarantine certificates. I need to make sure that pets are free from infectious diseases.
 
-### Sprint 2: Features Development
+### Sprint 2: Authenticating Users
+
+For all user stories in our Product Backlog, their is a basic need. That is, the website needs to determine whether the person currently operating is customer or pet store owner. Only after this feature is implemented first can we continue the subsequent features. Therefore, there is no specific User story for that Sprint. All user stories from the Product Backlog belong to that Sprint.
+
+#### High level overview
+
+Develop the feature of authenticating users as sellers or buyers, and test it.
+
+#### Highlights
+
+@温
+
+#### Meeting Log
+
+#### Technical Log
+
+
+
+### Sprint 3: Authenticating Users
 
 #### User Stories
 
@@ -213,21 +258,5 @@ Story 1: As Bruce, I want the owner to upload pictures of pets, so I could see p
 Story 2: As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
 Story 3: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
-
-#### High level overview
-
-Based on the user stories, complete the development of features, as well as unit and integration testing.
-
-#### Highlights
-
-1. Develop the feature of authenticating users as sellers or buyers, and test it.
-2. For Story 1, develop the feature of uploading pictures, and test it.
-3. For Story 2, develop the feature of modifying information of pets, and test it.
-4. For Story 3, story 1 and story 2, develop the feature of querying specified pets, and test it.
-5. Integration testing.
-
-#### Meeting Log
-
-#### Technical Log
 
 # Continuous Integration
