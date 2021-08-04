@@ -1,5 +1,0 @@
-# Abstract
-
-# Objectives
-
-# System Design
