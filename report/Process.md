@@ -15,7 +15,7 @@ At our group's first meeting, we discussed and compared several different agile 
    Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
 2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it. 
-![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg) 
+   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg) 
 
    - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint. 
 
@@ -242,13 +242,35 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 #### Highlights
 
-@温
+1. Feature 1: 
+   1. **User Registering**.
+   2. Used **API: [post] /user** with body uploaded to create a new user.
+2. Feature 2: 
+   1. **User Login**.
+   2. Used **API: [get] /suer/login** with query in path, to login.
+   3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
+3. Feature 3: 
+   1. **User Information Displaying**.
+   2. Used **API: [get] /user/{username}** with var in path to get user information.
+4. Feature 4:
+   1. **User Information editing**.
+   2. Used **API: [put] /user/{username}** with body to upload updated user information.
+5. Feature 5:
+   1. **User Deleting**.
+   2. Used **API: [delete] /user/{username}** to delete an existing user.
+6. Feature 6:
+   1. **Host Mode Authentication**.
+   2. Without using any API, bacause of lack of source code and further imformation, so we have to use this method instead.
 
 #### Meeting Log
 
 #### Technical Log
 
+**3rd Aug:** Firstly, after communication with Allison, we got inspired then sucessfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we receieved alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
 
+Then, we have used the tested API of user category to implement demonstrations for features as following, user registeration, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
+
+**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of travelling among the components also need to be designed, which we do so.
 
 ### Sprint 3: XXXXXXXXX
 
