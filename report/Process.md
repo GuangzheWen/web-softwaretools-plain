@@ -2,7 +2,7 @@
 
 Our group choose Agile software development to improve the effectiveness of software development professionals, teams. Agile software development methods support a broad range of the software development life cycle, but we decide to use Scrum as our development frameworks because it is suitable for the teams of only 5 people.
 
-Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 
 Owing to remote cooperation, we use online meeting instead of the Daily Stand-up Meeting in the scrum, which is held through the group based on the Microsoft Teams.
 Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
@@ -59,7 +59,7 @@ The Meeting Point:
 1. Shared the findings of the members, Guangzhe has found a bug on the site to which it was sent, which cannot be added or removed due to the long ID.
 2. Discussed agile development methods, Finally chose Scrum.
 3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the fearture to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
-4. Determined the work of the day: Guangzhe fixed the bug that couldn't add or remove pets, Alfy designed the list of questions needed for the interview, and after the list was obtained, everyone on the team needed to find at least one potential user to conduct the actual interview and Keep a written record.
+4. Determined the work of the day: Guangzhe fixed the bug that couldn't add or remove pets, Alfymora designed the list of questions needed for the interview, and after the list was obtained, everyone on the team needed to find at least one potential user to conduct the actual interview and Keep a written record.
 
 #### Technical Log
 
@@ -104,17 +104,17 @@ The Meeting Point:
 
 2. Each member described the results of their user interview in detail.
 
-3. Prior to the meeting, Jiangqi had summarized several user stories based on user interview data, and we discussed the feasibility of these requirements during the meeting. 
+3. Prior to the meeting, Jiangqi had summarized several user stories based on user interview data, and we discussed the feasibility of these requirements during the meeting.
 
    | User Stories                                                 | Comments                                                     |
    | ------------------------------------------------------------ | ------------------------------------------------------------ |
-   | As a new customer, I want there are enough user reviews so that I could know if it's a reliable pet store. | Great demand. In fact, there are many shopping sites that also have reviews. But we didn't find that functionality in the API, so we couldn't do it in this project. |
-   | As Bruce, I want the owner to upload pictures of pets, so I could see pets' appearance and health that are of importance when deciding which one to buy. | The group agreed that pictures of pets were essential to the site. Nothing shows a pet's characteristics more intuitively than a picture. |
+   | As a new customer, I want enough user review so that I could know if it's a reliable pet store. | Great demand. In fact, there are many shopping sites that also have reviews. But we didn't find functionality in the API, so we couldn't do it in this project. |
+   | As Bruce, I want the owner to upload pictures of pets, so I could see pets' appearance and health as it helps me to decide which one to buy. | The group members agreed that pictures of a pet are essential to the website. Nothing shows a pet's characteristics more intuitively than a picture. |
    | As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing. | A website that fails to modify information about pets can be a disaster for pet stores. Because none of us can guarantee that information about pets will never change. |
    | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
    | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
 
-   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. 
+   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets.
 
 #### Technical Log
 
@@ -130,7 +130,7 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
 
-   If the interviewww said filters, ask: Can you list some of the filter conditions that you usually use? (tags, catepories, status, inventories etc.) 
+   If the interviewww said filters, ask: Can you list some of the filter conditions that you usually use? (tags, catepories, status, inventories etc.)
 
 2. Do reviews section important for you? Why?
 
@@ -140,37 +140,37 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 5. Do you want to see some pets’ food suggestion or other advice for pets? Why?
 
-6. Do you recommend any different feature that you think will value the pets shop website? 
+6. Do you recommend any different feature that you think will value the pets shop website?
 
 ##### The Answers
 
 ###### Interviewee 1
 
-1. image, categories 
+1. image, categories
 
 2. Yes, because reviews reflect reality about an unknown store. Based on the reviews I can find out if the owner of the shop is a popular one, you know, like how good the pre-sales service is in relation to that. I can also find out about other buyers' shopping experiences, so I can predict my shopping experience and decide whether to deal here or not.  
 
-3. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online. 
+3. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online.
 
-4. Positive reviews 
+4. Positive reviews
 
-5. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food. 
+5. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food.
 
-6. Suggested features. I would like to be able to categorise the species so that I can focus more on the type of pet I like. 
+6. Suggested features. I would like to be able to categorise the species so that I can focus more on the type of pet I like.
 
 ###### Interviewee 2
 
-1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, colour, best seller) make my life easier and save my time while I am looking for a pet online. 
+1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, colour, best seller) make my life easier and save my time while I am looking for a pet online.
 
-2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny. 
+2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny.
 
-3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be catious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process. 
+3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be catious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
 
-4. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well. 
+4. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well.
 
-5. I think I do. I believe that getting to know more about the pet who I am going to live with on daily basis is extremely important for me as a customer such as their food, medications, trained or not. 
+5. I think I do. I believe that getting to know more about the pet who I am going to live with on daily basis is extremely important for me as a customer such as their food, medications, trained or not.
 
-6. As a customer, I always make sure to see interactions from the website management before, during and after sales. Answering customers’ questions who are planning to buy and also, answering and showing help for customers who has issues after sale such as delivery, medications, refund, deliveries. 
+6. As a customer, I always make sure to see interactions from the website management before, during and after sales. Answering customers’ questions who are planning to buy and also, answering and showing help for customers who has issues after sale such as delivery, medications, refund, deliveries.
 
 ###### Interviewee 3
 
