@@ -2,6 +2,7 @@
 
 **Agile Scrum methodology**
 
+<<<<<<< HEAD
 
 Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 
@@ -13,23 +14,49 @@ At our group's first meeting, we discussed and compared several different agile 
    - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
 
    - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research.
+=======
+<<<<<<< HEAD
+Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+=======
+At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on. 
+>>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
+
+1. Scrum is well suited to teams with five members. 
+
+   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations. 
+
+   - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research. 
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 
    - One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
 
    Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
+<<<<<<< HEAD
 2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
    ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
 
    - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint.
 
    - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes.
+=======
+2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it. 
+   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg) 
+
+   - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint. 
+
+   - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes. 
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 
    - Review Meeting: At the end of the sprint, we held review meeting, which evaluate the work we had done and enables us to reflect and improve.
 
 **Communication Channel**
 
+<<<<<<< HEAD
 Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
+=======
+Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it. 
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 
 Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
@@ -146,9 +173,17 @@ The Meeting Point:
    | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
    | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
 
+<<<<<<< HEAD
 
    Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
 
+=======
+<<<<<<< HEAD
+   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets.
+=======
+   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
+>>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 
 #### Technical Log
 
@@ -177,11 +212,19 @@ To sum up: we have optimized add, delete and search three features, which is imp
 6. Do you recommend any different feature that you think will value the pets shop website?
 
 ##### The Answers
+<<<<<<< HEAD
 
 ###### Interviewee 1
 
 1. image, categories
 
+=======
+
+###### Interviewee 1
+
+1. image, categories
+
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 2. Yes, because reviews reflect reality about an unknown store. Based on the reviews I can find out if the owner of the shop is a popular one, you know, like how good the pre-sales service is in relation to that. I can also find out about other buyers' shopping experiences, so I can predict my shopping experience and decide whether to deal here or not.  
 
 3. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online.
@@ -248,6 +291,7 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 #### Highlights
 
+<<<<<<< HEAD
 1. Feature 1:
    1. **User Registering**.
    2. Used **API: [post] /user** with body uploaded to create a new user.
@@ -256,6 +300,16 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
    2. Used **API: [get] /suer/login** with query in path, to login.
    3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
 3. Feature 3:
+=======
+1. Feature 1: 
+   1. **User Registering**.
+   2. Used **API: [post] /user** with body uploaded to create a new user.
+2. Feature 2: 
+   1. **User Login**.
+   2. Used **API: [get] /suer/login** with query in path, to login.
+   3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
+3. Feature 3: 
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
    1. **User Information Displaying**.
    2. Used **API: [get] /user/{username}** with var in path to get user information.
 4. Feature 4:
@@ -272,7 +326,12 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 #### Technical Log
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 **3rd Aug:** Firstly, after communication with Allison, we got inspired then sucessfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we receieved alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
 
 Then, we have used the tested API of user category to implement demonstrations for features as following, user registeration, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
@@ -289,5 +348,9 @@ Story 2: As the owner of this shop, I need a relevant and improved GUI for me mo
 
 Story 3: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
+>>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 # Continuous Integration
