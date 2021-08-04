@@ -1,10 +1,6 @@
 # Abstract
 
-<<<<<<< HEAD
 A local pet shop’s owner has been working on developing a website to show his available pet . However, lacking enough knowledge of computer technology led him to the failure unfortunately. He would like our team to help him continue his work and complete successfully in the end.
-=======
-A local pet shop’s owner has been working on developing a website to show his available pet. However, lacking enough knowledge of computer technology led him to the failure unfortunately. He would like our team to help him continue his work and complete successfully in the end.
->>>>>>> f8ca65d28954f39aad7017ee1374ebb37ac8cdfd
 
 We are interested in the website and trying to make it more appealing and versatile. Besides, we develop an improved graphical user-interface in order to make it more functional to use based on user research.
 
