@@ -9,7 +9,7 @@ import { HostAdminComponent } from './host-admin/host-admin.component';
 const routes: Routes = [
   { path: 'pets', component: PetsListComponent },
   { path: 'customerSide', component: CustomerSideComponent},
-  { path: '', redirectTo: '/pets', pathMatch: 'full' },
+  { path: '', redirectTo: '/customerSide', pathMatch: 'full' },
   { path: 'detail/:id', component: PetDetailsComponent},
   { path: 'host', component: HostAdminComponent}
 ];

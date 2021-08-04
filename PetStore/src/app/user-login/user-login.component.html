@@ -10,6 +10,6 @@
     </div>
     <div *ngIf="status">
         <p>congratulations, login succeed</p>
-        <app-user-details [loginUsername]="username"></app-user-details>
+        <app-user-details (backEvent)="logout()" [loginUsername]="username"></app-user-details>
     </div>
 </div>

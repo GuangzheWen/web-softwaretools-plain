@@ -34,12 +34,14 @@ export class UserService {
 
   // login check 
   login(user: User) : Observable<ApiResponse>  {
-    let url = `${this.baseUrl}/login?${user.username}:${user.password}`
+    let url = `${this.baseUrl}/login?username=${user.username}&password=${user.password}`
     return this.http.get<ApiResponse>(url, this.httpOptions)
     .pipe(
       tap(res => {
         if (res.code == 200){
           this.log(`user with username: ${user.username} logged in succeed`)
+        }else{
+          // console.log('res')
         }
       }),
       catchError(this.handleError<ApiResponse>('user login'))

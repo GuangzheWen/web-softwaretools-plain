@@ -27,9 +27,9 @@
             <input [(ngModel)]="user.password" value="user.password">
         </div>
         <button (click)="modify=false; modifyUser()">save</button>
-        <a routerLink="/">
-            <button  (click)="deleteUser()">delete account</button>
-        </a>
+        
+        <button (click)="deleteUser(); modify = false">delete account</button>
+        
         
     </div>
 

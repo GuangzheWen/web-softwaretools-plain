@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { User } from '../models/user';
-import { Location } from '@angular/common';
+
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-details',
@@ -11,14 +12,18 @@ import { Location } from '@angular/common';
 export class UserDetailsComponent implements OnInit {
 
   @Input() loginUsername?:string
+  @Output() backEvent = new EventEmitter<boolean>();
+
+
   user?: User
+  emptyUser?: User
   modify: boolean = false
 
 
 
   constructor(
     private userService: UserService,
-    private location: Location
+
   ) { }
 
   ngOnInit(): void {
@@ -38,7 +43,10 @@ export class UserDetailsComponent implements OnInit {
 
   deleteUser() {
     this.userService.deleteUser(this.user!)
-    .subscribe()
-
+    .subscribe(_ => {
+      this.user = this.emptyUser
+    })
+    this.backEvent.emit(true);
   }
+
 }

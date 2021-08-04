@@ -28,12 +28,27 @@ export class UserLoginComponent implements OnInit {
 
     this.userService.login({username, password} as User)
     .subscribe(res => {
-      if (res.code == 200){
-        // console.log(res)
-        this.status = true
-      }
+      // if ((res.code != 200) || !res){
+      //   alert('not exist')
+      // }else{
+      //   this.status = true
+      // }
     })
 
+    this.userService.getUser(username)
+    .subscribe(res => {
+      if (res){
+        // console.log(res)
+        this.status = true
+      }else{
+        alert('not exist user')
+      }
+      
+    })
+  }
+
+  logout() {
+    this.status = false
   }
 
 }
