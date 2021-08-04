@@ -148,8 +148,9 @@ The Meeting Point:
    | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
    | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
 
+Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
 
-   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
+4. The feature to be completed in the next Sprint is discussed and decided. That is to authenticate whether the operator is a customer or the pet store owner.
 
 #### Technical Log
 
@@ -240,7 +241,7 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 ### Sprint 2: Authenticating Users
 
-For all user stories in our Product Backlog, their is a basic need. That is, the website needs to determine whether the person currently operating is customer or pet store owner. Only after this feature is implemented first can we continue the subsequent features. Therefore, there is no specific User story for that Sprint. All user stories from the Product Backlog belong to that Sprint.
+There is a basic need for all user stories in our Product Backlog. The need is that the website needs to determine whether the person currently operating is customer or pet store owner. Only after this feature is implemented first can we continue the subsequent features. Therefore, there is no specific User story for that Sprint. All user stories from the Product Backlog belong to that Sprint.
 
 #### High level overview
 
@@ -270,6 +271,24 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 #### Meeting Log
 
+##### Meeting 4
+
+Time: 11:00am-11:40am
+
+Date: 4th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. Guangzhe has demonstrated the authentication capability by sharing the desktop. We discussed the specifics of the implementation and all agreed that the feature worked very well.
+2. The test method was discussed and the final decision was made to ask Allison.
+3. Discussed how to optimize the front end of this feature from UI and UX.
+4. Determined the feature to be made for the next Sprint. That is modifying the information, including upload picture for pet shop owner.
+5. We discussed the need for the rest of the team to continue to research the background while developing the back end and front, and to continue to dig for user stories to build our Product Backlog.
+
 #### Technical Log
 
 **3rd Aug:** Firstly, after communication with Allison, we got inspired then sucessfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we receieved alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
@@ -278,7 +297,7 @@ Then, we have used the tested API of user category to implement demonstrations f
 
 **4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of travelling among the components also need to be designed, which we do so.
 
-### Sprint 3: XXXXXXXXX
+### Sprint 3: Modifying Pet Information
 
 #### User Stories
 
@@ -286,6 +305,30 @@ Story 1: As Bruce, I want the owner to upload pictures of pets, so I could see p
 
 Story 2: As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
-Story 3: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+#### High level overview
+
+Develop the feature of modifying pet information, including uploading the pictures of pets, and test it.
+
+#### Highlights
+
+
+
+#### Meeting Log
+
+##### Meeting 5
+
+#### Technical Log
+
+
+
+
+
+
+
+
+
+### Sprint 4: XXXXXXXX
+
+Story 1: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
 # Continuous Integration
