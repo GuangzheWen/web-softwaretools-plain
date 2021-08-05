@@ -254,7 +254,7 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
    2. Used **API: [post] /user** with body uploaded to create a new user.
 2. Feature 2:
    1. **User Login**.
-   2. Used **API: [get] /suer/login** with query in path, to login.
+   2. Used **API: [get] /user/login** with query in path, to login.
    3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
 3. Feature 3:
    1. **User Information Displaying**.
@@ -313,23 +313,22 @@ Develop the feature of modifying pet information, including uploading the pictur
 
 1. Feature 1:
    1. **Seller-Pets list**.
-   2. Used **API: [post] /user** with body uploaded to create a new user.
+   2. Used **API: [get] /pet/findByStatus** with our own status "team2" to load all our group's own pets.
 2. Feature 2:
    1. Seller-**Pet's details**.
-   2. Used **API: [get] /suer/login** with query in path, to login.
-   3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
+   2. Used **API: [get] /pet/{petId}** with pet id in path, then get certain pet's information. 
 3. Feature 3:
    1. **Seller-Modify pet's information**.
-   2. Used **API: [get] /user/{username}** with var in path to get user information.
+   2. Used **API: [put] /pet** updating an existing pet's information with body (pet object). including adding photoURL to pet's object.
 4. Feature 4:
-   1. **Buyer-Pets list**.
-   2. Used **API: [put] /user/{username}** with body to upload updated user information.
+   1. **Seller-Add new pet**.
+   2. Used **API: [post] /pet** create a new pet with body (pet object).
 5. Feature 5:
-   1. **User Deleting**.
-   2. Used **API: [delete] /user/{username}** to delete an existing user.
+   1. **Seller-Deleting pet**.
+   2. Used **API: [delete] /pet/{username}** to delete an existing pet.
 6. Feature 6:
-   1. **Host Mode Authentication**.
-   2. Without using any API, because of lack of source code and further information, so we have to use this method instead.
+   1. **Buyer-Pets list**.
+   2. Used **API: [get] /pet/findByStatus** with our own status "team2" to retrieve all our group's own pets. And showing the photo of the pet as well.
 
 #### Meeting Log
 
