@@ -311,7 +311,25 @@ Develop the feature of modifying pet information, including uploading the pictur
 
 #### Highlights
 
-
+1. Feature 1:
+   1. **Seller-Pets list**.
+   2. Used **API: [post] /user** with body uploaded to create a new user.
+2. Feature 2:
+   1. Seller-**Pet's details**.
+   2. Used **API: [get] /suer/login** with query in path, to login.
+   3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
+3. Feature 3:
+   1. **Seller-Modify pet's information**.
+   2. Used **API: [get] /user/{username}** with var in path to get user information.
+4. Feature 4:
+   1. **Buyer-Pets list**.
+   2. Used **API: [put] /user/{username}** with body to upload updated user information.
+5. Feature 5:
+   1. **User Deleting**.
+   2. Used **API: [delete] /user/{username}** to delete an existing user.
+6. Feature 6:
+   1. **Host Mode Authentication**.
+   2. Without using any API, because of lack of source code and further information, so we have to use this method instead.
 
 #### Meeting Log
 
