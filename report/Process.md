@@ -340,7 +340,9 @@ Develop the feature of modifying pet information, including uploading the pictur
 But here the resolution does not mean modifying the API itself, as we have no way to modify a public API. rather, we use some code from the front-end to specifically handle the API data and errors in order to ensure that our front-end display works properly. We believe that being able to make good use of all available resources with a limited, unfixable API is also an ability. Of course, realistically enterprise level development certainly doesn't do this, and we know it.
 So, the functionality regarding pets was implemented without any problems, with the display of a list of pets (including images) and the addition of the ability to modify and delete pets. There are two explanations to be made here.
 One, both the seller side and the buyer side can load the pet list, but the seller side can route each pet by clicking on it and then edit the pet's details, the buyer side cannot.
-Secondly, there is a dedicated API for uploading images, but probably because of the public API, it doesn't actually receive an image file, it just uses a string instead, to keep the database from filling up. So this API function doesn't really work, so we use the upload URL of image instead of upload image.
+Secondly, there is a dedicated API for uploading images, but probably because of the public API, it doesn't actually receive an image file, it just uses a string instead, to keep the database from filling up. So this API function doesn't really work, so we use the upload URL of image instead of upload image.In addition, there was a bug during yesterday's demo that was not anticipated during the development phase, mainly in the page jumping logic, which has been resolved today.
+
+
 
 
 
@@ -350,6 +352,6 @@ Secondly, there is a dedicated API for uploading images, but probably because of
 
 ### Sprint 4: XXXXXXXX
 
-Story 1: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+Story 1: As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
 # Continuous Integration
