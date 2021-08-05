@@ -1,13 +1,18 @@
 
-<h1>
+<h1 id="header">
     {{ title }}
+    <span id="modeButton">
+      <a id="buyer" class="button" routerLink="/customerSide">
+        Buyer
+      </a>
+
+      <a id="seller" class="button" routerLink="/host">
+        Seller
+    </a>
+  </span>
 </h1>
 
-<nav>
-    <a class="button" routerLink="/customerSide">Customer Mode</a>
-    <span>&nbsp;</span>
-    <a class="button" routerLink="/host">Host Mode</a>
-  </nav>
+
 
 <router-outlet></router-outlet>
-<app-messages></app-messages>
+<app-messages id="messagePad"></app-messages>
