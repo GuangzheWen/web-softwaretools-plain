@@ -3,7 +3,7 @@
 **Agile Scrum methodology**
 
 
-Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 
 At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
 
@@ -37,7 +37,7 @@ Before the meeting starts, each member needs to send his recent progress and dis
 
 **Special Methods**
 
-- We use Office365 to design the quesionnare. Team members could comment on it and edit it.
+- We use Office365 to design the questionnaire. Team members could comment on it and edit it.
 - We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 - We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
 
@@ -55,7 +55,7 @@ We used the Gantt chart to plan our overall project timeline, which began after 
 
 ## Startup Phase
 
-In this part, on the one hand, we are in the warm-up phase before the formal start of a project. We are familiar with the team members, understand the background of the existing project, make plans and divide the roles. On the other hand, once we have settled on the roles, Wenzhe in charge of technology began testing the API.
+In this part, on the one hand, we are in the warm-up phase before the formal start of a project. We are familiar with the team members, understand the background of the existing project, make plans and divide the roles. On the other hand, once we have settled on the roles, Guangzhe Wen in charge of technology began testing the API.
 
 #### Meeting Log
 
@@ -92,7 +92,7 @@ The Meeting Point:
 
 1. Shared the findings of the members, Guangzhe has found a bug on the site to which it was sent, which cannot be added or removed due to the long ID.
 2. Discussed agile development methods, Finally chose Scrum.
-3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the fearture to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
+3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the feature to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
 4. Determined the work of the day: Guangzhe fixed the bug that couldn't add or remove pets, Alfymora designed the list of questions needed for the interview, and after the list was obtained, everyone on the team needed to find at least one potential user to conduct the actual interview and Keep a written record.
 
 #### Technical Log
@@ -134,7 +134,7 @@ Attendees: Guangzhe Wen, Chongyan Qi, Jiangqi Lou, Alfymora Joseph, Gang Li
 
 The Meeting Point:
 
-1. Wenzhe has shared the current API test progress and is ready to start new features development.
+1. Guangzhe has shared the current API test progress and is ready to start new features development.
 
 2. Each member described the results of their user interview in detail.
 
@@ -156,7 +156,7 @@ Finally, we determined the features that need to be added to the website, which 
 
 **31st July:** As planned yesterday, we use property " status" as our group's exclusive channel to mark our pets. (Because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to simplify debugging for the time being) (because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to temporarily simplify the debugging process and make the data more intuitive).
 Secondly, we are still using angular framework as a front-end framework, which is more stable and easier to use, and its framework allows us to better apply MVC theory. We will gradually improve the View at a later stage.
-Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add value (+2 here to try and avoid another bug) to the new pet.
+Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add 1 to the new pet.
 Fourthly, we have unfortunately and fortunately found another bug. when sending the same request every second, we get two responses that change periodically, like when we send RRRRRRR and get, ABABABAB. looks like some thing like odd/even response. still don't know why, but Based on our last experience of fixing a bug for 4 hours to no avail, we decided to leave it alone for now and lower its priority to more important functions.
 To sum up: we have optimized add, delete and search three features, which is implemented inside framework Angular(being deferent from demo). And fixed bugs (mainly about id precision) in demo website in our own way, because cannot modify api and back-end.
 
@@ -166,11 +166,11 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
 
-   If the interviewww said filters, ask: Can you list some of the filter conditions that you usually use? (tags, catepories, status, inventories etc.)
+   If the interview said filters, ask: Can you list some of the filter conditions that you usually use? (tags, categories, status, inventories etc.)
 
 2. Do reviews section important for you? Why?
 
-3. Which one do you prefer to sign up to use the website? Compusory or optional? Why?
+3. Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
 
 4. What will make you trust the website to add your personal details for signing up? Positive reviews, Best Selling, or More ads and marketing?
 
@@ -191,15 +191,15 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 5. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food.
 
-6. Suggested features. I would like to be able to categorise the species so that I can focus more on the type of pet I like.
+6. Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
 
 ###### Interviewee 2
 
-1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, colour, best seller) make my life easier and save my time while I am looking for a pet online.
+1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, color, best seller) make my life easier and save my time while I am looking for a pet online.
 
 2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny.
 
-3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be catious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
+3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be cautious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
 
 4. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well.
 
@@ -267,7 +267,7 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
    2. Used **API: [delete] /user/{username}** to delete an existing user.
 6. Feature 6:
    1. **Host Mode Authentication**.
-   2. Without using any API, bacause of lack of source code and further imformation, so we have to use this method instead.
+   2. Without using any API, because of lack of source code and further information, so we have to use this method instead.
 
 #### Meeting Log
 
@@ -291,11 +291,11 @@ The Meeting Point:
 
 #### Technical Log
 
-**3rd Aug:** Firstly, after communication with Allison, we got inspired then sucessfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we receieved alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
+**3rd Aug:** Firstly, after communication with Allison, we got inspired then successfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we received alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
 
-Then, we have used the tested API of user category to implement demonstrations for features as following, user registeration, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
+Then, we have used the tested API of user category to implement demonstrations for features as following, user registering, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
 
-**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of travelling among the components also need to be designed, which we do so.
+**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of traveling among the components also need to be designed, which we do so.
 
 ### Sprint 3: Modifying Pet Information
 
