@@ -2,19 +2,24 @@
     <h1>
         Customer side
     </h1>
-    
-
         <div *ngFor="let pet of pets" >
-
                 {{ pet.name }}
                 {{ pet.id }}
-        
-                
-
         </div>
-
-
-
-    <app-user-register></app-user-register>
-    <app-user-login></app-user-login>
+        <div>
+            <div *ngIf="isL || !isR">
+                <button (click)="isRegister()"> register</button>
+            </div>
+            <div *ngIf="!isL || isR">
+                <button (click)="isLogin()"> login</button>
+            </div>
+            
+        </div>
+        <div *ngIf="isR">
+            <app-user-register></app-user-register>
+        </div>
+        <div *ngIf="isL">
+            <app-user-login></app-user-login>
+        </div>
+    
 </div>

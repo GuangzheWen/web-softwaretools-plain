@@ -9,7 +9,7 @@
         </form>
     </div>
     <div *ngIf="status">
-        <p>congratulations, login succeed</p>
+        <!-- <p>congratulations, login succeed</p> -->
         <app-user-details (backEvent)="logout()" [loginUsername]="username"></app-user-details>
     </div>
 </div>

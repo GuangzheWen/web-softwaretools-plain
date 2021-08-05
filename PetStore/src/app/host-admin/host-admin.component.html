@@ -1,8 +1,6 @@
-<div *ngIf="!access">
+<div class="container">
     host password:
     <input [(ngModel)]="passwordInput" placeholder="password">
     <button (click)="check()"> Enter</button>
 </div>
-<div *ngIf="access">
-    <app-pets-list></app-pets-list>
-</div>
+

@@ -11,7 +11,8 @@ import { PetService } from '../service/pet.service';
 export class CustomerSideComponent implements OnInit {
 
   pets: Pet[] = []
-
+  isR: boolean = false
+  isL: boolean = false
   constructor(
     private petService: PetService
   ) { }
@@ -27,4 +28,12 @@ export class CustomerSideComponent implements OnInit {
     })
   }
 
+  isRegister(){
+    this.isR = true;
+    this.isL = false
+  }
+  isLogin(){
+    this.isL = true
+    this.isR = false;
+  }
 }

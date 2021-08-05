@@ -11,7 +11,6 @@ export class HostAdminComponent implements OnInit {
 
   password: string = 'admin'
   passwordInput: string = ''
-  access: boolean = false
 
   constructor(
     private router: Router
@@ -25,7 +24,6 @@ export class HostAdminComponent implements OnInit {
       alert('wrong password')
     }
     else {
-      // this.access = true
       this.router.navigateByUrl('/pets') 
       
     }
