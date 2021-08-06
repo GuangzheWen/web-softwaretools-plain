@@ -3,6 +3,7 @@
 **Agile Scrum methodology**
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 =======
 At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
@@ -12,15 +13,34 @@ At our group's first meeting, we discussed and compared several different agile 
 
    - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
 
+=======
+
+Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+
+At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
+
+
+1. Scrum is well suited to teams with five members.
+
+   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
+
+>>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
    - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research.
 
    - One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
 
    Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
+<<<<<<< HEAD
 2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
    ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
 
+=======
+
+2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
+   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
+
+>>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
    - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint.
 
    - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes.
@@ -29,13 +49,17 @@ At our group's first meeting, we discussed and compared several different agile 
 
 **Communication Channel**
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
 Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
 
 Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
 **Special Methods**
 
-- We use Office365 to design the quesionnare. Team members could comment on it and edit it.
+- We use Office365 to design the questionnaire. Team members could comment on it and edit it.
 - We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 - We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
 
@@ -53,7 +77,7 @@ We used the Gantt chart to plan our overall project timeline, which began after 
 
 ## Startup Phase
 
-In this part, on the one hand, we are in the warm-up phase before the formal start of a project. We are familiar with the team members, understand the background of the existing project, make plans and divide the roles. On the other hand, once we have settled on the roles, Wenzhe in charge of technology began testing the API.
+In this part, on the one hand, we are in the warm-up phase before the formal start of a project. We are familiar with the team members, understand the background of the existing project, make plans and divide the roles. On the other hand, once we have settled on the roles, Guangzhe Wen in charge of technology began testing the API.
 
 #### Meeting Log
 
@@ -90,7 +114,7 @@ The Meeting Point:
 
 1. Shared the findings of the members, Guangzhe has found a bug on the site to which it was sent, which cannot be added or removed due to the long ID.
 2. Discussed agile development methods, Finally chose Scrum.
-3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the fearture to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
+3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the feature to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
 4. Determined the work of the day: Guangzhe fixed the bug that couldn't add or remove pets, Alfymora designed the list of questions needed for the interview, and after the list was obtained, everyone on the team needed to find at least one potential user to conduct the actual interview and Keep a written record.
 
 #### Technical Log
@@ -132,7 +156,7 @@ Attendees: Guangzhe Wen, Chongyan Qi, Jiangqi Lou, Alfymora Joseph, Gang Li
 
 The Meeting Point:
 
-1. Wenzhe has shared the current API test progress and is ready to start new features development.
+1. Guangzhe has shared the current API test progress and is ready to start new features development.
 
 2. Each member described the results of their user interview in detail.
 
@@ -146,17 +170,15 @@ The Meeting Point:
    | As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc. | The search function allows users to find the type of pet they want more quickly, which will definitely improve the efficiency and experience of users using the website. |
    | As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open. | This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative. |
 
-<<<<<<< HEAD
-   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets.
-=======
-   Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
->>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
+Finally, we determined the features that need to be added to the website, which are: the feature of authenticating users as sellers or buyers, the feature of uploading pictures, the feature of modifying information, and the feature of querying specified pets. These features are put into our Product Backlog.
+
+4. The feature to be completed in the next Sprint is discussed and decided. That is to authenticate whether the operator is a customer or the pet store owner.
 
 #### Technical Log
 
 **31st July:** As planned yesterday, we use property " status" as our group's exclusive channel to mark our pets. (Because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to simplify debugging for the time being) (because the data in the public api is so messy and difficult to debug at the beginning of the project, we use this approach to temporarily simplify the debugging process and make the data more intuitive).
 Secondly, we are still using angular framework as a front-end framework, which is more stable and easier to use, and its framework allows us to better apply MVC theory. We will gradually improve the View at a later stage.
-Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add value (+2 here to try and avoid another bug) to the new pet.
+Thirdly, we have really implemented the concept of assigning ids to the front end to prevent getting into the awkward situation of having too large a backend ID and not being able to change the backend api. This step is based on the exclusive channel "status" function, which filters out our unique pets, whose IDs are 8 digits, like 10000012. Fetch all our pets and map the id attribute, take the maximum value and add 1 to the new pet.
 Fourthly, we have unfortunately and fortunately found another bug. when sending the same request every second, we get two responses that change periodically, like when we send RRRRRRR and get, ABABABAB. looks like some thing like odd/even response. still don't know why, but Based on our last experience of fixing a bug for 4 hours to no avail, we decided to leave it alone for now and lower its priority to more important functions.
 To sum up: we have optimized add, delete and search three features, which is implemented inside framework Angular(being deferent from demo). And fixed bugs (mainly about id precision) in demo website in our own way, because cannot modify api and back-end.
 
@@ -166,11 +188,11 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
 
-   If the interviewww said filters, ask: Can you list some of the filter conditions that you usually use? (tags, catepories, status, inventories etc.)
+   If the interview said filters, ask: Can you list some of the filter conditions that you usually use? (tags, categories, status, inventories etc.)
 
 2. Do reviews section important for you? Why?
 
-3. Which one do you prefer to sign up to use the website? Compusory or optional? Why?
+3. Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
 
 4. What will make you trust the website to add your personal details for signing up? Positive reviews, Best Selling, or More ads and marketing?
 
@@ -179,7 +201,6 @@ To sum up: we have optimized add, delete and search three features, which is imp
 6. Do you recommend any different feature that you think will value the pets shop website?
 
 ##### The Answers
-
 ###### Interviewee 1
 
 1. image, categories
@@ -192,15 +213,15 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 5. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food.
 
-6. Suggested features. I would like to be able to categorise the species so that I can focus more on the type of pet I like.
+6. Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
 
 ###### Interviewee 2
 
-1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, colour, best seller) make my life easier and save my time while I am looking for a pet online.
+1. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, color, best seller) make my life easier and save my time while I am looking for a pet online.
 
 2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny.
 
-3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be catious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
+3. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be cautious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
 
 4. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well.
 
@@ -210,7 +231,7 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 ###### Interviewee 3
 
-1. image is the most helpful, honestly the appearance of a pet determines whether I want to buy or not. I can't imagine without pictures, how should people decide
+1. Image is the most helpful, honestly the appearance of a pet determines whether I want to buy or not. I can't imagine without pictures, how should people decide
 
 2. For the pet store review, I think it's important. Because I need user reviews to know if it's a reliable pet store. But the site was developed by the store and I don't think it will be objective. As for comments about pets, I don't think it matters. Because every pet is an independent individual, I think the pet that users buy will be different from the pet that I buy.
 
@@ -242,7 +263,7 @@ To sum up: we have optimized add, delete and search three features, which is imp
 
 ### Sprint 2: Authenticating Users
 
-For all user stories in our Product Backlog, their is a basic need. That is, the website needs to determine whether the person currently operating is customer or pet store owner. Only after this feature is implemented first can we continue the subsequent features. Therefore, there is no specific User story for that Sprint. All user stories from the Product Backlog belong to that Sprint.
+There is a basic need for all user stories in our Product Backlog. The need is that the website needs to determine whether the person currently operating is customer or pet store owner. Only after this feature is implemented first can we continue the subsequent features. Therefore, there is no specific User story for that Sprint. All user stories from the Product Backlog belong to that Sprint.
 
 #### High level overview
 
@@ -255,7 +276,7 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
    2. Used **API: [post] /user** with body uploaded to create a new user.
 2. Feature 2:
    1. **User Login**.
-   2. Used **API: [get] /suer/login** with query in path, to login.
+   2. Used **API: [get] /user/login** with query in path, to login.
    3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
 3. Feature 3:
    1. **User Information Displaying**.
@@ -268,21 +289,37 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
    2. Used **API: [delete] /user/{username}** to delete an existing user.
 6. Feature 6:
    1. **Host Mode Authentication**.
-   2. Without using any API, bacause of lack of source code and further imformation, so we have to use this method instead.
+   2. Without using any API, because of lack of source code and further information, so we have to use this method instead.
 
 #### Meeting Log
 
+##### Meeting 4
+
+Time: 11:00am-11:40am
+
+Date: 4th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. Guangzhe has demonstrated the authentication capability by sharing the desktop. We discussed the specifics of the implementation and all agreed that the feature worked very well.
+2. The test method was discussed and the final decision was made to ask Allison.
+3. Discussed how to optimize the front end of this feature from UI and UX.
+4. Determined the feature to be made for the next Sprint. That is modifying the information, including upload picture for pet shop owner.
+5. We discussed the need for the rest of the team to continue to research the background while developing the back end and front, and to continue to dig for user stories to build our Product Backlog.
+
 #### Technical Log
 
-<<<<<<< HEAD
-=======
-**3rd Aug:** Firstly, after communication with Allison, we got inspired then sucessfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we receieved alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
+**3rd Aug:** Firstly, after communication with Allison, we got inspired then successfully fix a bug we found above: for retrieving pets APIs, there seems like two side of backend because of we received alternant Response when test the API. We fixed it by making a Request twice a time, which will create a pair of synchronized  backend, though it has two back-end. Finally we got two totally same backend, which won't impact front-end features any more.
 
-Then, we have used the tested API of user category to implement demonstrations for features as following, user registeration, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
+Then, we have used the tested API of user category to implement demonstrations for features as following, user registering, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
 
-**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of travelling among the components also need to be designed, which we do so.
+**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of traveling among the components also need to be designed, which we do so.
 
-### Sprint 3: XXXXXXXXX
+### Sprint 3: Modifying Pet Information
 
 #### User Stories
 
@@ -290,7 +327,78 @@ Story 1: As Bruce, I want the owner to upload pictures of pets, so I could see p
 
 Story 2: As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
-Story 3: As a dog lover, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+#### High level overview
 
->>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
+Develop the feature of modifying pet information, including uploading the pictures of pets, and test it.
+
+#### Highlights
+
+1. Feature 1:
+   1. **Seller-Pets list**.
+   2. Used **API: [get] /pet/findByStatus** with our own status "team2" to load all our group's own pets.
+2. Feature 2:
+   1. Seller-**Pet's details**.
+   2. Used **API: [get] /pet/{petId}** with pet id in path, then get certain pet's information. 
+3. Feature 3:
+   1. **Seller-Modify pet's information**.
+   2. Used **API: [put] /pet** updating an existing pet's information with body (pet object). including adding photoURL to pet's object.
+4. Feature 4:
+   1. **Seller-Add new pet**.
+   2. Used **API: [post] /pet** create a new pet with body (pet object).
+5. Feature 5:
+   1. **Seller-Deleting pet**.
+   2. Used **API: [delete] /pet/{username}** to delete an existing pet.
+6. Feature 6:
+   1. **Buyer-Pets list**.
+   2. Used **API: [get] /pet/findByStatus** with our own status "team2" to retrieve all our group's own pets. And showing the photo of the pet as well.
+
+#### Meeting Log
+
+##### Meeting 5
+
+Time: 11:00am-11:40am
+
+Date: 5th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. Guangzhe has demonstrated the Modifying Pet Information feature by sharing the desktop.
+2. It was decided to begin designing the front end for the Authenticating Users and Modifying Pet Information features. The first task is to interview users and ask them what their ideal front page would look like.
+3. It was decided to show the Authenticating Users and Modifying Pet Information Features to Users in an attempt to get some user feedback
+4. The next Sprint task is determined to be the search feature development.
+
+#### Technical Log
+
+**5th Aug:** Fortunately, we chose the right development route and tested the API exhaustively first thing when we were first given the task to prevent unanticipated bugs when using it afterwards, and during the debugging process at the time, some API bugs were found and solved.
+But here the resolution does not mean modifying the API itself, as we have no way to modify a public API. rather, we use some code from the front-end to specifically handle the API data and errors in order to ensure that our front-end display works properly. We believe that being able to make good use of all available resources with a limited, unfixable API is also an ability. Of course, realistically enterprise level development certainly doesn't do this, and we know it.
+So, the functionality regarding pets was implemented without any problems, with the display of a list of pets (including images) and the addition of the ability to modify and delete pets. There are two explanations to be made here.
+One, both the seller side and the buyer side can load the pet list, but the seller side can route each pet by clicking on it and then edit the pet's details, the buyer side cannot.
+Secondly, there is a dedicated API for uploading images, but probably because of the public API, it doesn't actually receive an image file, it just uses a string instead, to keep the database from filling up. So this API function doesn't really work, so we use the upload URL of image instead of upload image.In addition, there was a bug during yesterday's demo that was not anticipated during the development phase, mainly in the page jumping logic, which has been resolved today.
+
+
+
+### Sprint 4: Searching
+
+#### User Stories
+
+As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+
+#### High level overview
+
+Develop the feature of searching, and test it.
+
+#### Highlights
+
+#### Meeting Log
+
+##### Meeting 5
+
+#### Technical Log
+
+
+
 # Continuous Integration
