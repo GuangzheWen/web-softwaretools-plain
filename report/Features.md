@@ -1,4 +1,4 @@
-We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
+ We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
 
 The target users of our website are in two separated groups, one is customers group, who are the potential pets-buyers, they are the people who are able to choose online shopping and meanwhile are interested in adopting a pet. The other one should be the pet store host group, or we call it seller. This group probably contains only one person, or perhaps is consist of a couple of members. No matter how many people does it have, it will never have influence on one truth, which is the sellers and buyers must use different features and have to handle problems on different pages.
 
@@ -99,13 +99,13 @@ We will describe our test development process of features in great detail below,
 3. Features implementing one by one as component.
 4. Putting all components together then arrange routing.
 
-#### API features testing.
+## API features testing.
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
 
-I would like to show results first, I guess you do so, if you are interested in the details, find them as following.
+I would like to show results at first, I guess you do so, if you are interested in the details, find them as following.
 
-**Pets' API:**
+### **Pets' API test form:**
 
 | No.  | method | path                  | feature        | work? | use?        |
 | ---- | ------ | --------------------- | -------------- | ----- | ----------- |
@@ -117,7 +117,7 @@ I would like to show results first, I guess you do so, if you are interested in 
 | 6    | post   | /pet/{id}             | update a pet   | -     | no          |
 | 7    | delete | /pet/{id}             |                | yes   | yes         |
 
-**Users' API:**
+### **Users' API test form:**
 
 | NO.  | method | path                  | feature       | work? | use? |
 | ---- | ------ | --------------------- | ------------- | ----- | ---- |
@@ -132,9 +132,9 @@ I would like to show results first, I guess you do so, if you are interested in 
 
 
 
-**Pets' API:**
+### **Pets' API test details:**
 
-1. **Upload Image:**
+#### **1. Upload Image:**
 
 <img src="../images/API_post_pet_id_uploadImage.png" alt="API_post_pet_image" style="zoom:50%;" />
 
@@ -198,7 +198,7 @@ curl -X 'GET' \
 
 But we still need to implement uploading a photo, we will achieve that and describe in the next part. Fortunately, we tested GET PET BY ID API works well.
 
-2. **Add new pet**
+#### **2. Add new pet**
 
 <img src="../images/API_post_pet.png" alt="API_post_pet" style="zoom:50%;" />
 
@@ -299,15 +299,101 @@ curl -X 'POST' \
 
 As we can see above, if we assign id = 0 or directly delete the line of assigning an id, we will get a response of creation of new pet with such a long id from backend. (Spoiler: this long id will cause problems, will discuss it later) But if we assign an id with certain number we made, then the new pet will be created with this id. This is a important find that will help us to fix errors later. 
 
+#### **3. Update an existing pet**
+
+<img src="../images/API_put_pet.png" alt="API_put_pet" style="zoom:50%;" />
+
+```json
+// Response body (with 200)
+{
+  "id": 20002020,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie2",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+```
+
+**Conclusion:**
+
+Nothing special about this API, it works well. The usage of it is input the pet's id that you want to modify into the body, and just fill in other information you want to modify into the body.
+
+#### **4. Find pets by status**
+
+<img src="../images/API_get_pet_bystatus.png" alt="API_get_pet_bystatus" style="zoom:50%;" />
+
+This API works well without any bugs, but helped us find an other bug: the backend used big int type for the id which are automatically generated. And at frontend JS and json.parse() cannot handle that big int, result in lose precision of the number. Here we are going to discribe how we find it and verify it is certain error instead of others. Next chapter we will discuss how we "fix" it by avoiding it happens.
 
 
-#### Some API bugs fixing.
+
+You can see the screenshot below of the website demo from teachers. When I see this page fisrt time, I was curious about why the ids were the same, which was not reasonable.
+
+<img src="../images/proof_demo_bug.png" alt="image-20210806143437607" style="zoom:50%;" />
+
+So we choosed to test it with demo website display, Chrome debug mode preview Response, Chrome raw Response, and POSTMAN Response below. 
+
+**Demo website display:**
+
+<img src="../images/proof_demo.png" alt="image-20210806141941565" style="zoom:50%;" />
+
+So I checked in debug mode of Chrome, then found screenshots below:
+
+**Preview of response in Chrome:**
+
+<img src="../images/proof_chrome_preview.png" alt="image-20210806142117446" style="zoom:50%;" />
+
+**Raw response in Chrome:**
+
+![image-20210806142306414](../images/proof_chrome_rawRes.png)
+
+**Response in PostMan:**
+
+<img src="../images/proof_postman.png" alt="image-20210806143057712" style="zoom:50%;" />
+
+We found that in Postman and Chrome raw results, this pet object has the real id with accurate number, but in the demo site and Chrome preview stage, it shows fake id with losing precision. Then we compared serval pet objects, which had the same problem. So the truth is all the pets has unique id, but sometimes the real id cannot be displayed correctly.
+
+We infered that Postman can do it because it is a mature tool, they must has some operations of displaying big int, or probably it didn't use JS, because after research we know that other languages don't have this big int problem when calling HTTP request, like python. The comparison of Raw and Preview from chrome has proved our inference. The problem occurs at the stage transfering from string to object, which is json.parse().
+
+Our deduction is not without foundation, and the final nail in the coffin is the two screenshots below.
+
+- We have the data model introduced in https://petstore.swagger.io/ .
+
+<img src="../images/proof_backend.png" alt="image-20210806145025765" style="zoom:50%;" />
+
+- We have known that the biggest number json parse in JS can handle is 9007199254740991, 
+
+<img src="../images/proof_js.png" alt="image-20210806145214608" style="zoom:50%;" />
+
+and all pets were wrongly displayed whose id is bigger than the MAX number.
+
+We searched a lot about this problem. Most developers fix it by letting backend not using such a big int or asking backend to respond a string back. 
+
+We knew that we were using a public API and that it would be impractical to change the backend as a matter of common sense, but we gave up and went on to find another way.
+
+Then we found a library of tools that can handle big int on the front end. reference link below, https://github.com/sidorares/json-bigint. We thought that the problem was about to be solved, but we were not able to use it without problems. Again, we found other developers on https://github.com/angular/angular.js/issues/8030 that were not able to use this tool in Angular's framework, and we had to regretfully abandon this solution.
+
+Eventually we decided to generate our own short IDs on the front end. The exact implementation process will be explained in the next section.
+
+## Some API bugs fixing.
 
 I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix bugs really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API.
 
 
 
-#### Features implementing one by one as component.
+## Features implementing one by one as component.
 
-#### Putting all components together then arrange routing.
+## Putting all components together then arrange routing.
+
+
 
