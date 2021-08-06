@@ -548,9 +548,109 @@ At this point it is easy to see that not all Responses return an Object (pet or 
 
 
 
-## Some API bugs fixing.
+## Some API problems fixing.
 
-I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix bugs really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API.
+I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix problems really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API. This is exactly what I call "fix".
+
+As usual, we list all the problems that we fixed here firstly.
+
+1. Backend respond big int type id.
+2. Upload fake image from API.
+3. A/B double-face backend.
+4. User Login always respond 200.
+
+### Backend respond big int type id.
+
+Resolving problems by cutting them to pieces then fix little ones is a wisdom way. For this circumstance, we can divid the main problem to two separated problems, one is to generate normal int type id from frontend then assign it to the pet in the body. The other one could be how to retrieve all the pets that we assigned our own ids when we get pet list from the backend.
+
+I have to mention that we have no access to modify backend again, so we realize that there is a ready-made feature for us, which is API findByStatus. Although we know that this API is built for marking pet's status, available, pending, and sold. But one more thing that we know is that, in this assessment, we will not get that further like making real orders and managing pet's status. So that, we decides to use this API for another purpose, not its initial purpose. In the future, if we have opportunities to do more further on this project, for example, we would have access to the backend, then we will create brand new API for this feature and give tha API findByStatus back to its own working place.
+
+```typescript
+// pets-list.component.ts (code snippets)
+
+add(name: string): void {
+    name = name.trim();
+    let id = 10000001
+    let status = 'team2'
+    if (!name) { return; }
+    
+    if (this.pets.length > 0){
+      this.pets.map(pet => {
+        this.idArray.push(pet.id)
+      })
+      id = Math.max(...this.idArray) + 1
+    }
+    
+    this.petService.addPet({ name, id, status } as Pet)
+      .subscribe(pet => {
+        this.pets.push(pet);
+      });
+  }
+```
+
+```typescript
+// pet.service.ts (code snippets)
+
+private petsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=team2';  // URL to web api
+
+  // get all our own pets with our own ids
+  getPets(): Observable<Pet[]> {
+    this.http.get<Pet[]>(this.petsUrl)
+    return this.http.get<Pet[]>(this.petsUrl)
+    .pipe(
+      tap(_ => this.log('fetched pets')),
+      catchError(this.handleError<Pet[]>('getPets', []))
+    );
+  }
+```
+
+As code above showing, the whole logic and process is that if there is any our team2's pets, we will create first one with id=10000001, else if there is already existing an our own pet, we will get that pet's id and give new pet id 1 more than that older pet's id. And the most frequent situation is there are already having a lot of pets, then we will get all the existing pets id in a array then find the biggest one then plus one, which is going to be the newst pet's id. In this way our own pets' id will be unique.
+
+We will not only passing the id into the body then request HTTP, but also add "team2" as the value of the status property of each pet. So that when we need to find all our own pets, we just need make a get  request with path: https://petstore.swagger.io/v2/pet/findByStatus?status=team2. 
+
+We also considered what to do if someone else's team accidentally took over our ID range - after all, it's a public API - and after testing it out, this was not a problem to worry about. We found that one of the special features of the API for creating new pets is that if there is already a pet for that ID, when you create a new pet with the same ID, the new pet will completely overwrite the information of the old one. So we don't have to worry at all about our functionality and data being compromised, it's just someone else who suffers.
+
+
+
+### Upload fake image from API
+
+When we tested out that the API for uploading images was not working well, it immediately occurred to us that because it was a free and public API, if everyone could upload images, the database server in the background would take up a lot of resources, which would be a significant budget. So instead of opening up the permission to upload images, the provider of this API returned a token response of a successful upload, however in reality nothing happened in the background.
+
+This being the case, we conclude that the API backend does not have the ability to manage media files such as images, but we can manage our own media file database, or even a pet shop owner if he were to use our website right now.
+Then we just need to add the string with the address of the image to the PhotoUrls array, as it is possible to store string arrays in PhotoUrls.
+
+This API fails, but we found another API for modifying pet information that allows us to modify the string in the PhotoUrls array at the same time as the pet information. Therefore, we used this instead of uploading images. It just says that it requires the user to manage the media files on the web repository on their own and copy the url of the image over to add the image.
+
+```typescript
+// pet-details.component.ts
+save(url: string): void {
+    if (this.pet) {
+      this.pet.photoUrls?.push(url)
+      this.petService.updatePet(this.pet)
+        .subscribe(() => this.goBack());
+    }
+  }
+
+// pet.service.ts
+/** PUT: update the pet on the server */
+  updatePet(pet: Pet): Observable<any> {
+    this.http.put(this.baseUrl, pet, this.httpOptions).subscribe()
+    return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
+      tap(_ => this.log(`updated pet id=${pet.id}`)),
+      catchError(this.handleError<any>('updatePet'))
+    );
+  }
+```
+
+
+
+We used two images as examples, stored in our other GitHub repository, and tested that the two images were successfully retrieved and displayed correctly on our page.
+
+### A/B double-face backend
+
+
+
+### User Login always respond 200
 
 
 
