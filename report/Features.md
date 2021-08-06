@@ -103,7 +103,36 @@ We will describe our test development process of features in great detail below,
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
 
-**Pets:**
+I would like to show results first, I guess you do so, if you are interested in the details, find them as following.
+
+**Pets' API:**
+
+| No.  | method | path                  | feature        | work? | use?        |
+| ---- | ------ | --------------------- | -------------- | ----- | ----------- |
+| 1    | post   | /pet/{id}/uploadImage | upload image   | no    | no          |
+| 2    | post   | /pet                  | new a pet      | yes   | yes         |
+| 3    | put    | /pet                  | update a pet   | yes   | yes         |
+| 4    | get    | /pet/findByStatus     | find by status | yes   | special use |
+| 5    | get    | /pet/{id}             | get pet        | yes   | no          |
+| 6    | post   | /pet/{id}             | update a pet   | -     | no          |
+| 7    | delete | /pet/{id}             |                | yes   | yes         |
+
+**Users' API:**
+
+| NO.  | method | path                  | feature       | work? | use? |
+| ---- | ------ | --------------------- | ------------- | ----- | ---- |
+| 1    | post   | /user/createWithList  | create users  | -     | no   |
+| 2    | get    | /user/{username}      | get a user    | yes   | yes  |
+| 3    | put    | /user/{username}      | update a user | yes   | yes  |
+| 4    | delete | /user/{username}      | delete a user | yes   | yes  |
+| 5    | get    | /user/login           | login         | no    | yes  |
+| 6    | get    | /user/logout          | logout        | -     | no   |
+| 7    | post   | /user/createWithArray | create users  | yes   | yes  |
+| 8    | post   | /user                 | create user   | -     | n0   |
+
+
+
+**Pets' API:**
 
 1. **Upload Image:**
 
@@ -163,11 +192,112 @@ curl -X 'GET' \
  server: Jetty(9.2.9.v20150224) 
 ```
 
-Conclusion: We can see that at the first step, we got a 200 response code which means uploading an image successfully. But in the next stage, verifying phase, we can see the property array "photoUrls" is empty. This is the evidence to certify POST IMAGE API doesn't work in fact.  
+**Conclusion:**
+
+ We can see that at the first step, we got a 200 response code which means uploading an image successfully. But in the next stage, verifying phase, we can see the property array "photoUrls" is empty. This is the evidence to certify POST IMAGE API doesn't work in fact.  
 
 But we still need to implement uploading a photo, we will achieve that and describe in the next part. Fortunately, we tested GET PET BY ID API works well.
 
 2. **Add new pet**
+
+<img src="../images/API_post_pet.png" alt="API_post_pet" style="zoom:50%;" />
+
+```json
+// Request URL
+https://petstore.swagger.io/v2/pet
+
+// req body with id=0 or without id
+curl -X 'POST' \
+  'https://petstore.swagger.io/v2/pet' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": ""
+  },
+  "name": "doggie86",
+  "photoUrls": [
+    ""
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": ""
+    }
+  ],
+  "status": ""
+}'
+
+// Response body
+{
+  "id": 9223372000001083000,
+  "category": {
+    "id": 0,
+    "name": ""
+  },
+  "name": "doggie86",
+  "photoUrls": [
+    ""
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": ""
+    }
+  ],
+  "status": ""
+}
+
+// req with certain id we assigned
+curl -X 'POST' \
+  'https://petstore.swagger.io/v2/pet' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 20002020,
+  "category": {
+    "id": 0,
+    "name": ""
+  },
+  "name": "doggie87",
+  "photoUrls": [
+    ""
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": ""
+    }
+  ],
+  "status": ""
+}'
+
+// Response body
+{
+  "id": 20002020,
+  "category": {
+    "id": 0,
+    "name": ""
+  },
+  "name": "doggie87",
+  "photoUrls": [
+    ""
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": ""
+    }
+  ],
+  "status": ""
+}
+```
+
+**Conclusion:**
+
+As we can see above, if we assign id = 0 or directly delete the line of assigning an id, we will get a response of creation of new pet with such a long id from backend. (Spoiler: this long id will cause problems, will discuss it later) But if we assign an id with certain number we made, then the new pet will be created with this id. This is a important find that will help us to fix errors later. 
 
 
 
