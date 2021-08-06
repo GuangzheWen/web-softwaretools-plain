@@ -648,7 +648,17 @@ We used two images as examples, stored in our other GitHub repository, and teste
 
 ### A/B double-face backend
 
+This problem differs from the two above in that we have not figured out why it occurs, nor have we found any cases of the same. Allow me first to describe the phenomenon of the problem.
 
+When we send the same request consecutively every second apart, we receive two different responses alternately. This problem was discovered when we were using the findByStatus API, but it was also later discovered that the same was happening in all of pet's APIs, not in the user-related APIs.
+
+For example, if I send the request Req, again and again, six times, then we will got Response A, Response B, Response A, Response B, Response A, Response B.
+
+It looks like there are two backends receiving data, let's call it, a backend with an A-side and a B-side.
+
+This can have a significant impact on the stability of the site, for example if I request a new pet, which is on side A, then side A has a new pet in the backend and side B does not. When we next open the site at some point and need to fetch the pet, if it happens to be on side B, it returns that there is no such pet, but in reality it should be there. (Although it switches sides in AB during the same request over and over, it is unknown if it is on side A or side B when the site is first opened.)
+
+We were initially plagued by this problem and did not know how to solve it. Then during a team discussion, ideas were exchanged and suddenly a result burst forth. We could send the request twice each time we needed to send it, so that we could ensure that the AB side of the backend was in sync, no matter which side we encountered, we would be facing the same data, and the subsequent operation on the data would be twice, so that we could keep the AB side of the backend in sync. This avoids this tricky problem. Since then, no similar errors have been reported by the front-end.
 
 ### User Login always respond 200
 
