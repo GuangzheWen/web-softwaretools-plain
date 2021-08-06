@@ -5,31 +5,31 @@
 <<<<<<< HEAD
 Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 =======
-At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on. 
+At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
 >>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
 
-1. Scrum is well suited to teams with five members. 
+1. Scrum is well suited to teams with five members.
 
-   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations. 
+   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
 
-   - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research. 
+   - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research.
 
    - One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
 
    Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
-2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it. 
-   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg) 
+2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
+   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
 
-   - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint. 
+   - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint.
 
-   - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes. 
+   - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes.
 
    - Review Meeting: At the end of the sprint, we held review meeting, which evaluate the work we had done and enables us to reflect and improve.
 
 **Communication Channel**
 
-Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it. 
+Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
 
 Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
@@ -250,14 +250,14 @@ Develop the feature of authenticating users as sellers or buyers, and test it.
 
 #### Highlights
 
-1. Feature 1: 
+1. Feature 1:
    1. **User Registering**.
    2. Used **API: [post] /user** with body uploaded to create a new user.
-2. Feature 2: 
+2. Feature 2:
    1. **User Login**.
    2. Used **API: [get] /suer/login** with query in path, to login.
    3. But seems like a fake api, because when we test we found that if you input a right username and a wrong password, API will still respond a successful message. We treated it as a bug and leave it there.
-3. Feature 3: 
+3. Feature 3:
    1. **User Information Displaying**.
    2. Used **API: [get] /user/{username}** with var in path to get user information.
 4. Feature 4:
@@ -286,7 +286,7 @@ Then, we have used the tested API of user category to implement demonstrations f
 
 #### User Stories
 
-Story 1: As Bruce, I want the owner to upload pictures of pets, so I could see pets' appearance and health that are of importance when deciding which one to buy.
+Story 1: As Bruce, I want the owner to upload pictures of pets, so I could see pets' appearance and health as it is important when I decide which one to buy.
 
 Story 2: As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
