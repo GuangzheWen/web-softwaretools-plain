@@ -44,9 +44,10 @@ Nonetheless, we will definitely not create two websites for two different groups
 
   **For sellers:**
 
-2. Authentication of Seller mode, avoiding customer access wantonly.
-   
+1. Authentication of Seller mode, avoiding customer access wantonly.
+
 2. Add link button on list pets to show pets details.
+
 3. Modifying pet’s information.
 
 4. Uploading pet’s photo URL.
@@ -56,16 +57,15 @@ Nonetheless, we will definitely not create two websites for two different groups
    **For buyers:**
 
 1. User account registering.
-
 2. User login.
 
-3. User information showing.
+1. User information showing.
 
-4. Modifying user information.
+2. Modifying user information.
 
-5. Deleting user account.
+3. Deleting user account.
 
-6. Showing all pets in a list with image.
+4. Showing all pets in a list with image.
 
    **For both:**
 
