@@ -8,6 +8,28 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 # Possible Features
 
+1. For buyers:
+
+2. 1. Reviews from history user.
+   2. Pets’ photos showing.
+   3. Filtering pets’ categories.
+   4. Creating account of the website.
+
+3. For sellers:
+
+4. 1. GUI for editing pets’ information.
+   2. Adding pets (already existed)
+   3. Modifying pets.
+   4. Deleting pets (already existed)
+   5. List all pets (already existed)
+   6. Searching pets.
+
+5. For both:
+
+6. 1. Message pad showing operations.
+   2. Reporting suggestion.
+   3. Help center.
+
 # Feature 1
 
 ## Justification
