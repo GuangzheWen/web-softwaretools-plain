@@ -334,6 +334,21 @@ Develop the feature of modifying pet information, including uploading the pictur
 
 ##### Meeting 5
 
+Time: 11:00am-11:40am
+
+Date: 5th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. Guangzhe has demonstrated the Modifying Pet Information feature by sharing the desktop.
+2. It was decided to begin designing the front end for the Authenticating Users and Modifying Pet Information features. The first task is to interview users and ask them what their ideal front page would look like.
+3. It was decided to show the Authenticating Users and Modifying Pet Information Features to Users in an attempt to get some user feedback
+4. The next Sprint task is determined to be the search feature development.
+
 #### Technical Log
 
 **5th Aug:** Fortunately, we chose the right development route and tested the API exhaustively first thing when we were first given the task to prevent unanticipated bugs when using it afterwards, and during the debugging process at the time, some API bugs were found and solved.
@@ -344,14 +359,24 @@ Secondly, there is a dedicated API for uploading images, but probably because of
 
 
 
+### Sprint 4: Searching
+
+#### User Stories
+
+As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+
+#### High level overview
+
+Develop the feature of searching, and test it.
+
+#### Highlights
+
+#### Meeting Log
+
+##### Meeting 5
+
+#### Technical Log
 
 
-
-
-
-
-### Sprint 4: XXXXXXXX
-
-Story 1: As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
 # Continuous Integration
