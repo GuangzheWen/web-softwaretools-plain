@@ -721,17 +721,7 @@ We just felt that this was too perfunctory from a user's point of view and didn'
 
 Because our API can retrieve all the information about this user via username, then we use the password in this information to compare the password entered by the user. If the user enters the wrong password, we still won't allow him to access his account information and a pop-up will indicate to him that the password he entered is incorrect. The user will not be able to access or even modify the account details until he has entered the correct password.
 
-```typescript
-
-```
-
-
-
-
-
 ## Features implementing one by one as component.
-
-## Putting all components together then arrange routing.
 
 
 
