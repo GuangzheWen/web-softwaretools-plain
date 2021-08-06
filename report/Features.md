@@ -8,60 +8,68 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 # Possible Features
 
-1. For buyers:
+- For buyers:
 
-2. 1. Reviews from history user.
-   2. Pets’ photos showing.
-   3. Filtering pets’ categories.
-   4. Creating account of the website.
+1. Reviews from history user.
+2. Pets’ photos showing.
+3. Filtering pets’ categories.
+4. Creating account of the website.
 
-3. For sellers:
+- For sellers:
 
-4. 1. GUI for editing pets’ information.
-   2. Adding pets (already existed)
-   3. Modifying pets.
-   4. Deleting pets (already existed)
-   5. List all pets (already existed)
-   6. Searching pets.
+1. GUI for editing pets’ information.
+2. Adding pets (already existed)
+3. Modifying pets.
+4. Deleting pets (already existed)
+5. List all pets (already existed)
+6. Searching pets.
 
-5. For both:
+- For both:
 
-6. 1. Message pad showing operations.
-   2. Reporting suggestion.
-   3. Help center.
+1. Message pad showing operations.
+2. Reporting suggestion.
+3. Help center.
 
 
 
 **What new feature(s) have we chosen to add ?**
 
-1. Features already exists: (undistinguished)
+- Features already exists: (undistinguished)
 
-2. 1. List of pets.
-   2. Adding new pet.
-   3. Deleting a pet.
+1. List of pets.
+2. Adding new pet.
+3. Deleting a pet.
 
-3. New features we have chosen to add:
+- New features we have chosen to add:
 
-4. 1. For sellers:
+  **For sellers:**
 
-   2. 1. Authentication of Seller mode, avoiding customer access wantonly.
-      2. Add link button on list pets to show pets details.
-      3. Modifying pet’s information.
-      4. Uploading pet’s photo URL.
-      5. Searching a certain pet.
+2. Authentication of Seller mode, avoiding customer access wantonly.
+   
+2. Add link button on list pets to show pets details.
+3. Modifying pet’s information.
 
-   3. For buyers:
+4. Uploading pet’s photo URL.
 
-   4. 1. User account registering.
-      2. User login.
-      3. User information showing.
-      4. Modifying user information.
-      5. Deleting user account.
-      6. Showing all pets in a list with image.
+5. Searching a certain pet.
 
-   5. For both:
+   **For buyers:**
 
-   6. 1. Message box to show operations feedback.
+1. User account registering.
+
+2. User login.
+
+3. User information showing.
+
+4. Modifying user information.
+
+5. Deleting user account.
+
+6. Showing all pets in a list with image.
+
+   **For both:**
+
+1. Message box to show operations feedback.
 
 In reality, product specialists basically choose add features by user demand research and analysis from professional team. Because making user-centered strategic decisions has commonly became a magic weapon to win in the fierce market competition. Although sometimes some user requests are obscure and not easy to achieve, developer group members still try their best to make it work, by all kinds of testing and exploring, where sparing no effort to realize the user’s vision.
 
@@ -98,10 +106,19 @@ We will describe our test development process of features in great detail below,
 3. Features implementing one by one as component.
 4. Putting all components together then arrange routing.
 
-#  
+#### API features testing.
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
 
 
 
+#### Some API bugs fixing.
+
 I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix bugs really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API.
+
+
+
+#### Features implementing one by one as component.
+
+#### Putting all components together then arrange routing.
+
