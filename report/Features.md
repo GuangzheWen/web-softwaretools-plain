@@ -105,7 +105,7 @@ APIs are like spanners in the hands of a car mechanic - if you're not familiar w
 
 I would like to show results at first, I guess you do so, if you are interested in the details, find them as following.
 
-### **Pets' API test form:**
+### **Pet API test form:**
 
 | No.  | method | path                  | feature        | work? | use?        |
 | ---- | ------ | --------------------- | -------------- | ----- | ----------- |
@@ -117,7 +117,7 @@ I would like to show results at first, I guess you do so, if you are interested 
 | 6    | post   | /pet/{id}             | update a pet   | -     | no          |
 | 7    | delete | /pet/{id}             |                | yes   | yes         |
 
-### **Users' API test form:**
+### **User API test form:**
 
 | NO.  | method | path                  | feature       | work? | use? |
 | ---- | ------ | --------------------- | ------------- | ----- | ---- |
@@ -132,7 +132,7 @@ I would like to show results at first, I guess you do so, if you are interested 
 
 
 
-### **Pets' API test details:**
+### **Pet API test details:**
 
 #### **1. Upload Image:**
 
@@ -339,7 +339,7 @@ This API works well without any bugs, but helped us find an other bug: the backe
 
 You can see the screenshot below of the website demo from teachers. When I see this page fisrt time, I was curious about why the ids were the same, which was not reasonable.
 
-<img src="../images/proof_demo_bug.png" alt="image-20210806143437607" style="zoom:50%;" />
+<img src="../images/proof_demo_bug.png" alt="image-20210806143437607"  />
 
 So we choosed to test it with demo website display, Chrome debug mode preview Response, Chrome raw Response, and POSTMAN Response below. 
 
@@ -385,9 +385,174 @@ Then we found a library of tools that can handle big int on the front end. refer
 
 Eventually we decided to generate our own short IDs on the front end. The exact implementation process will be explained in the next section.
 
+#### **5. Delete a pet**
+
+![image-20210806163914676](file:///Users/wayne/Desktop/SEGP/web-softwaretools-plain/images/API_delete_pet.png?lastModify=1628264499)
+
+Tested working well.
+
+```json
+// Request
+curl -X 'DELETE' \
+  'https://petstore.swagger.io/v2/pet/10000001' \
+  -H 'accept: application/json'
+
+// Response (200)
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "10000001"
+}
+
+```
+
+### **User API test details:**
+
+#### **1. Get a user:** 
+
+<img src="../images/API_get_user.png" alt="image-20210806165813199" style="zoom:50%;" />
+
+Tested working well.
+
+```json
+// Reqeust:
+curl -X 'GET' \
+  'https://petstore.swagger.io/v2/user/testUserName' \
+  -H 'accept: application/json'
+
+// Response:
+{
+  "id": 9223372000000212000,
+  "username": "testUserName",
+  "firstName": "testFirstName",
+  "lastName": "testLastName",
+  "email": "testEmail",
+  "password": "testPassword",
+  "phone": "testPhone",
+  "userStatus": 0
+}
+```
+
+
+
+
+
+#### **2. Update a user: **
+
+<img src="../images/API_put_user_update.png" alt="image-20210806165907933" style="zoom:50%;" />
+
+Tested working well.
+
+```json
+// Request:
+curl -X 'PUT' \
+  'https://petstore.swagger.io/v2/user/testUserName' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "username": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "password": "string",
+  "phone": "string",
+  "userStatus": 0
+}'
+
+//Response:
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "9223372000000212378"
+}
+```
+
+
+
+#### **3. Delete a user: **
+
+<img src="../images/API_delete_user.png" alt="image-20210806165935132" style="zoom:50%;" />
+
+Tested working well.
+
+```json
+// Request:
+curl -X 'DELETE' \
+  'https://petstore.swagger.io/v2/user/testUserName' \
+  -H 'accept: application/json'
+
+//Response:
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "testUserName"
+}
+```
+
+
+
+#### **4. User Login: **
+
+<img src="../images/API_get_user_login.png" alt="image-20210806165958390" style="zoom:50%;" />
+
+```json
+// Request:
+curl -X 'GET' \
+  'https://petstore.swagger.io/v2/user/login?username=testUserName&password=1' \
+  -H 'accept: application/json'
+
+// Response:
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "logged in user session:1628266085259"
+}
+```
+
+If you pay attention, you'll see that I deliberately entered the wrong password in the request, but the API still returns a successful response to the request, which is outrageous. We can only assume that this API is an empty shell for authentication.
+
+#### **5. Create a user: **
+
+<img src="../images/API_post_user_create.png" alt="image-20210806170023065" style="zoom:50%;" />
+
+Tested working well.
+
+```json
+// Request:
+curl -X 'POST' \
+  'https://petstore.swagger.io/v2/user' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "username": "testUserName",
+  "firstName": "testFirstName",
+  "lastName": "testLastName",
+  "email": "testEmail",
+  "password": "testPassword",
+  "phone": "testPhone",
+  "userStatus": 0
+}'
+
+// Response:
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "9223372000000212341"
+}
+
+```
+
+At this point it is easy to see that not all Responses return an Object (pet or user) but it can be seen that, with the exception of the Object type, the type returned is the ApiResponse type in the data model of the public API. By sorting out the various API return types, we will be able to handle responses correctly in the rest of the development process, rather than blindly without knowing what the response is.
+
+
+
 ## Some API bugs fixing.
 
 I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix bugs really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API.
+
+
 
 
 
