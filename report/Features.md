@@ -77,7 +77,7 @@ In reality, product specialists basically choose add features by user demand res
 
 Actually we are going to follow such principles, but there is going to be some minor changes, because of the using of public API, which means we cannot access any part of backend. This constraint is such of strength pulling us back, so we have to be considering existing API’s functions, which is based on feasibility analysis concept.
 
-# Feature 1
+# Feature 1：
 
 ## Justification
 
@@ -109,6 +109,72 @@ We will describe our test development process of features in great detail below,
 #### API features testing.
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
+
+**Pets:**
+
+1. **Upload Image:**
+
+<img src="../images/API_post_pet_id_uploadImage.png" alt="API_post_pet_image" style="zoom:50%;" />
+
+Fisrtly we choose one existing pet with id: 10000001, to request to upload an image. Then we get:
+
+```json
+// test request: 
+curl -X 'POST' \
+  'https://petstore.swagger.io/v2/pet/10000001/uploadImage' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@sampleCat.png;type=image/png'
+  
+// response body:
+{
+  "code": 200,
+  "type": "unknown",
+  "message": "additionalMetadata: null\nFile uploaded to ./sampleCat.png, 6082 bytes"
+}
+
+// response header:
+ access-control-allow-headers: Content-Type,api_key,Authorization 
+ access-control-allow-methods: GET,POST,DELETE,PUT 
+ access-control-allow-origin: * 
+ content-type: application/json 
+ date: Fri,06 Aug 2021 11:22:49 GMT 
+ server: Jetty(9.2.9.v20150224) 
+```
+
+After operations above, we retrieved this pet details, by get pet by id API:
+
+<img src="../images/API_get_pet_byId.png/" alt="API_get_pet_byId" style="zoom:50%;" />
+
+```json
+// verify request:
+curl -X 'GET' \
+  'https://petstore.swagger.io/v2/pet/10000001' \
+  -H 'accept: application/json'
+
+// request body:
+{
+  "id": 10000001,
+  "name": "one",
+  "photoUrls": [],
+  "tags": [],
+  "status": "team2"
+}
+
+// request headers:
+ access-control-allow-headers: Content-Type,api_key,Authorization 
+ access-control-allow-methods: GET,POST,DELETE,PUT 
+ access-control-allow-origin: * 
+ content-type: application/json 
+ date: Fri,06 Aug 2021 11:28:35 GMT 
+ server: Jetty(9.2.9.v20150224) 
+```
+
+Conclusion: We can see that at the first step, we got a 200 response code which means uploading an image successfully. But in the next stage, verifying phase, we can see the property array "photoUrls" is empty. This is the evidence to certify POST IMAGE API doesn't work in fact.  
+
+But we still need to implement uploading a photo, we will achieve that and describe in the next part. Fortunately, we tested GET PET BY ID API works well.
+
+2. **Add new pet**
 
 
 
