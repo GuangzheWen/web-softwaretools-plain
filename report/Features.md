@@ -34,40 +34,33 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 **What new feature(s) have we chosen to add ?**
 
-- Features already exists: (undistinguished)
+**Features already exists: (undistinguished)**
 
 1. List of pets.
 2. Adding new pet.
 3. Deleting a pet.
 
-- New features we have chosen to add:
+**New features we have chosen to add:**
 
-  **For sellers:**
+- **For sellers:**
 
 1. Authentication of Seller mode, avoiding customer access wantonly.
-
 2. Add link button on list pets to show pets details.
-
 3. Modifying pet’s information.
-
 4. Uploading pet’s photo URL.
-
 5. Searching a certain pet.
 
-   **For buyers:**
+- **For buyers:**
 
 1. User account registering.
 2. User login.
 
 1. User information showing.
-
 2. Modifying user information.
-
 3. Deleting user account.
-
 4. Showing all pets in a list with image.
 
-   **For both:**
+- **For both:**
 
 1. Message box to show operations feedback.
 
