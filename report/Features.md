@@ -660,7 +660,70 @@ This can have a significant impact on the stability of the site, for example if 
 
 We were initially plagued by this problem and did not know how to solve it. Then during a team discussion, ideas were exchanged and suddenly a result burst forth. We could send the request twice each time we needed to send it, so that we could ensure that the AB side of the backend was in sync, no matter which side we encountered, we would be facing the same data, and the subsequent operation on the data would be twice, so that we could keep the AB side of the backend in sync. This avoids this tricky problem. Since then, no similar errors have been reported by the front-end.
 
+```typescript
+  // get all pets
+  getPets(): Observable<Pet[]> {
+    this.http.get(this.petsUrl).subscribe()
+    this.http.get<Pet[]>(this.petsUrl)
+    return this.http.get<Pet[]>(this.petsUrl)
+    .pipe(
+      tap(_ => this.log('fetched pets')),
+      catchError(this.handleError<Pet[]>('getPets', []))
+    );
+  }
+
+  // get pet by id
+  getPet(id: number): Observable<Pet> {
+    const url = `${this.baseUrl}/${id}`
+    this.http.get(url).subscribe()
+    return this.http.get<Pet>(url)
+    .pipe(
+      tap(_ => this.log(`fetched pet id=${id}`)),
+      catchError(this.handleError<Pet>(`getPet id=${id}`))
+    )
+  }
+
+  updatePet(pet: Pet): Observable<any> {
+    this.http.put(this.baseUrl, pet, this.httpOptions).subscribe()
+    return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
+      tap(_ => this.log(`updated pet id=${pet.id}`)),
+      catchError(this.handleError<any>('updatePet'))
+    );
+  }
+
+  /** POST: add a new pet to the server */
+  addPet(pet: Pet): Observable<Pet> {
+    this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).subscribe()
+    return this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).pipe(
+      tap((newPet: Pet) => this.log(`added pet w/ id=${newPet.id}`)),
+      catchError(this.handleError<Pet>('addPet'))
+    );
+  }
+
+  /** DELETE: delete the hero from the server */
+  deletePet(id: number): Observable<Pet> {
+    const url = `${this.baseUrl}/${id}`;
+    this.http.delete<Pet>(url, this.httpOptions).subscribe()
+    return this.http.delete<Pet>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted pet id=${id}`)),
+      catchError(this.handleError<Pet>('deletePet'))
+    );
+  }
+```
+
+
+
 ### User Login always respond 200
+
+This problem seems rather routine, and it is possible for everyone to debug front and back in this way at the beginning of their development. The interface returns a true value directly in response to the completed part of the functionality before a part of the functionality is evening out.
+
+We just felt that this was too perfunctory from a user's point of view and didn't show whether we had got it right or wrong, so we added a password verification link.
+
+Because our API can retrieve all the information about this user via username, then we use the password in this information to compare the password entered by the user. If the user enters the wrong password, we still won't allow him to access his account information and a pop-up will indicate to him that the password he entered is incorrect. The user will not be able to access or even modify the account details until he has entered the correct password.
+
+```typescript
+
+```
 
 
 
