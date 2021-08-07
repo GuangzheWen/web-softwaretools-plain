@@ -1,4 +1,49 @@
-[TOC]
+<!-- vscode-markdown-toc -->
+* 1. [Justification](#Justification)
+* 2. [Justification](#Justification-1)
+* 3. [Justification](#Justification-1)
+* 4. [Justification](#Justification-1)
+* 5. [API features testing.](#APIfeaturestesting.)
+	* 5.1. [**Pet API test form:**](#PetAPItestform:)
+	* 5.2. [**User API test form:**](#UserAPItestform:)
+	* 5.3. [**Pet API test details:**](#PetAPItestdetails:)
+		* 5.3.1. [**1. Upload Image:**](#1.UploadImage:)
+		* 5.3.2. [**2. Add new pet**](#2.Addnewpet)
+		* 5.3.3. [**3. Update an existing pet**](#3.Updateanexistingpet)
+		* 5.3.4. [**4. Find pets by status**](#4.Findpetsbystatus)
+		* 5.3.5. [**5. Delete a pet**](#5.Deleteapet)
+	* 5.4. [**User API test details:**](#UserAPItestdetails:)
+		* 5.4.1. [**1. Get a user:**](#1.Getauser:)
+		* 5.4.2. [2. Update a user:](#Updateauser:)
+		* 5.4.3. [3. Delete a user:](#Deleteauser:)
+		* 5.4.4. [4. User Login:](#UserLogin:)
+		* 5.4.5. [5. Create a user:](#Createauser:)
+* 6. [Some API problems fixing.](#SomeAPIproblemsfixing.)
+	* 6.1. [Backend respond big int type id.](#Backendrespondbiginttypeid.)
+	* 6.2. [Upload fake image from API](#UploadfakeimagefromAPI)
+	* 6.3. [A/B double-face backend](#ABdouble-facebackend)
+	* 6.4. [User Login always respond 200](#UserLoginalwaysrespond200)
+* 7. [Features implementing one by one as component.](#Featuresimplementingonebyoneascomponent.)
+	* 7.1. [1. For Both Seller and Buyer](#ForBothSellerandBuyer)
+		* 7.1.1. [Feature 1: Switching Buyer/Seller mode](#Feature1:SwitchingBuyerSellermode)
+		* 7.1.2. [Feature 2: Message Pad](#Feature2:MessagePad)
+	* 7.2. [2. For Seller](#ForSeller)
+		* 7.2.1. [Feature 1: Authentication for user (Seller)](#Feature1:AuthenticationforuserSeller)
+		* 7.2.2. [Feature 3: Showing pets list and Deleting pet](#Feature3:ShowingpetslistandDeletingpet)
+		* 7.2.3. [Feature 4: Adding pet](#Feature4:Addingpet)
+		* 7.2.4. [Feature 5: Showing pet's details and Modifying pet's information](#Feature5:ShowingpetsdetailsandModifyingpetsinformation)
+	* 7.3. [3. For Buyer](#ForBuyer)
+		* 7.3.1. [Feature 1: Registering user account](#Feature1:Registeringuseraccount)
+		* 7.3.2. [Feature 2: Login](#Feature2:Login)
+		* 7.3.3. [Feature 3: Showing user account details](#Feature3:Showinguseraccountdetails)
+		* 7.3.4. [Feature 4: Editing user information and Deleting user account](#Feature4:EditinguserinformationandDeletinguseraccount)
+		* 7.3.5. [Feature 5: Showing pets list and Searching by conditions](#Feature5:ShowingpetslistandSearchingbyconditions)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
  We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
 
@@ -100,7 +145,7 @@ So the final implementation is that on the seller's page, you have to enter an a
 
 On the seller's page, we offer the ability to register users, log in, change account information, delete accounts, etc. The only way to gain access to edit this account information is to enter the correct username and password.
 
-## Justification
+##  1. <a name='Justification'></a>Justification
 
 **User story:** 
 
@@ -143,7 +188,7 @@ In the user survey, it was found that the user login function is necessary, but 
 
 From the seller's point of view, he wanted a more usable user interface to manage the pets. However, in the previous demo from Allison we had already implemented Find, Delete and New, so we added a function to change the pet's information. Undoubtedly this is a seller function and does not require the buyer to have access to it.
 
-## Justification
+##  2. <a name='Justification-1'></a>Justification
 
 **User story:** As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
@@ -155,7 +200,7 @@ The last question in our interview asked potential users what features they woul
 
 However, this feature will not be implemented as the first step in the development process, it is after all the icing on the cake based on other features, we will ensure the user experience of the other basic features before completing the design of this feature.
 
-## Justification
+##  3. <a name='Justification-1'></a>Justification
 
 **Interview Questions:** Do you recommend any different feature that you think will value the pets shop website?
 
@@ -171,7 +216,7 @@ This Message Pad is a feature we added to the user, originally during developmen
 We just needed to replace the feedback string code with user-friendly text or short sentences that a normal person could understand later in development.
 In this way, in addition to the user being able to observe changes in the appearance of the page to see if certain actions have been performed, they can also use this feedback panel to get feedback on their own action history.
 
-## Justification
+##  4. <a name='Justification-1'></a>Justification
 
 One of the keys to UI/UX design is how to design feedback for user actions. Sometimes good feedback reminders are more important than good looks and more intuitive than lots of text cues.
 Feedback can come in the form of press states, activity indicators, progress indicators, live previews, Toast, dialog boxes, other sounds, etc.
@@ -202,13 +247,13 @@ We will describe our test development process of features in great detail below,
 3. Features implementing one by one as component.
 4. Putting all components together then arrange routing.
 
-## API features testing.
+##  5. <a name='APIfeaturestesting.'></a>API features testing.
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
 
 I would like to show results at first, I guess you do so, if you are interested in the details, find them as following.
 
-### **Pet API test form:**
+###  5.1. <a name='PetAPItestform:'></a>**Pet API test form:**
 
 | No.  | method | path                  | feature        | work? | use?        |
 | ---- | ------ | --------------------- | -------------- | ----- | ----------- |
@@ -220,7 +265,7 @@ I would like to show results at first, I guess you do so, if you are interested 
 | 6    | post   | /pet/{id}             | update a pet   | -     | no          |
 | 7    | delete | /pet/{id}             |                | yes   | yes         |
 
-### **User API test form:**
+###  5.2. <a name='UserAPItestform:'></a>**User API test form:**
 
 | NO.  | method | path                  | feature       | work? | use? |
 | ---- | ------ | --------------------- | ------------- | ----- | ---- |
@@ -235,9 +280,9 @@ I would like to show results at first, I guess you do so, if you are interested 
 
 
 
-### **Pet API test details:**
+###  5.3. <a name='PetAPItestdetails:'></a>**Pet API test details:**
 
-#### **1. Upload Image:**
+####  5.3.1. <a name='1.UploadImage:'></a>**1. Upload Image:**
 
 <img src="../images/API_post_pet_id_uploadImage.png" alt="API_post_pet_image" width = "300" />
 
@@ -301,7 +346,7 @@ curl -X 'GET' \
 
 But we still need to implement uploading a photo, we will achieve that and describe in the next part. Fortunately, we tested GET PET BY ID API works well.
 
-#### **2. Add new pet**
+####  5.3.2. <a name='2.Addnewpet'></a>**2. Add new pet**
 
 <img src="../images/API_post_pet.png" alt="API_post_pet" width = "210" />
 
@@ -402,7 +447,7 @@ curl -X 'POST' \
 
 As we can see above, if we assign id = 0 or directly delete the line of assigning an id, we will get a response of creation of new pet with such a long id from backend. (Spoiler: this long id will cause problems, will discuss it later) But if we assign an id with certain number we made, then the new pet will be created with this id. This is a important find that will help us to fix errors later. 
 
-#### **3. Update an existing pet**
+####  5.3.3. <a name='3.Updateanexistingpet'></a>**3. Update an existing pet**
 
 <img src="../images/API_put_pet.png" alt="API_put_pet" width = "200" />
 
@@ -432,7 +477,7 @@ As we can see above, if we assign id = 0 or directly delete the line of assignin
 
 Nothing special about this API, it works well. The usage of it is input the pet's id that you want to modify into the body, and just fill in other information you want to modify into the body.
 
-#### **4. Find pets by status**
+####  5.3.4. <a name='4.Findpetsbystatus'></a>**4. Find pets by status**
 
 <img src="../images/API_get_pet_bystatus.png" alt="API_get_pet_bystatus" width = "300" />
 
@@ -488,7 +533,7 @@ Then we found a library of tools that can handle big int on the front end. refer
 
 Eventually we decided to generate our own short IDs on the front end. The exact implementation process will be explained in the next section.
 
-#### **5. Delete a pet**
+####  5.3.5. <a name='5.Deleteapet'></a>**5. Delete a pet**
 
 <img src="../images/API_delete_pet.png" alt="image-20210807215353726" width = "300" />
 
@@ -509,9 +554,9 @@ curl -X 'DELETE' \
 
 ```
 
-### **User API test details:**
+###  5.4. <a name='UserAPItestdetails:'></a>**User API test details:**
 
-#### **1. Get a user:** 
+####  5.4.1. <a name='1.Getauser:'></a>**1. Get a user:** 
 
 <img src="../images/API_get_user.png" alt="image-20210806165813199" width = "300" />
 
@@ -540,7 +585,7 @@ curl -X 'GET' \
 
 
 
-#### 2. Update a user: 
+####  5.4.2. <a name='Updateauser:'></a>2. Update a user: 
 
 <img src="../images/API_put_user_update.png" alt="image-20210806165907933" width = "300" />
 
@@ -573,7 +618,7 @@ curl -X 'PUT' \
 
 
 
-#### 3. Delete a user: 
+####  5.4.3. <a name='Deleteauser:'></a>3. Delete a user: 
 
 <img src="../images/API_delete_user.png" alt="image-20210806165935132" width = "300"/>
 
@@ -595,7 +640,7 @@ curl -X 'DELETE' \
 
 
 
-#### 4. User Login: 
+####  5.4.4. <a name='UserLogin:'></a>4. User Login: 
 
 <img src="../images/API_get_user_login.png" alt="image-20210806165958390" width = "300"/>
 
@@ -615,7 +660,7 @@ curl -X 'GET' \
 
 If you pay attention, you'll see that I deliberately entered the wrong password in the request, but the API still returns a successful response to the request, which is outrageous. We can only assume that this API is an empty shell for authentication.
 
-#### 5. Create a user: 
+####  5.4.5. <a name='Createauser:'></a>5. Create a user: 
 
 <img src="../images/API_post_user_create.png" alt="image-20210806170023065" width = "300" />
 
@@ -651,7 +696,7 @@ At this point it is easy to see that not all Responses return an Object (pet or 
 
 
 
-## Some API problems fixing.
+##  6. <a name='SomeAPIproblemsfixing.'></a>Some API problems fixing.
 
 I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix problems really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API. This is exactly what I call "fix".
 
@@ -662,7 +707,7 @@ As usual, we list all the problems that we fixed here firstly.
 3. A/B double-face backend.
 4. User Login always respond 200.
 
-### Backend respond big int type id.
+###  6.1. <a name='Backendrespondbiginttypeid.'></a>Backend respond big int type id.
 
 Resolving problems by cutting them to pieces then fix little ones is a wisdom way. For this circumstance, we can divid the main problem to two separated problems, one is to generate normal int type id from frontend then assign it to the pet in the body. The other one could be how to retrieve all the pets that we assigned our own ids when we get pet list from the backend.
 
@@ -715,7 +760,7 @@ We also considered what to do if someone else's team accidentally took over our 
 
 
 
-### Upload fake image from API
+###  6.2. <a name='UploadfakeimagefromAPI'></a>Upload fake image from API
 
 When we tested out that the API for uploading images was not working well, it immediately occurred to us that because it was a free and public API, if everyone could upload images, the database server in the background would take up a lot of resources, which would be a significant budget. So instead of opening up the permission to upload images, the provider of this API returned a token response of a successful upload, however in reality nothing happened in the background.
 
@@ -749,7 +794,7 @@ save(url: string): void {
 
 We used two images as examples, stored in our other GitHub repository, and tested that the two images were successfully retrieved and displayed correctly on our page.
 
-### A/B double-face backend
+###  6.3. <a name='ABdouble-facebackend'></a>A/B double-face backend
 
 This problem differs from the two above in that we have not figured out why it occurs, nor have we found any cases of the same. Allow me first to describe the phenomenon of the problem.
 
@@ -816,7 +861,7 @@ We were initially plagued by this problem and did not know how to solve it. Then
 
 
 
-### User Login always respond 200
+###  6.4. <a name='UserLoginalwaysrespond200'></a>User Login always respond 200
 
 This problem seems rather routine, and it is possible for everyone to debug front and back in this way at the beginning of their development. The interface returns a true value directly in response to the completed part of the functionality before a part of the functionality is evening out.
 
@@ -824,11 +869,11 @@ We just felt that this was too perfunctory from a user's point of view and didn'
 
 Because our API can retrieve all the information about this user via username, then we use the password in this information to compare the password entered by the user. If the user enters the wrong password, we still won't allow him to access his account information and a pop-up will indicate to him that the password he entered is incorrect. The user will not be able to access or even modify the account details until he has entered the correct password.
 
-## Features implementing one by one as component.
+##  7. <a name='Featuresimplementingonebyoneascomponent.'></a>Features implementing one by one as component.
 
-### 1. For Both Seller and Buyer
+###  7.1. <a name='ForBothSellerandBuyer'></a>1. For Both Seller and Buyer
 
-#### Feature 1: Switching Buyer/Seller mode
+####  7.1.1. <a name='Feature1:SwitchingBuyerSellermode'></a>Feature 1: Switching Buyer/Seller mode
 
 ##### Code:
 
@@ -863,7 +908,7 @@ const routes: Routes = [
 
 <img src="../images/test_switchMode_seller.png" alt="image-20210807174440434" width = "400" />
 
-#### Feature 2: Message Pad
+####  7.1.2. <a name='Feature2:MessagePad'></a>Feature 2: Message Pad
 
 ##### Code:
 
@@ -908,9 +953,9 @@ export class MessageService {
 
 <img src="../images/test_message_pad.png" alt="image-20210807204659144" width = "300" />
 
-### 2. For Seller
+###  7.2. <a name='ForSeller'></a>2. For Seller
 
-#### Feature 1: Authentication for user (Seller)
+####  7.2.1. <a name='Feature1:AuthenticationforuserSeller'></a>Feature 1: Authentication for user (Seller)
 
 ##### Code:
 
@@ -951,7 +996,7 @@ export class MessageService {
 
 <img src="../images/test_host_admin_wrong.png" alt="image-20210807205058792" width = "500" />
 
-#### Feature 3: Showing pets list and Deleting pet
+####  7.2.2. <a name='Feature3:ShowingpetslistandDeletingpet'></a>Feature 3: Showing pets list and Deleting pet
 
 ##### Code:
 
@@ -1029,7 +1074,7 @@ import { MessageService } from '../service/message.service';
 
 <img src="../images/test_seller_pets_delete.png" alt="image-20210807205848953" width = "200" />
 
-#### Feature 4: Adding pet
+####  7.2.3. <a name='Feature4:Addingpet'></a>Feature 4: Adding pet
 
 ##### Code:
 
@@ -1088,7 +1133,7 @@ add(name: string): void {
 
 <img src="../images/test_seller_add_pet_succeed.png" alt="image-20210807211219998" width = "400" />
 
-#### Feature 5: Showing pet's details and Modifying pet's information 
+####  7.2.4. <a name='Feature5:ShowingpetsdetailsandModifyingpetsinformation'></a>Feature 5: Showing pet's details and Modifying pet's information 
 
 ##### Code:
 
@@ -1183,9 +1228,9 @@ export class PetDetailsComponent implements OnInit {
 
 <img src="../images/test_seller_modify_pet.png" alt="image-20210807211410831" width = "400"/>
 
-### 3. For Buyer
+###  7.3. <a name='ForBuyer'></a>3. For Buyer
 
-#### Feature 1: Registering user account
+####  7.3.1. <a name='Feature1:Registeringuseraccount'></a>Feature 1: Registering user account
 
 ##### Code:
 
@@ -1271,9 +1316,9 @@ export class UserRegisterComponent implements OnInit {
 
 <img src="../images/test_buyer_register_succeed.png" alt="image-20210807212108316" width = "400"/>
 
-#### Feature 2: Login
+####  7.3.2. <a name='Feature2:Login'></a>Feature 2: Login
 
-#### Feature 3: Showing user account details
+####  7.3.3. <a name='Feature3:Showinguseraccountdetails'></a>Feature 3: Showing user account details
 
 ##### Code:
 
@@ -1388,7 +1433,7 @@ export class UserLoginComponent implements OnInit {
 
 <img src="../images/test_buyer_login_succeed.png" alt="image-20210807212358303" width = "200" />
 
-#### Feature 4: Editing user information and Deleting user account
+####  7.3.4. <a name='Feature4:EditinguserinformationandDeletinguseraccount'></a>Feature 4: Editing user information and Deleting user account
 
 ##### Code:
 
@@ -1509,7 +1554,7 @@ export class UserDetailsComponent implements OnInit {
 
 <img src="../images/test_buyer_modifying_user.png" alt="image-20210807212621834" width = "200" />
 
-#### Feature 5: Showing pets list and Searching by conditions
+####  7.3.5. <a name='Feature5:ShowingpetslistandSearchingbyconditions'></a>Feature 5: Showing pets list and Searching by conditions
 
 ##### Code:
 
