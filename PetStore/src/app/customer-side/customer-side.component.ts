@@ -38,6 +38,9 @@ export class CustomerSideComponent implements OnInit {
     this.pets = returnPets
   }
 
+  clear(){
+    this.pets = this.originPets
+  }
   constructor(
     private petService: PetService
   ) { }

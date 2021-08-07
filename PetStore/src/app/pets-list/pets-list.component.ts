@@ -17,7 +17,6 @@ import { MessageService } from '../service/message.service';
 
 export class PetsListComponent implements OnInit {
 
-  // mock static data 
   pets: Pet[] = []
   idArray: number[] = []
 

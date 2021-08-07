@@ -19,8 +19,6 @@ export class UserDetailsComponent implements OnInit {
   emptyUser?: User
   modify: boolean = false
 
-
-
   constructor(
     private userService: UserService,
 
