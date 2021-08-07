@@ -70,7 +70,48 @@ In reality, product specialists basically choose add features by user demand res
 
 Actually we are going to follow such principles, but there is going to be some minor changes, because of the using of public API, which means we cannot access any part of backend. This constraint is such of strength pulling us back, so we have to be considering existing API’s functions, which is based on feasibility analysis concept.
 
-# Feature 1：
+# Feature 1：User Authentication
+
+**Sub-features:**
+
+- For-Seller:
+
+1. Verifying administration password page.
+
+- For-Buyer:
+
+1. User account registering.
+2. User login.
+3. User account information showing.
+4. User information modifying.
+5. User account deleting.
+
+**Counting:** used 5 APIs.
+
+## Justification
+
+
+
+# Feature 2：Modifying Pet's information
+
+**Sub-features:**
+
+- For-seller only:
+
+1. Modifying pets details.
+2. Especially add photo URL.
+
+## Justification
+
+# Feature 3：Searching pets by category
+
+## Justification
+
+# Feature 4：Searching pet by name
+
+## Justification
+
+# Feature 5：Message Pad
 
 ## Justification
 
