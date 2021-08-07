@@ -237,7 +237,7 @@ I would like to show results at first, I guess you do so, if you are interested 
 
 #### **1. Upload Image:**
 
-<img src="../images/API_post_pet_id_uploadImage.png" alt="API_post_pet_image" style="zoom:50%;" />
+<img src="../images/API_post_pet_id_uploadImage.png" alt="API_post_pet_image" width = "300" />
 
 Fisrtly we choose one existing pet with id: 10000001, to request to upload an image. Then we get:
 
@@ -267,7 +267,7 @@ curl -X 'POST' \
 
 After operations above, we retrieved this pet details, by get pet by id API:
 
-<img src="../images/API_get_pet_byId.png/" alt="API_get_pet_byId" style="zoom:50%;" />
+<img src="../images/API_get_pet_byId.png/" alt="API_get_pet_byId" width = "300" />
 
 ```json
 // verify request:
@@ -301,7 +301,7 @@ But we still need to implement uploading a photo, we will achieve that and descr
 
 #### **2. Add new pet**
 
-<img src="../images/API_post_pet.png" alt="API_post_pet" style="zoom:50%;" />
+<img src="../images/API_post_pet.png" alt="API_post_pet" width = "210" />
 
 ```json
 // Request URL
@@ -402,7 +402,7 @@ As we can see above, if we assign id = 0 or directly delete the line of assignin
 
 #### **3. Update an existing pet**
 
-<img src="../images/API_put_pet.png" alt="API_put_pet" style="zoom:50%;" />
+<img src="../images/API_put_pet.png" alt="API_put_pet" width = "200" />
 
 ```json
 // Response body (with 200)
@@ -432,7 +432,7 @@ Nothing special about this API, it works well. The usage of it is input the pet'
 
 #### **4. Find pets by status**
 
-<img src="../images/API_get_pet_bystatus.png" alt="API_get_pet_bystatus" style="zoom:50%;" />
+<img src="../images/API_get_pet_bystatus.png" alt="API_get_pet_bystatus" width = "300" />
 
 This API works well without any bugs, but helped us find an other bug: the backend used big int type for the id which are automatically generated. And at frontend JS and json.parse() cannot handle that big int, result in lose precision of the number. Here we are going to discribe how we find it and verify it is certain error instead of others. Next chapter we will discuss how we "fix" it by avoiding it happens.
 
@@ -440,27 +440,27 @@ This API works well without any bugs, but helped us find an other bug: the backe
 
 You can see the screenshot below of the website demo from teachers. When I see this page fisrt time, I was curious about why the ids were the same, which was not reasonable.
 
-<img src="../images/proof_demo_bug.png" alt="image-20210806143437607"  />
+<img src="../images/proof_demo_bug.png" alt="image-20210806143437607" width = "400" />
 
 So we choosed to test it with demo website display, Chrome debug mode preview Response, Chrome raw Response, and POSTMAN Response below. 
 
 **Demo website display:**
 
-<img src="../images/proof_demo.png" alt="image-20210806141941565" style="zoom:50%;" />
+<img src="../images/proof_demo.png" alt="image-20210806141941565" width = "300" />
 
 So I checked in debug mode of Chrome, then found screenshots below:
 
 **Preview of response in Chrome:**
 
-<img src="../images/proof_chrome_preview.png" alt="image-20210806142117446" style="zoom:50%;" />
+<img src="../images/proof_chrome_preview.png" alt="image-20210806142117446" width = "300" />
 
 **Raw response in Chrome:**
 
-![image-20210806142306414](../images/proof_chrome_rawRes.png)
+<img src="../images/proof_chrome_rawRes.png" alt="image-20210806142306414" width = "600" />
 
 **Response in PostMan:**
 
-<img src="../images/proof_postman.png" alt="image-20210806143057712" style="zoom:50%;" />
+<img src="../images/proof_postman.png" alt="image-20210806143057712" width = "400" />
 
 We found that in Postman and Chrome raw results, this pet object has the real id with accurate number, but in the demo site and Chrome preview stage, it shows fake id with losing precision. Then we compared serval pet objects, which had the same problem. So the truth is all the pets has unique id, but sometimes the real id cannot be displayed correctly.
 
@@ -470,11 +470,11 @@ Our deduction is not without foundation, and the final nail in the coffin is the
 
 - We have the data model introduced in https://petstore.swagger.io/ .
 
-<img src="../images/proof_backend.png" alt="image-20210806145025765" style="zoom:50%;" />
+<img src="../images/proof_backend.png" alt="image-20210806145025765" width = "300" />
 
 - We have known that the biggest number json parse in JS can handle is 9007199254740991, 
 
-<img src="../images/proof_js.png" alt="image-20210806145214608" style="zoom:50%;" />
+<img src="../images/proof_js.png" alt="image-20210806145214608" width = "400"/>
 
 and all pets were wrongly displayed whose id is bigger than the MAX number.
 
@@ -488,7 +488,7 @@ Eventually we decided to generate our own short IDs on the front end. The exact 
 
 #### **5. Delete a pet**
 
-![image-20210806163914676](file:///Users/wayne/Desktop/SEGP/web-softwaretools-plain/images/API_delete_pet.png?lastModify=1628264499)
+<img src="../images/API_delete_pet.png" alt="image-20210807215353726" width = "300" />
 
 Tested working well.
 
@@ -511,7 +511,7 @@ curl -X 'DELETE' \
 
 #### **1. Get a user:** 
 
-<img src="../images/API_get_user.png" alt="image-20210806165813199" style="zoom:50%;" />
+<img src="../images/API_get_user.png" alt="image-20210806165813199" width = "300" />
 
 Tested working well.
 
@@ -540,7 +540,7 @@ curl -X 'GET' \
 
 #### **2. Update a user: **
 
-<img src="../images/API_put_user_update.png" alt="image-20210806165907933" style="zoom:50%;" />
+<img src="../images/API_put_user_update.png" alt="image-20210806165907933" width = "300" />
 
 Tested working well.
 
@@ -573,7 +573,7 @@ curl -X 'PUT' \
 
 #### **3. Delete a user: **
 
-<img src="../images/API_delete_user.png" alt="image-20210806165935132" style="zoom:50%;" />
+<img src="../images/API_delete_user.png" alt="image-20210806165935132" width = "300"/>
 
 Tested working well.
 
@@ -595,7 +595,7 @@ curl -X 'DELETE' \
 
 #### **4. User Login: **
 
-<img src="../images/API_get_user_login.png" alt="image-20210806165958390" style="zoom:50%;" />
+<img src="../images/API_get_user_login.png" alt="image-20210806165958390" width = "300"/>
 
 ```json
 // Request:
@@ -615,7 +615,7 @@ If you pay attention, you'll see that I deliberately entered the wrong password 
 
 #### **5. Create a user: **
 
-<img src="../images/API_post_user_create.png" alt="image-20210806170023065" style="zoom:50%;" />
+<img src="../images/API_post_user_create.png" alt="image-20210806170023065" width = "300" />
 
 Tested working well.
 
@@ -857,9 +857,9 @@ const routes: Routes = [
 
 ##### Test Screenshots:
 
-![image-20210807174415423](../images/test_switchMode_buyer.png)
+<img src="../images/test_switchMode_buyer.png" alt="image-20210807174415423" width = "400"/>
 
-![image-20210807174440434](../images/test_switchMode_seller.png)
+<img src="../images/test_switchMode_seller.png" alt="image-20210807174440434" width = "400" />
 
 #### Feature 2: Message Pad
 
@@ -904,7 +904,7 @@ export class MessageService {
 
 ##### Test Screenshots:
 
-![image-20210807204659144](../images/test_message_pad.png)
+<img src="../images/test_message_pad.png" alt="image-20210807204659144" width = "300" />
 
 ### 2. For Seller
 
@@ -945,9 +945,9 @@ export class MessageService {
 
 ##### Test Screenshots:
 
-![image-20210807205027877](../images/test_host_admin_right.png)
+<img src="../images/test_host_admin_right.png" alt="image-20210807205027877" width = "500" />
 
-![image-20210807205058792](../images/test_host_admin_wrong.png)
+<img src="../images/test_host_admin_wrong.png" alt="image-20210807205058792" width = "500" />
 
 #### Feature 3: Showing pets list and Deleting pet
 
@@ -1023,9 +1023,9 @@ import { MessageService } from '../service/message.service';
 
 ##### Test Screenshots:
 
-![image-20210807205823259](../images/test_seller_pets_list.png)
+<img src="../images/test_seller_pets_list.png" alt="image-20210807205823259" width = "200" />
 
-![image-20210807205848953](../images/test_seller_pets_delete.png)
+<img src="../images/test_seller_pets_delete.png" alt="image-20210807205848953" width = "200" />
 
 #### Feature 4: Adding pet
 
@@ -1082,9 +1082,9 @@ add(name: string): void {
 
 ##### Test Screenshots:
 
-![image-20210807211209452](../images/test_seller_add_pet.png)
+<img src="../images/test_seller_add_pet.png" alt="image-20210807211209452" width = "400" />
 
-![image-20210807211219998](../images/test_seller_add_pet_succeed.png)
+<img src="../images/test_seller_add_pet_succeed.png" alt="image-20210807211219998" width = "400" />
 
 #### Feature 5: Showing pet's details and Modifying pet's information 
 
@@ -1179,7 +1179,7 @@ export class PetDetailsComponent implements OnInit {
 
 ##### Test Screenshots:
 
-![image-20210807211410831](../images/test_seller_modify_pet.png)
+<img src="../images/test_seller_modify_pet.png" alt="image-20210807211410831" width = "400"/>
 
 ### 3. For Buyer
 
@@ -1265,9 +1265,9 @@ export class UserRegisterComponent implements OnInit {
 
 ##### Test Screenshots:
 
-![image-20210807212058422](../images/test_buyer_register.png)
+<img src="../images/test_buyer_register.png" alt="image-20210807212058422" width = "400"/>
 
-![image-20210807212108316](../images/test_buyer_register_succeed.png)
+<img src="../images/test_buyer_register_succeed.png" alt="image-20210807212108316" width = "400"/>
 
 #### Feature 2: Login
 
@@ -1378,13 +1378,13 @@ export class UserLoginComponent implements OnInit {
 
 ##### Test Screenshots:
 
-![image-20210807212306728](../images/test_buyer_login_wrong_username.png)
+<img src="../images/test_buyer_login_wrong_username.png" alt="image-20210807212306728" width = "400"/>
 
-![image-20210807212326818](../images/test_buyer_login_wrong_password.png)
+<img src="../images/test_buyer_login_wrong_password.png" alt="image-20210807212326818" width = "400" />
 
-![image-20210807212345080](../images/test_buyer_login.png)
+<img src="../images/test_buyer_login.png" alt="image-20210807212345080" width = "400"/>
 
-![image-20210807212358303](../images/test_buyer_login_succeed.png)
+<img src="../images/test_buyer_login_succeed.png" alt="image-20210807212358303" width = "200" />
 
 #### Feature 4: Editing user information and Deleting user account
 
@@ -1505,7 +1505,7 @@ export class UserDetailsComponent implements OnInit {
 
 ##### Test Screenshots:
 
-![image-20210807212621834](../images/test_buyer_modifying_user.png)
+<img src="../images/test_buyer_modifying_user.png" alt="image-20210807212621834" width = "200" />
 
 #### Feature 5: Showing pets list and Searching by conditions
 
@@ -1609,11 +1609,11 @@ export class CustomerSideComponent implements OnInit {
 
 ##### Test Screenshots:
 
-![image-20210807212831008](../images/test_buyer_pets_list.png)
+<img src="../images/test_buyer_pets_list.png" alt="image-20210807212831008" width = "300" />
 
-![image-20210807212849792](../images/test_buyer_pets_category.png)
+<img src="../images/test_buyer_pets_category.png" alt="image-20210807212849792" width = "300" />
 
-![image-20210807212914214](../images/test_buyer_pets_name.png)
+<img src="../images/test_buyer_pets_name.png" alt="image-20210807212914214" width = "300" />
 
 
 
