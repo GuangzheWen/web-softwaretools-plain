@@ -155,7 +155,7 @@ However, this feature will not be implemented as the first step in the developme
 
 ## Justification
 
-**Interview Questions:**Do you recommend any different feature that you think will value the pets shop website?
+**Interview Questions:** Do you recommend any different feature that you think will value the pets shop website?
 
 **Interviewee:** Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
 
