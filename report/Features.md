@@ -147,7 +147,7 @@ From the seller's point of view, he wanted a more usable user interface to manag
 
 Sellers may use this feature to achieve the following visions, change pet names, categories, status, photos, etc. As it is inevitable that there may be times when the first edit is wrong, or later, for some specific reason, some information needs to be changed, then we provide this interface.
 
-# Feature 3：Searching pets by category
+# Feature 3：Searching pets by category or name
 
 The last question in our interview asked potential users what features they would like to see added to the site, and one of them said that they would like to see a categorisation feature, an idea that inspired us. After all, this is a very common and necessary feature in our extensive experience with the site, so we decided to add it.
 
@@ -161,13 +161,7 @@ However, this feature will not be implemented as the first step in the developme
 
 **User Stories:** As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
-# Feature 4：Searching pet by name
-
-## Justification
-
-
-
-# Feature 5：Message Pad
+# Feature 4：Message Pad
 
 **Description:** 
 
@@ -829,6 +823,8 @@ We just felt that this was too perfunctory from a user's point of view and didn'
 Because our API can retrieve all the information about this user via username, then we use the password in this information to compare the password entered by the user. If the user enters the wrong password, we still won't allow him to access his account information and a pop-up will indicate to him that the password he entered is incorrect. The user will not be able to access or even modify the account details until he has entered the correct password.
 
 ## Features implementing one by one as component.
+
+### 
 
 
 
