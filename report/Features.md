@@ -538,7 +538,7 @@ curl -X 'GET' \
 
 
 
-#### **2. Update a user: **
+#### 2. Update a user: 
 
 <img src="../images/API_put_user_update.png" alt="image-20210806165907933" width = "300" />
 
@@ -571,7 +571,7 @@ curl -X 'PUT' \
 
 
 
-#### **3. Delete a user: **
+#### 3. Delete a user: 
 
 <img src="../images/API_delete_user.png" alt="image-20210806165935132" width = "300"/>
 
@@ -593,7 +593,7 @@ curl -X 'DELETE' \
 
 
 
-#### **4. User Login: **
+#### 4. User Login: 
 
 <img src="../images/API_get_user_login.png" alt="image-20210806165958390" width = "300"/>
 
@@ -613,7 +613,7 @@ curl -X 'GET' \
 
 If you pay attention, you'll see that I deliberately entered the wrong password in the request, but the API still returns a successful response to the request, which is outrageous. We can only assume that this API is an empty shell for authentication.
 
-#### **5. Create a user: **
+#### 5. Create a user: 
 
 <img src="../images/API_post_user_create.png" alt="image-20210806170023065" width = "300" />
 
@@ -847,7 +847,7 @@ Because our API can retrieve all the information about this user via username, t
 ```
 
 ```typescript
-// 
+// app.component.ts
 const routes: Routes = [
   { path: 'customerSide', component: CustomerSideComponent},
   { path: '', redirectTo: '/customerSide', pathMatch: 'full' },
