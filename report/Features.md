@@ -824,7 +824,798 @@ Because our API can retrieve all the information about this user via username, t
 
 ## Features implementing one by one as component.
 
-### 
+### 1. For Both Seller and Buyer
+
+#### Feature 1: Switching Buyer/Seller mode
+
+##### Code:
+
+```html
+// app.component.html (code snippets)
+
+<span id="modeButton">
+      <a id="buyer" class="button" routerLink="/customerSide">
+        Buyer
+      </a>
+
+      <a id="seller" class="button" routerLink="/host">
+        Seller
+    </a>
+  </span>
+
+<router-outlet></router-outlet>
+```
+
+```typescript
+// 
+const routes: Routes = [
+  { path: 'customerSide', component: CustomerSideComponent},
+  { path: '', redirectTo: '/customerSide', pathMatch: 'full' },
+  { path: 'host', component: HostAdminComponent}
+];
+```
+
+##### Test Screenshots:
+
+![image-20210807174415423](../images/test_switchMode_buyer.png)
+
+![image-20210807174440434](../images/test_switchMode_seller.png)
+
+#### Feature 2: Message Pad
+
+##### Code:
+
+```html
+// messages.component.html
+<div id="messageBox" style="padding: 20px;">
+        <span>Messages: </span>  
+        <button (click)="messageService.clear()">Clear</button>
+        <div id="messageContent">
+                <div *ngIf="messageService.messages.length"> 
+                        <div *ngFor='let message of messageService.messages'> {{message}} </div>
+                </div>
+        </div>
+        
+</div>
+```
+
+```typescript
+// messages.component.ts
+import { MessageService } from '../service/message.service';
+  constructor(
+    public messageService: MessageService
+  ) { }
+
+// message.service.ts
+export class MessageService {
+  messages: string[] = [];
+
+  add(message: string) {
+    this.messages.push(message);
+  }
+
+  clear() {
+    this.messages = [];
+  }
+}
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807204659144](../images/test_message_pad.png)
+
+### 2. For Seller
+
+#### Feature 1: Authentication for user (Seller)
+
+##### Code:
+
+```html
+// host-admin.component.html
+<div class="container">
+    host password:
+    <input [(ngModel)]="passwordInput" placeholder="password">
+    <button (click)="check()"> Enter</button>
+</div>
+```
+
+```typescript
+// host-admin.component.ts
+	password: string = 'admin'
+  passwordInput: string = ''
+
+  constructor(
+    private router: Router
+  ) { }
+
+  check() {
+    if (this.passwordInput != this.password){
+      alert('wrong password')
+    }
+    else {
+      this.router.navigateByUrl('/pets') 
+      
+    }
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807205027877](../images/test_host_admin_right.png)
+
+![image-20210807205058792](../images/test_host_admin_wrong.png)
+
+#### Feature 3: Showing pets list and Deleting pet
+
+##### Code:
+
+```html
+// pets-list.component.html
+<div class="container">
+    <!-- Showing pets list -->
+<table>
+    <ul>
+        <li *ngFor="let pet of pets">
+            <a routerLink="/detail/{{pet.id}}">
+                <span>{{ pet.name }}</span>
+            </a>
+            <span style="width: 40px;">&nbsp;</span>
+            <button title="delete pet"
+                (click)="delete(pet)">x</button>
+        </li>
+    </ul>
+</table>
+</div>
+```
+
+```typescript
+// pets-list.component.ts
+import { PetService } from '../service/pet.service';
+import { MessageService } from '../service/message.service';
+
+	pets: Pet[] = []
+  idArray: number[] = []
+
+	constructor(
+    private petService:PetService,
+    private messageService: MessageService
+  ) { }
+
+	ngOnInit(): void {
+    this.getPets();
+  }
+  
+  delete(pet: Pet): void {
+    this.pets = this.pets.filter(p => p !== pet);
+    this.petService.deletePet(pet.id).subscribe();
+  }
+  
+// pet.service.ts
+  private petsUrl = 'https://petstore.swagger.io/v2/pet/findByStatus?status=team2';  // URL to web api
+
+  // get all pets
+  getPets(): Observable<Pet[]> {
+    this.http.get(this.petsUrl).subscribe()
+    this.http.get<Pet[]>(this.petsUrl)
+    return this.http.get<Pet[]>(this.petsUrl)
+    .pipe(
+      tap(_ => this.log('fetched pets')),
+      catchError(this.handleError<Pet[]>('getPets', []))
+    );
+  }
+  
+    // DELETE: delete the hero from the server 
+  deletePet(id: number): Observable<Pet> {
+    const url = `${this.baseUrl}/${id}`;
+    this.http.delete<Pet> (url, this.httpOptions).subscribe()
+    return this.http.delete<Pet>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted pet id=${id}`)),
+      catchError(this.handleError<Pet>('deletePet'))
+    );
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807205823259](../images/test_seller_pets_list.png)
+
+![image-20210807205848953](../images/test_seller_pets_delete.png)
+
+#### Feature 4: Adding pet
+
+##### Code:
+
+```html
+// pets-list.component.html
+<!-- add new pet -->
+<div>
+    <input #petName/>
+    <button (click)="add(petName.value) ; petName.value = '' ">Add</button>
+</div>
+
+```
+
+```typescript
+// pets-list.component.ts
+add(name: string): void {
+    name = name.trim();
+    let id = 10000001
+    let status = 'team2'
+    let category = {
+      id : 0,
+      name: ""
+    }
+    let photoUrls = [""]
+    if (!name) { return; }
+    
+    if (this.pets.length > 0){
+      this.pets.map(pet => {
+        this.idArray.push(pet.id)
+      })
+      id = Math.max(...this.idArray) + 1
+    }
+    
+    this.petService.addPet({ name, id, status,photoUrls, category} as Pet)
+      .subscribe(pet => {
+        this.pets.push(pet);
+      });
+  }
+
+// pet.service.ts
+/** POST: add a new pet to the server */
+  addPet(pet: Pet): Observable<Pet> {
+    this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).subscribe()
+    return this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).pipe(
+      tap((newPet: Pet) => this.log(`added pet w/ id=${newPet.id}`)),
+      catchError(this.handleError<Pet>('addPet'))
+    );
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807211209452](../images/test_seller_add_pet.png)
+
+![image-20210807211219998](../images/test_seller_add_pet_succeed.png)
+
+#### Feature 5: Showing pet's details and Modifying pet's information 
+
+##### Code:
+
+```html
+// pet-details.component.html
+<div class="container">
+    <!-- pet detials -->
+<div *ngIf="pet">
+    <h2>{{ pet.name }} Details</h2>
+    <div>
+        <div>
+            <span>id:</span>{{ pet.id }}
+        </div>
+        <div>
+            <span>status:</span>{{ pet.status }}
+        </div>
+        <div *ngIf="pet.photoUrls">
+            <img src="{{ pet.photoUrls[0] }}" alt="cannot load image" >
+        </div>
+        <div>
+            <input [(ngModel)]="pet.name" placeholder="name">
+            <span>url</span>
+            <input #imgUrl [(ngModel)]="pet.photoUrls[0]" placeholder="photoUrl"> 
+            <span>category</span>
+            <input #category [(ngModel)]="pet.category.name" placeholder="category">
+        </div>
+    </div>
+
+
+    <button (click)="save(imgUrl.value,category.value)">save</button>
+</div>
+<button (click)="goBack()">go back</button>
+
+</div>
+
+
+```
+
+```typescript
+// pet-details.component.ts
+export class PetDetailsComponent implements OnInit {
+
+  @Input() pet?: Pet
+  constructor(
+    private route: ActivatedRoute,
+    private petService: PetService,
+    private location: Location
+  ) { }
+
+  ngOnInit(): void {
+    this.getPet()
+  }
+
+  getPet() {
+    const id = Number(this.route.snapshot.paramMap.get('id'))
+    this.petService.getPet(id)
+    .subscribe(pet => {
+      this.pet = pet
+    })
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  save(url: string, category:string): void {
+    if (this.pet) {
+      this.pet.photoUrls[0] = url
+      this.pet.category.id = 0
+      this.pet.category.name = category
+      this.petService.updatePet(this.pet)
+        .subscribe(() => this.goBack());
+    }
+  }
+
+}
+
+// pet.service.ts
+/** PUT: update the pet on the server */
+  updatePet(pet: Pet): Observable<any> {
+    this.http.put(this.baseUrl, pet, this.httpOptions).subscribe()
+    return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
+      tap(_ => this.log(`updated pet id=${pet.id}`)),
+      catchError(this.handleError<any>('updatePet'))
+    );
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807211410831](../images/test_seller_modify_pet.png)
+
+### 3. For Buyer
+
+#### Feature 1: Registering user account
+
+##### Code:
+
+```html
+// user-register.component.html
+<div class="container">
+    <div *ngIf="!status">
+        <form>
+            <label>username:</label>
+            <input [(ngModel)]="username" placeholder="username" name="username"><br>
+            <label>first name:</label>
+            <input [(ngModel)]="firstName" placeholder="firstName" name="firstName"><br>
+            <label>last name:</label>
+            <input [(ngModel)]="lastName" placeholder="lastName" name="lastName"><br>
+            <label>password:</label>
+            <input [(ngModel)]="password" placeholder="password" name="password"><br>
+            <button (click)="addUser()"> Resgiter</button>
+        </form>
+    </div>
+    <div *ngIf="status">
+        <p>congratulations, register succeed</p>
+    </div>
+</div>
+```
+
+```typescript
+// user-register.component.ts
+export class UserRegisterComponent implements OnInit {
+
+  username: string = ""
+  firstName: string = ""
+  lastName: string = ""
+  password: string = ""
+
+  status: boolean = false
+
+  constructor(
+    private userService: UserService
+  ) { }
+
+  ngOnInit(): void {
+  }
+
+  addUser() {
+    let username = this.username
+    let firstName = this.firstName
+    let lastName = this.lastName
+    let password = this.password
+
+    this.userService.addUser({username, firstName, lastName, password} as User)
+    .subscribe(res => {
+      if (res.code == 200){
+        this.status = true
+      }
+    })
+  }
+
+}
+
+// user.service.ts
+ private baseUrl = 'https://petstore.swagger.io/v2/user'
+
+  // create a new user account
+  addUser(user: User): Observable<ApiResponse> {
+    this.http.post<ApiResponse>(this.baseUrl, user, this.httpOptions).subscribe()
+    return this.http.post<ApiResponse>(this.baseUrl, user, this.httpOptions)
+      .pipe(
+        tap(res => {
+          if (res.code == 200){
+            this.log(`added user with username: ${user.username}`)
+          }
+        }),
+        catchError(this.handleError<ApiResponse>('addUser'))
+      )
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807212058422](../images/test_buyer_register.png)
+
+![image-20210807212108316](../images/test_buyer_register_succeed.png)
+
+#### Feature 2: Login
+
+#### Feature 3: Showing user account details
+
+##### Code:
+
+```html
+// user-login.component.html
+<div class="container">
+    <div *ngIf="!status">
+        <form>
+            <label>username:</label>
+            <input [(ngModel)]="username" placeholder="username" name="username"><br>
+            <label>password:</label>
+            <input [(ngModel)]="password" placeholder="password" name="password"><br>
+            <button (click)="login()"> Log in</button>
+        </form>
+    </div>
+    <div *ngIf="status">
+        <!-- <p>congratulations, login succeed</p> -->
+        <app-user-details (backEvent)="logout()" [loginUsername]="username"></app-user-details>
+    </div>
+</div>
+```
+
+```typescript
+// user-login.component.ts
+export class UserLoginComponent implements OnInit {
+
+  username: string = ""
+  password: string = ""
+
+  status: boolean = false
+  
+  constructor(
+    private userService: UserService
+  ) { }
+
+  ngOnInit(): void {
+  }
+
+  login() {
+    let username = this.username
+    let password = this.password
+
+    
+
+    this.userService.getUser(username)
+    .subscribe(res => {
+      if (res){
+        if (res.password == password){
+          this.status = true
+        }else {
+          alert('wrong password')
+        }
+        
+      }else{
+        alert('not exist user')
+      }
+      
+    })
+    this.userService.login({username, password} as User)
+    .subscribe(res => {
+    })
+  }
+
+  logout() {
+    this.status = false
+  }
+
+}
+
+// user.service.ts
+// login check 
+  login(user: User) : Observable<ApiResponse>  {
+    let url = `${this.baseUrl}/login?username=${user.username}&password=${user.password}`
+    this.http.get<ApiResponse>(url, this.httpOptions).subscribe()
+    return this.http.get<ApiResponse>(url, this.httpOptions)
+    .pipe(
+      tap(res => {
+        if (res.code == 200){
+          this.log(`user with username: ${user.username} logged in succeed`)
+        }else{
+          // console.log('res')
+        }
+      }),
+      catchError(this.handleError<ApiResponse>('user login'))
+    )
+  }
+
+  // get user info by username
+  getUser(useranme: string): Observable<User> {
+    let url = `${this.baseUrl}/${useranme}`
+    this.http.get<User>(url, this.httpOptions).subscribe()
+    return this.http.get<User>(url, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} info shows here`)
+      }),
+      catchError(this.handleError<User>('user info'))
+    )
+  }
+
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807212306728](../images/test_buyer_login_wrong_username.png)
+
+![image-20210807212326818](../images/test_buyer_login_wrong_password.png)
+
+![image-20210807212345080](../images/test_buyer_login.png)
+
+![image-20210807212358303](../images/test_buyer_login_succeed.png)
+
+#### Feature 4: Editing user information and Deleting user account
+
+##### Code:
+
+```html
+// user-details.component.html
+<div class="container">
+    <div *ngIf="!modify">
+        <div *ngIf="user">
+            <p>username: {{user.username}}</p>
+            <p>first name: {{user.firstName}}</p>
+            <p>last name: {{user.lastName}}</p>
+            <p>email: {{user.email}}</p>
+            <p>phone: {{user.phone}}</p>
+            <p>password: {{user.password}}</p>
+        </div>
+        <button (click)="modify=true">Modify info</button>
+    </div>
+    
+    <div *ngIf="modify">
+        <div *ngIf="user">
+            <p>username: {{user.username}}</p>
+            <input [(ngModel)]="user.username" value="user.username">
+            <p>first name: {{user.firstName}}</p>
+            <input [(ngModel)]="user.firstName" value="user.firstName">
+            <p>last name: {{user.lastName}}</p>
+            <input [(ngModel)]="user.lastName" value="user.lastName">
+            <p>email: {{user.email}}</p>
+            <input [(ngModel)]="user.email" value="user.email">
+            <p>phone: {{user.phone}}</p>
+            <input [(ngModel)]="user.phone" value="user.phone">
+            <p>password: {{user.password}}</p>
+            <input [(ngModel)]="user.password" value="user.password">
+        </div>
+        <button (click)="modify=false; modifyUser()">save</button>
+        
+        <button (click)="deleteUser(); modify = false">delete account</button>
+        
+        
+    </div>
+
+</div>
+```
+
+```typescript
+// user-details.component.ts
+export class UserDetailsComponent implements OnInit {
+
+  @Input() loginUsername?:string
+  @Output() backEvent = new EventEmitter<boolean>();
+
+
+  user?: User
+  emptyUser?: User
+  modify: boolean = false
+
+  constructor(
+    private userService: UserService,
+
+  ) { }
+
+  ngOnInit(): void {
+    this.getUser()
+  }
+  getUser() {
+    this.userService.getUser(this.loginUsername!)
+      .subscribe(user => {
+        this.user = user
+      })
+  }
+
+  modifyUser() {
+    this.userService.modifyUser(this.user!)
+    .subscribe()
+  }
+
+  deleteUser() {
+    this.userService.deleteUser(this.user!)
+    .subscribe(_ => {
+      this.user = this.emptyUser
+    })
+    this.backEvent.emit(true);
+  }
+
+}
+
+// user.service.ts
+// Modify User
+  modifyUser(user: User): Observable<User>{
+    let url = `${this.baseUrl}/${user.username}`
+    this.http.put<User>(url, user, this.httpOptions).subscribe()
+    return this.http.put<User>(url, user, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} updated`)
+      }),
+      catchError(this.handleError<User>('user info updated'))
+    )
+  }
+
+  // delete user
+  deleteUser(user: User): Observable<User>{
+    let url = `${this.baseUrl}/${user.username}`
+    this.http.delete<User>(url, this.httpOptions).subscribe()
+    return this.http.delete<User>(url, this.httpOptions)
+    .pipe(
+      tap(user => {
+          this.log(`user with username: ${user.username} updated`)
+      }),
+      catchError(this.handleError<User>('user info updated'))
+    )
+
+  }
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807212621834](../images/test_buyer_modifying_user.png)
+
+#### Feature 5: Showing pets list and Searching by conditions
+
+##### Code:
+
+```html
+// customer-side.component.html
+<div class="container">
+    <h1>
+        Customer side
+    </h1>
+        <div *ngFor="let pet of pets" >
+                {{ pet.name }}
+                {{ pet.id }}
+        </div>
+        <div>
+            <div *ngIf="isL || !isR">
+                <button (click)="isRegister()"> register</button>
+            </div>
+            <div *ngIf="!isL || isR">
+                <button (click)="isLogin()"> login</button>
+            </div>
+            
+        </div>
+        <div *ngIf="isR">
+            <app-user-register></app-user-register>
+        </div>
+        <div *ngIf="isL">
+            <app-user-login></app-user-login>
+        </div>
+    
+    <div>
+        <span>find by category</span>
+        <input [(ngModel)]="categoryInput">
+        <button (click)="fingByCategory()">find</button>
+    </div>
+        
+    <div>
+				<span>find by name</span>
+        <input [(ngModel)]="nameInput">
+        <button (click)="findByNane()">find</button>
+    </div>
+  <button (click)="clear()">Clear</button>
+
+</div>
+```
+
+```typescript
+// customer-side.component.ts
+export class CustomerSideComponent implements OnInit {
+
+  originPets: Pet[] = []
+  pets: Pet[] = []
+  categoryInput = ""
+  nameInput = ""
+
+  fingByCategory(){
+    let returnPets: Pet[] = []
+    this.originPets.forEach(pet => {
+      if(pet.category.name == this.categoryInput ){
+        returnPets.push(pet)
+      }
+    });
+    this.pets = returnPets
+  }
+
+  findByNane(){
+    let returnPets: Pet[] = []
+    this.originPets.forEach(pet => {
+      if(pet.name == this.nameInput ){
+        returnPets.push(pet)
+      }
+    });
+    this.pets = returnPets
+  }
+  clear(){
+    this.pets = this.originPets
+  }
+
+  constructor(
+    private petService: PetService
+  ) { }
+
+  ngOnInit(): void {
+    this.getPets()
+  }
+
+  getPets(){
+    this.petService.getPets()
+    .subscribe(pets => {
+      this.originPets = pets
+      this.pets = this.originPets
+    })
+  }
+
+}
+
+```
+
+
+
+##### Test Screenshots:
+
+![image-20210807212831008](../images/test_buyer_pets_list.png)
+
+![image-20210807212849792](../images/test_buyer_pets_category.png)
+
+![image-20210807212914214](../images/test_buyer_pets_name.png)
+
+
 
 
 
