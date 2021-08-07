@@ -42,6 +42,11 @@ export class PetsListComponent implements OnInit {
     name = name.trim();
     let id = 10000001
     let status = 'team2'
+    let category = {
+      id : 0,
+      name: ""
+    }
+    let photoUrls = [""]
     if (!name) { return; }
     
     if (this.pets.length > 0){
@@ -51,7 +56,7 @@ export class PetsListComponent implements OnInit {
       id = Math.max(...this.idArray) + 1
     }
     
-    this.petService.addPet({ name, id, status } as Pet)
+    this.petService.addPet({ name, id, status,photoUrls, category} as Pet)
       .subscribe(pet => {
         this.pets.push(pet);
       });

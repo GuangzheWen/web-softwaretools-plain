@@ -14,12 +14,15 @@
         </div>
         <div>
             <input [(ngModel)]="pet.name" placeholder="name">
-            <input #imgUrl>
+            <span>url</span>
+            <input #imgUrl [(ngModel)]="pet.photoUrls[0]" placeholder="photoUrl"> 
+            <span>category</span>
+            <input #category [(ngModel)]="pet.category.name" placeholder="category">
         </div>
     </div>
 
 
-    <button (click)="save(imgUrl.value)">save</button>
+    <button (click)="save(imgUrl.value,category.value)">save</button>
 </div>
 <button (click)="goBack()">go back</button>
 

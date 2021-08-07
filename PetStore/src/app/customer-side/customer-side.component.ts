@@ -10,9 +10,34 @@ import { PetService } from '../service/pet.service';
 })
 export class CustomerSideComponent implements OnInit {
 
+  originPets: Pet[] = []
   pets: Pet[] = []
   isR: boolean = false
   isL: boolean = false
+
+  categoryInput = ""
+  nameInput = ""
+
+  fingByCategory(){
+    let returnPets: Pet[] = []
+    this.originPets.forEach(pet => {
+      if(pet.category.name == this.categoryInput ){
+        returnPets.push(pet)
+      }
+    });
+    this.pets = returnPets
+  }
+
+  findByNane(){
+    let returnPets: Pet[] = []
+    this.originPets.forEach(pet => {
+      if(pet.name == this.nameInput ){
+        returnPets.push(pet)
+      }
+    });
+    this.pets = returnPets
+  }
+
   constructor(
     private petService: PetService
   ) { }
@@ -24,7 +49,8 @@ export class CustomerSideComponent implements OnInit {
   getPets(){
     this.petService.getPets()
     .subscribe(pets => {
-      this.pets = pets
+      this.originPets = pets
+      this.pets = this.originPets
     })
   }
 
