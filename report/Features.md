@@ -88,7 +88,41 @@ Actually we are going to follow such principles, but there is going to be some m
 
 **Counting:** used 5 APIs.
 
+**Description:** 
+
+After discussion and analysis within our group at the meeting, it was unanimously determined that the users of the site could be divided into two groups, buyers and sellers. So we tentatively deduced that in order to differentiate between the two different groups, there should be different user interfaces on the website, available to these two different groups of users.
+
+Since there are different modes of displaying pages, there should be certain barriers that do not allow two different groups to access each other's pages. This is the first level of authentication. Let's assume for a moment that sellers have one and buyers will have many. So in order to distinguish each individual buyer from accessing other buyers' information, we provide a second layer of authentication, which is what users expect, as we learned during our research.
+
+So the final implementation is that on the seller's page, you have to enter an administrator password, not an account number, because there is only one seller, and this password is only known to the seller, so it prevents buyers from accessing the seller's back office indiscriminately to prevent others from editing pet information, adding and deleting pets. After all, these actions should only be taken by the seller.
+
+On the seller's page, we offer the ability to register users, log in, change account information, delete accounts, etc. The only way to gain access to edit this account information is to enter the correct username and password.
+
 ## Justification
+
+**User story:** 
+
+Story 1: As a big fan of online shopping, I want to create an account to buy pets, so that my transaction is guaranteed to be fair and open.
+
+Story 2: As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
+
+**comments:** This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative.
+
+**Question 1:**
+
+Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
+
+**Interviewees 1:** 
+
+1. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online.
+2. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be cautious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
+3. Optional. I figured when I decided to place an order, I was going to pick it up at a pet store. So just send a confirmation email to my email address. There's no need to log in.
+4. It depends. When I just skim the information of lovely pets, I do not want to be asked to sign up. But if I choose one to buy, I really need to create an account to follow my order, which might be critical when I need help.
+5. Optional. I think everyone has the right to browse pet images and information through the website. However, you must register an account to buy pets. This will ensure that the transaction is fair and open.
+
+**Discuss:**
+
+In the user survey, it was found that the user login function is necessary, but it is not necessary to only be able to log in and then see the website information. Having an account would make transactions more trustworthy and reliable, but if users just want to have a casual look, the login function should lie quietly to the side and not interfere with other actions.
 
 
 
