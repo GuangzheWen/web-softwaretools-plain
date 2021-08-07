@@ -169,9 +169,17 @@ However, this feature will not be implemented as the first step in the developme
 
 # Feature 5：Message Pad
 
+**Description:** 
+
+This Message Pad is a feature we added to the user, originally during development, which also gives instant feedback on the response to each action, letting the developer know what they are doing, whether the code ran successfully etc.
+We just needed to replace the feedback string code with user-friendly text or short sentences that a normal person could understand later in development.
+In this way, in addition to the user being able to observe changes in the appearance of the page to see if certain actions have been performed, they can also use this feedback panel to get feedback on their own action history.
+
 ## Justification
 
-
+One of the keys to UI/UX design is how to design feedback for user actions. Sometimes good feedback reminders are more important than good looks and more intuitive than lots of text cues.
+Feedback can come in the form of press states, activity indicators, progress indicators, live previews, Toast, dialog boxes, other sounds, etc.
+Our Message Pad is a component that brings together some of the ideas from the above and is designed to give feedback to the user and improve the user experience.
 
 # Testing
 
