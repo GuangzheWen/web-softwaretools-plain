@@ -21,6 +21,7 @@ export class UserService {
 
   // create a new user account
   addUser(user: User): Observable<ApiResponse> {
+    this.http.post<ApiResponse>(this.baseUrl, user, this.httpOptions).subscribe()
     return this.http.post<ApiResponse>(this.baseUrl, user, this.httpOptions)
       .pipe(
         tap(res => {
@@ -35,6 +36,7 @@ export class UserService {
   // login check 
   login(user: User) : Observable<ApiResponse>  {
     let url = `${this.baseUrl}/login?username=${user.username}&password=${user.password}`
+    this.http.get<ApiResponse>(url, this.httpOptions).subscribe()
     return this.http.get<ApiResponse>(url, this.httpOptions)
     .pipe(
       tap(res => {
@@ -51,6 +53,7 @@ export class UserService {
   // get user info by username
   getUser(useranme: string): Observable<User> {
     let url = `${this.baseUrl}/${useranme}`
+    this.http.get<User>(url, this.httpOptions).subscribe()
     return this.http.get<User>(url, this.httpOptions)
     .pipe(
       tap(user => {
@@ -63,6 +66,7 @@ export class UserService {
   // Modify User
   modifyUser(user: User): Observable<User>{
     let url = `${this.baseUrl}/${user.username}`
+    this.http.put<User>(url, user, this.httpOptions).subscribe()
     return this.http.put<User>(url, user, this.httpOptions)
     .pipe(
       tap(user => {

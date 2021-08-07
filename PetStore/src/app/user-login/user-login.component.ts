@@ -26,24 +26,24 @@ export class UserLoginComponent implements OnInit {
     let username = this.username
     let password = this.password
 
-    this.userService.login({username, password} as User)
-    .subscribe(res => {
-      // if ((res.code != 200) || !res){
-      //   alert('not exist')
-      // }else{
-      //   this.status = true
-      // }
-    })
+    
 
     this.userService.getUser(username)
     .subscribe(res => {
       if (res){
-        // console.log(res)
-        this.status = true
+        if (res.password == password){
+          this.status = true
+        }else {
+          alert('wrong password')
+        }
+        
       }else{
         alert('not exist user')
       }
       
+    })
+    this.userService.login({username, password} as User)
+    .subscribe(res => {
     })
   }
 
