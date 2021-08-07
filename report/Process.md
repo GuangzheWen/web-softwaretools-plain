@@ -399,6 +399,8 @@ Develop the feature of searching, and test it.
 
 #### Technical Log
 
-
+Today I have implemented the function of filtering pets in the buyer's interface, giving two options respectively, one is to filter pets by category and the other is to filter pets by their name.
+Of course, since we have to filter category to have the value of category, we set the category in the data model as an optional value in the pre-development process to save time: category? So now that we need to use it we have changed the data model to make it a standard value. As a result, the logic of the code for the new pet and modify pet information functions has also been changed.
+All went well and it worked fine.
 
 # Continuous Integration
