@@ -135,19 +135,43 @@ In the user survey, it was found that the user login function is necessary, but 
 1. Modifying pets details.
 2. Especially add photo URL.
 
+**Counting:** used 1 API.
+
+**Description:** 
+
+From the seller's point of view, he wanted a more usable user interface to manage the pets. However, in the previous demo from Allison we had already implemented Find, Delete and New, so we added a function to change the pet's information. Undoubtedly this is a seller function and does not require the buyer to have access to it.
+
 ## Justification
+
+**User story:** As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
+
+Sellers may use this feature to achieve the following visions, change pet names, categories, status, photos, etc. As it is inevitable that there may be times when the first edit is wrong, or later, for some specific reason, some information needs to be changed, then we provide this interface.
 
 # Feature 3：Searching pets by category
 
+The last question in our interview asked potential users what features they would like to see added to the site, and one of them said that they would like to see a categorisation feature, an idea that inspired us. After all, this is a very common and necessary feature in our extensive experience with the site, so we decided to add it.
+
+However, this feature will not be implemented as the first step in the development process, it is after all the icing on the cake based on other features, we will ensure the user experience of the other basic features before completing the design of this feature.
+
 ## Justification
+
+**Interview Questions:**Do you recommend any different feature that you think will value the pets shop website?
+
+**Interviewee:** Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
+
+**User Stories:** As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
 # Feature 4：Searching pet by name
 
 ## Justification
 
+
+
 # Feature 5：Message Pad
 
 ## Justification
+
+
 
 # Testing
 
