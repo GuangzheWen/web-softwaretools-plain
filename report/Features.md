@@ -1,22 +1,24 @@
- [Possible Features](#1)
+# Content:
 
-[Features](#2.1)
+[1. Possible Features](#1)
 
-​	[Feature 1：User Authentication](#2.1)
+[2. Features](#2.1)
 
-​	[Feature 2：Modifying Pet's information](#2.2)
+​		[Feature 1：User Authentication](#2.1)
 
-​	[Feature 3：Searching pets by category or name](#2.3)
+​		[Feature 2：Modifying Pet's information](#2.2)
 
-​	[Feature 4：Message Pad](#2.4)
+​		[Feature 3：Searching pets by category or name](#2.3)
 
-[Testing](#3)
+​		[Feature 4：Message Pad](#2.4)
 
-​	[1. API features testing. ](#3.1)
+[3. Testing](#3)
 
-​	[2. Some API problems fixing. ](#3.2)
+​		[1. API features testing. ](#3.1)
 
-​	[3. Features implementing one by one as component. ](#3.3)
+​		[2. Some API problems fixing. ](#3.2)
+
+​		[3. Features implementing one by one as component. ](#3.3)
 
 
 
