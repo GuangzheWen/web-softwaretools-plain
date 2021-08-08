@@ -1,4 +1,4 @@
-# Content:
+<h1>Content: </h1>
 
 [1. Possible Features](#1)
 
@@ -38,7 +38,7 @@
 
 
 
-
+<h1>Body: </h1>
 
 We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
 
