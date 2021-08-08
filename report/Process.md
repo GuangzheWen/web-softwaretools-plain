@@ -1,19 +1,10 @@
 # Group Working
 
-**Agile Scrum methodology**
+## Agile Scrum methodology
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
-=======
+
 At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
->>>>>>> 25c0841e32dbea876d292e3ab6fb99968e277c36
-
-1. Scrum is well suited to teams with five members.
-
-   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
-
-=======
 
 Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 
@@ -22,46 +13,30 @@ At our group's first meeting, we discussed and compared several different agile 
 
 1. Scrum is well suited to teams with five members.
 
-   - One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
+- One people is Product owner, propose or adjust strategies based on user requirements, monitor the development process, and assess whether functionality meets expectations.
+- One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
 
->>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
-   - Three people are in the Development Team, propose or adjust strategies based on user requirements, monitor the development process, responsible for back-end feature development, front-end UI design and development, and user research.
-
-   - One people is Scrum master, remove obstacles that hinder the team from delivering the sprint goal and ensure the smooth implementation of Scrum.
-
-   Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
-
-<<<<<<< HEAD
-2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
-   ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
-
-=======
+Of course, this is only the ideal situation, our team will be based on the situation of the project and the ideas of each member, timely adjustment of the specific work to keep everyone motivated. Each person's detailed contribution can be seen in Team Roles.
 
 2. The process is very clear and efficient. After the meeting, we created a flow chart to visualize the Scrum process and motivate us to follow it.
    ![Scrum Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Scrum%20Process.jpg)
 
->>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
-   - Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint.
+- Sprint Planning Meeting. When Scrum begins, there is a Sprint Planning meeting where the Product Owner, Scrum Master, and Dev Team work together to plan what to do for the Sprint. This is usually decided at our last meeting in each Sprint.
+- Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes.
+- Review Meeting: At the end of the sprint, we held review meeting, which evaluate the work we had done and enables us to reflect and improve.
 
-   - Daily Stand-up Meeting: Owing to remote cooperation, Instead of the Daily Stand-up Meeting in the scrum, we use online meeting which is held through the group based on the Microsoft Teams. Our Scrum Team assess progress in daily scrums of almost 40 minutes.
+## Communication Channel
 
-   - Review Meeting: At the end of the sprint, we held review meeting, which evaluate the work we had done and enables us to reflect and improve.
-
-**Communication Channel**
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 21af814f6a9b26a3b877a63675bec87524e1cd40
 Microsoft Teams is main communication channels for us to discuss and organize daily meeting, and the daily minutes of the meeting could be found below. Although team members are spread across multiple time zones, we arrange the regular meeting at proper time in order that everyone could be full of energy to participate it.
 
 Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
 **Special Methods**
 
-- We use Office365 to design the questionnaire. Team members could comment on it and edit it.
+- We use Microsoft 365 to design the questionnaire. Team members could edit it together and comment it to express own thoughts.
 - We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 - We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
+- Owing to the fact that most of our teams are chinese, the chinese people use Wechat, one kind of immediate communication tool which is popular in China, to share opinions. Although immediate communication sometimes seem to be annoying, but it quite suits during short-time development.
 
 # Team Roles
 

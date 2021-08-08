@@ -6,7 +6,7 @@ We are interested in the website and trying to make it more appealing and versat
 
 Our team gave out questionnaires to the customers who are potentially watching his pet shop online at the beginning to find out what they are looking for and what kind of features are mostly wanted.
 
-To maximise the benefits to the pet shop owner, the system is focus on two parts: the need from the owner and the view from customers. As for the owner, he needs the basic operation function upon the website, such as adding, deleting, and editing the information of pets. For the perspective from customers, they want the website has a beautiful UI to give a good impression on them and could be easily used to search their target pets.
+To maximize the benefits to the pet shop owner, the system is focus on two parts: the need from the owner and the view from customers. As for the owner, he needs the basic operation function upon the website, such as adding, deleting, and editing the information of pets. For the perspective from customers, they want the website has a beautiful UI to give a good impression on them and could be easily used to search their target pets.
 
 # Objectives
 
