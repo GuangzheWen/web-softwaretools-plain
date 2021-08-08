@@ -61,8 +61,11 @@
 /* For pet */
 #pet{
     border: 1px solid red;
-    margin: 5px;
-    padding: 5px;
+    margin: 20px;
+    padding: 20px;
+    width: 880px;
+    height: 200px;
+    border-radius: 15px;
 }
 
 /* Button */
