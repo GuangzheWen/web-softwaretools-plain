@@ -4,13 +4,13 @@
 
 [2. Features](#2)
 
-&nbsp; [Feature 1：User Authentication](#2.1)
+&emsp; [Feature 1：User Authentication & Justification](#2.1)
 
-&emsp; [Feature 2：Modifying Pet's information](#2.2)
+&emsp; [Feature 2：Modifying Pet's information & Justification](#2.2)
 
-&emsp; [Feature 3：Searching pets by category or name](#2.3)
+&emsp; [Feature 3：Searching pets by category or name & Justification](#2.3)
 
-&emsp; [Feature 4：Message Pad](#2.4)
+&emsp; [Feature 4：Message Pad & Justification](#2.4)
 
 [3. Testing](#3)
 
@@ -18,7 +18,23 @@
 
 &emsp; [2. Some API problems fixing. ](#3.2)
 
+&emsp;&emsp;[Backend respond big int type id.](#3.2.1)
+
+&emsp;&emsp;[Upload fake image from API](#3.2.2)
+
+&emsp;&emsp;["A/B double-face" backend](#3.2.3)
+
+&emsp;&emsp;[User Login always respond 200](#3.2.4)
+
 &emsp; [3. Features implementing one by one as component. ](#3.3)
+
+&emsp;&emsp;[1. For Both Seller and Buyer](#3.3.1)
+
+&emsp;&emsp;[2. For Seller](#3.3.2)
+
+&emsp;&emsp;[3. For Buyer](#3.3.3)
+
+
 
 
 
@@ -686,7 +702,7 @@ As usual, we list all the problems that we fixed here firstly.
 3. A/B double-face backend.
 4. User Login always respond 200.
 
-###  Backend respond big int type id.
+###  <a name='3.2.1'></a>Backend respond big int type id.
 
 Resolving problems by cutting them to pieces then fix little ones is a wisdom way. For this circumstance, we can divid the main problem to two separated problems, one is to generate normal int type id from frontend then assign it to the pet in the body. The other one could be how to retrieve all the pets that we assigned our own ids when we get pet list from the backend.
 
@@ -739,7 +755,7 @@ We also considered what to do if someone else's team accidentally took over our 
 
 
 
-###  Upload fake image from API
+###  <a name='3.2.2'></a>Upload fake image from API
 
 When we tested out that the API for uploading images was not working well, it immediately occurred to us that because it was a free and public API, if everyone could upload images, the database server in the background would take up a lot of resources, which would be a significant budget. So instead of opening up the permission to upload images, the provider of this API returned a token response of a successful upload, however in reality nothing happened in the background.
 
@@ -773,7 +789,7 @@ save(url: string): void {
 
 We used two images as examples, stored in our other GitHub repository, and tested that the two images were successfully retrieved and displayed correctly on our page.
 
-###  A/B double-face backend
+###  <a name='3.2.3'></a>"A/B double-face" backend
 
 This problem differs from the two above in that we have not figured out why it occurs, nor have we found any cases of the same. Allow me first to describe the phenomenon of the problem.
 
@@ -840,7 +856,7 @@ We were initially plagued by this problem and did not know how to solve it. Then
 
 
 
-###  User Login always respond 200
+###  <a name='3.2.4'></a>User Login always respond 200
 
 This problem seems rather routine, and it is possible for everyone to debug front and back in this way at the beginning of their development. The interface returns a true value directly in response to the completed part of the functionality before a part of the functionality is evening out.
 
@@ -850,7 +866,7 @@ Because our API can retrieve all the information about this user via username, t
 
 ##  <a name='3.3'></a>3. Features implementing one by one as component. 
 
-###  1. For Both Seller and Buyer
+###  <a name='3.3.1'></a>1. For Both Seller and Buyer
 
 ####  Feature 1: Switching Buyer/Seller mode
 
@@ -932,7 +948,7 @@ export class MessageService {
 
 <img src="../images/test_message_pad.png" alt="image-20210807204659144" width = "300" />
 
-###  2. For Seller
+###  <a name='3.3.2'></a>2. For Seller
 
 ####  Feature 1: Authentication for user (Seller)
 
@@ -1207,7 +1223,7 @@ export class PetDetailsComponent implements OnInit {
 
 <img src="../images/test_seller_modify_pet.png" alt="image-20210807211410831" width = "400"/>
 
-###  3. For Buyer
+###  <a name='3.3.3'></a>3. For Buyer
 
 ####  Feature 1: Registering user account
 
