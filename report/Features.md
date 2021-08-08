@@ -2,7 +2,7 @@
 
 [1. Possible Features](#1)
 
-[2. Features](#2.1)
+[2. Features](#2)
 
 ​		[Feature 1：User Authentication](#2.1)
 
@@ -58,7 +58,7 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 
 
-**What new feature(s) have we chosen to add ?**
+<a name='1'></a>**What new feature(s) have we chosen to add ?**
 
 **Features already exists: (undistinguished)**
 
