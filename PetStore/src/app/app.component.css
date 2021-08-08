@@ -11,9 +11,10 @@
 /* For text */
 #title{
     display: inline-block;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #storeName{
-    font-size: 40px;
+    font-size: 42px;
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -26,7 +27,7 @@
     margin-right: 20px;
     position: fixed;
     left: 10px;
-   
+    border-radius: 20px;
 }
 
 
@@ -73,3 +74,17 @@
     right: 20px;
     z-index: 9999;
 }
+
+#mainBody{
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 60px);
+
+}
+
+#shell{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+

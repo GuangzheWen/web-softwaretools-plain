@@ -1,39 +1,60 @@
+<!-- This component's shell, making it looks like a box. -->
 <div class="container">
-    <h1>
-        Customer side
-    </h1>
-        <div *ngFor="let pet of pets" >
+
+
+    <!-- Title at the top. -->
+    <div id="title">
+        <h1 id="wellcomeLine">
+            Wellcome to our Pet Store, let's explore cute pets 😁
+        </h1>
+    </div>
+
+
+    <!-- Main body of content. -->
+    <div id="contentBody"> 
+        <!-- Left part of body, occupying 1/3 -->
+        <div class="content" id="left">
+            <div>
+                <span>find by category</span>
+                <input [(ngModel)]="categoryInput">
+                <button (click)="fingByCategory()">find</button>
+            </div>
+                
+            <div>
+                <span>find by name</span>
+                <input [(ngModel)]="nameInput">
+                <button (click)="findByNane()">find</button>
+                
+            </div>
+            <button (click)="clear()">Clear</button>
+            <div *ngFor="let pet of pets" >
                 {{ pet.name }}
                 {{ pet.id }}
-        </div>
-        <div>
-            <div *ngIf="isL || !isR">
-                <button (click)="isRegister()"> register</button>
             </div>
-            <div *ngIf="!isL || isR">
-                <button (click)="isLogin()"> login</button>
-            </div>
-            
         </div>
-        <div *ngIf="isR">
-            <app-user-register></app-user-register>
-        </div>
-        <div *ngIf="isL">
-            <app-user-login></app-user-login>
-        </div>
-    
-    <div>
-        <span>find by category</span>
-        <input [(ngModel)]="categoryInput">
-        <button (click)="fingByCategory()">find</button>
-    </div>
-        
-    <div>
-        <span>find by name</span>
-        <input [(ngModel)]="nameInput">
-        <button (click)="findByNane()">find</button>
-        
-    </div>
-    <button (click)="clear()">Clear</button>
 
+        <!-- Right part of body, occupying 2/3 -->
+        <div class="content" id="right">
+            <div>
+                <div *ngIf="isL || !isR">
+                    <button (click)="isRegister()"> register</button>
+                </div>
+                <div *ngIf="!isL || isR">
+                    <button (click)="isLogin()"> login</button>
+                </div>
+                
+            </div>
+
+
+
+            <div *ngIf="isR">
+                <app-user-register></app-user-register>
+            </div>
+            <div *ngIf="isL">
+                <app-user-login></app-user-login>
+            </div>
+
+        </div>
+
+   </div>
 </div>

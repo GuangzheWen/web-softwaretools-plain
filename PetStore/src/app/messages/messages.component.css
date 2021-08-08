@@ -19,6 +19,7 @@
   margin-top: 20px;
   color: whitesmoke;
   font-size: small;
+  padding: 3px;
 }
 #messageBox span {
   font-weight: bold;

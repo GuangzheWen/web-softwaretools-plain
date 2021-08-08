@@ -1,9 +1,13 @@
-<!-- Thess sinppets of code are the header of the website, contains title, icon, and switching mode button. -->
+<div id="shell">
+  <!-- Thess sinppets of code are the header of the website, contains title, icon, and switching mode button. -->
 <h1 id="header">
 
   <!-- Icon image and Title. -->
   <div id="title"> 
-    <img id="icon" src="https://raw.githubusercontent.com/GuangzheWen/Photos/main/R.jpg" alt="Icon">
+    <a routerLink="/customerSide">
+      <img id="icon" src="https://raw.githubusercontent.com/GuangzheWen/Photos/main/R.jpg" alt="Icon">
+    </a>
+   
     <div id="storeName">
       {{ title }}
     </div>
@@ -24,8 +28,12 @@
 
 
 <!-- This area is made for the main content of our website. -->
-<router-outlet></router-outlet>
+<div id="mainBody">
+  <router-outlet></router-outlet>
+</div>
+
 
 
 <!-- This area is made for showing message feedback. -->
 <app-messages id="messagePad"></app-messages>
+</div>
