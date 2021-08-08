@@ -45,3 +45,23 @@
     right: 20px;
     z-index: 9999;
 }
+
+#title{
+    display: inline-block;
+
+}
+#storeName{
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#icon{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    position: fixed;
+    left: 10px;
+   
+}
