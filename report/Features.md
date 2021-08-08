@@ -58,7 +58,7 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 
 
-<a name='1'></a>**What new feature(s) have we chosen to add ?**
+<a name='2'></a>**What new feature(s) have we chosen to add ?**
 
 **Features already exists: (undistinguished)**
 
