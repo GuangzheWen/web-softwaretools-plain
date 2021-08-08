@@ -1,3 +1,4 @@
+/* For header */
 #header {
     margin: 0;
     padding: 0;
@@ -7,7 +8,30 @@
     height: 60px;
     text-align: center;
 }
+/* For text */
+#title{
+    display: inline-block;
+}
+#storeName{
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* For icon image */
+#icon{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    position: fixed;
+    left: 10px;
+   
+}
 
+
+
+/* For buttons */
 #buyer,#seller{
     width: 80px;
     height: 26px;
@@ -27,7 +51,6 @@
     vertical-align:middle;
     padding-top: 4px;
 } 
-
 #modeButton {
     text-align: right;
     float: right;
@@ -35,33 +58,18 @@
 #modeButton a{
     text-decoration: none;
 }
+/* For button animation*/
 .button:hover {
     padding-right: 5px;
     padding-left: 5px;
 }
+
+
+
+/* For message box */
 #messagePad {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-}
-
-#title{
-    display: inline-block;
-
-}
-#storeName{
-    font-size: 40px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-#icon{
-    width: 100px;
-    height: 40px;
-    display: inline-block;
-    margin-top: 10px;
-    margin-right: 20px;
-    position: fixed;
-    left: 10px;
-   
 }

@@ -1,23 +1,31 @@
-
+<!-- Thess sinppets of code are the header of the website, contains title, icon, and switching mode button. -->
 <h1 id="header">
+
+  <!-- Icon image and Title. -->
   <div id="title"> 
     <img id="icon" src="https://raw.githubusercontent.com/GuangzheWen/Photos/main/R.jpg" alt="Icon">
     <div id="storeName">
       {{ title }}
     </div>
   </div >
-    <span id="modeButton">
-      <a id="buyer" class="button" routerLink="/customerSide">
-        Buyer
-      </a>
 
-      <a id="seller" class="button" routerLink="/host">
+  <!-- Mode switching buttons. -->
+  <span id="modeButton">
+    <!-- Buyer mode button, change the routerlink, impact on router-outlet. -->
+    <a id="buyer" class="button" routerLink="/customerSide">
+        Buyer
+    </a>
+    <!-- Seller mode button, change the routerlink, impact on router-outlet. -->
+    <a id="seller" class="button" routerLink="/host">
         Seller
     </a>
   </span>
 </h1>
 
 
-
+<!-- This area is made for the main content of our website. -->
 <router-outlet></router-outlet>
+
+
+<!-- This area is made for showing message feedback. -->
 <app-messages id="messagePad"></app-messages>
