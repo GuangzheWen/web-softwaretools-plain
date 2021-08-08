@@ -259,10 +259,11 @@ The whole process, from before the start, after each feature has been implemente
 
 We will describe our test development process of features in great detail below, so here is a general list of the following to help you read this document. 
 
-1. API features testing.
-2. Some API bugs fixing.
-3. Features implementing one by one as component.
-4. Putting all components together then arrange routing.
+[1. API features testing.](#3.1)
+
+[2. Some API bugs fixing.](#3.2)
+
+[3. Features implementing one by one as component.](#3.3)
 
 ##  <a name='3.1'></a>1. API features testing. 
 
