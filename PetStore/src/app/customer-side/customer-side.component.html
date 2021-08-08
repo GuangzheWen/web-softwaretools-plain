@@ -14,34 +14,45 @@
     <div id="contentBody"> 
         <!-- Left part of body, occupying 1/3 -->
         <div class="content" id="left">
-            <div>
-                <span>find by category</span>
-                <input [(ngModel)]="categoryInput">
-                <button (click)="fingByCategory()">find</button>
+            <div id="filter"> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Filter: 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span>By Category</span>
+                    <input [(ngModel)]="categoryInput">
+                    <button class="leftButton" (click)="fingByCategory()">Find</button>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span>By Name</span>
+                    <input [(ngModel)]="nameInput">
+                    <button class="leftButton" (click)="findByNane()">Find</button>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="leftButton" (click)="clear()">Clear</button>
             </div>
-                
-            <div>
-                <span>find by name</span>
-                <input [(ngModel)]="nameInput">
-                <button (click)="findByNane()">find</button>
-                
-            </div>
-            <button (click)="clear()">Clear</button>
-            <div *ngFor="let pet of pets" >
-                {{ pet.name }}
-                {{ pet.id }}
+            <div id="pets">
+                <div id="pet" *ngFor="let pet of pets" >
+                    {{ pet.name }}
+                    {{ pet.id }}
+                </div>
             </div>
         </div>
 
         <!-- Right part of body, occupying 2/3 -->
         <div class="content" id="right">
-            <div>
-                <div *ngIf="isL || !isR">
-                    <button (click)="isRegister()"> register</button>
-                </div>
-                <div *ngIf="!isL || isR">
-                    <button (click)="isLogin()"> login</button>
-                </div>
+            <div id="switching"> 
+                <!-- <span *ngIf="isL || !isR"> -->
+                    <button class="rightButton"  (click)="isRegister()"> register</button>
+                <!-- </span> -->
+                <!-- <span *ngIf="!isL || isR"> -->
+                    <button class="rightButton" (click)="isLogin()"> login</button>
+                <!-- </span> -->
                 
             </div>
 
