@@ -30,9 +30,31 @@
 
 &emsp;&emsp;[1. For Both Seller and Buyer](#3.3.1)
 
+&emsp;&emsp;&emsp;[Feature 1: Switching Buyer/Seller mode](#3.3.1.1)
+
+&emsp;&emsp;&emsp;[Feature 2: Message Pad](#3.3.1.2)
+
 &emsp;&emsp;[2. For Seller](#3.3.2)
 
+&emsp;&emsp;&emsp;[Feature 1: Authentication for user (Seller)](#3.3.2.1)
+
+&emsp;&emsp;&emsp;[Feature 2: Showing pets list and Deleting pet](#3.3.2.2)
+
+&emsp;&emsp;&emsp;[Feature 3: Adding pet](#3.3.2.3)
+
+&emsp;&emsp;&emsp;[Feature 4: Showing pet's details and Modifying pet's information ](#3.3.2.4)
+
 &emsp;&emsp;[3. For Buyer](#3.3.3)
+
+&emsp;&emsp;&emsp;[Feature 1: Registering user account](#3.3.3.1)
+
+&emsp;&emsp;&emsp;[Feature 2: Login](#3.3.3.2)
+
+&emsp;&emsp;&emsp;[Feature 3: Showing user account details](#3.3.3.3)
+
+&emsp;&emsp;&emsp;[Feature 4: Editing user information and Deleting user account](#3.3.3.4)
+
+&emsp;&emsp;&emsp;[Feature 5: Showing pets list and Searching by conditions](#3.3.3.5)
 
 
 
@@ -868,7 +890,7 @@ Because our API can retrieve all the information about this user via username, t
 
 ###  <a name='3.3.1'></a>1. For Both Seller and Buyer
 
-####  Feature 1: Switching Buyer/Seller mode
+####  <a name='3.3.1.1'></a>Feature 1: Switching Buyer/Seller mode
 
 ##### Code:
 
@@ -903,7 +925,7 @@ const routes: Routes = [
 
 <img src="../images/test_switchMode_seller.png" alt="image-20210807174440434" width = "400" />
 
-####  Feature 2: Message Pad
+####  <a name='3.3.1.2'></a>Feature 2: Message Pad
 
 ##### Code:
 
@@ -950,7 +972,7 @@ export class MessageService {
 
 ###  <a name='3.3.2'></a>2. For Seller
 
-####  Feature 1: Authentication for user (Seller)
+####  <a name='3.3.2.1'></a>Feature 1: Authentication for user (Seller)
 
 ##### Code:
 
@@ -991,7 +1013,7 @@ export class MessageService {
 
 <img src="../images/test_host_admin_wrong.png" alt="image-20210807205058792" width = "500" />
 
-####  Feature 3: Showing pets list and Deleting pet
+####  <a name='3.3.2.2'></a>Feature 2: Showing pets list and Deleting pet
 
 ##### Code:
 
@@ -1069,7 +1091,7 @@ import { MessageService } from '../service/message.service';
 
 <img src="../images/test_seller_pets_delete.png" alt="image-20210807205848953" width = "200" />
 
-####  Feature 4: Adding pet
+####  <a name='3.3.2.3'></a>Feature 3: Adding pet
 
 ##### Code:
 
@@ -1128,7 +1150,7 @@ add(name: string): void {
 
 <img src="../images/test_seller_add_pet_succeed.png" alt="image-20210807211219998" width = "400" />
 
-####  Feature 5: Showing pet's details and Modifying pet's information 
+####  <a name='3.3.2.4'></a>Feature 4: Showing pet's details and Modifying pet's information 
 
 ##### Code:
 
@@ -1225,7 +1247,7 @@ export class PetDetailsComponent implements OnInit {
 
 ###  <a name='3.3.3'></a>3. For Buyer
 
-####  Feature 1: Registering user account
+####  <a name='3.3.3.1'></a>Feature 1: Registering user account
 
 ##### Code:
 
@@ -1311,9 +1333,9 @@ export class UserRegisterComponent implements OnInit {
 
 <img src="../images/test_buyer_register_succeed.png" alt="image-20210807212108316" width = "400"/>
 
-####  Feature 2: Login
+####  <a name='3.3.3.2'></a>Feature 2: Login
 
-####  Feature 3: Showing user account details
+####  <a name='3.3.3.3'></a>Feature 3: Showing user account details
 
 ##### Code:
 
@@ -1428,7 +1450,7 @@ export class UserLoginComponent implements OnInit {
 
 <img src="../images/test_buyer_login_succeed.png" alt="image-20210807212358303" width = "200" />
 
-####  Feature 4: Editing user information and Deleting user account
+####  <a name='3.3.3.4'></a>Feature 4: Editing user information and Deleting user account
 
 ##### Code:
 
@@ -1549,7 +1571,7 @@ export class UserDetailsComponent implements OnInit {
 
 <img src="../images/test_buyer_modifying_user.png" alt="image-20210807212621834" width = "200" />
 
-####  Feature 5: Showing pets list and Searching by conditions
+####  <a name='3.3.3.5'></a>Feature 5: Showing pets list and Searching by conditions
 
 ##### Code:
 
