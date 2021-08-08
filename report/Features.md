@@ -10,7 +10,7 @@ As above we discussed, our website will be developed by two routes, but synchron
 
 Nonetheless, we will definitely not create two websites for two different groups, which looks like a bit counterproductive. Therefore we are preparing to develop a single website which has two mode, switching by a pair of buttons somewhere. In advance of programming we determined that.
 
-# Possible Features<a name='1'></a>
+# <a name='1'></a>Possible Features
 
 - For buyers:
 
