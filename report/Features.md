@@ -495,7 +495,7 @@ As we can see above, if we assign id = 0 or directly delete the line of assignin
 
 Nothing special about this API, it works well. The usage of it is input the pet's id that you want to modify into the body, and just fill in other information you want to modify into the body.
 
-####  **4. Find pets by status**
+####  <a name='0'></a>**4. Find pets by status**
 
 <img src="../images/API_get_pet_bystatus.png" alt="API_get_pet_bystatus" width = "300" />
 
@@ -720,12 +720,17 @@ I apologize for the title, it may be misleading as we don't have access to API c
 
 As usual, we list all the problems that we fixed here firstly.
 
-1. Backend respond big int type id.
-2. Upload fake image from API.
-3. A/B double-face backend.
-4. User Login always respond 200.
+[1. Backend respond big int type id.](#3.2.1)
+
+[2. Upload fake image from API.](#3.2.2)
+
+[3. A/B double-face backend.](#3.2.3)
+
+[4. User Login always respond 200.](#3.2.4)
 
 ###  <a name='3.2.1'></a>Backend respond big int type id.
+
+[Analysis process Link](#0)
 
 Resolving problems by cutting them to pieces then fix little ones is a wisdom way. For this circumstance, we can divid the main problem to two separated problems, one is to generate normal int type id from frontend then assign it to the pet in the body. The other one could be how to retrieve all the pets that we assigned our own ids when we get pet list from the backend.
 
@@ -1336,8 +1341,6 @@ export class UserRegisterComponent implements OnInit {
 
 ####  <a name='3.3.3.2'></a>Feature 2: Login
 
-####  <a name='3.3.3.3'></a>Feature 3: Showing user account details
-
 ##### Code:
 
 ```html
@@ -1449,7 +1452,7 @@ export class UserLoginComponent implements OnInit {
 
 <img src="../images/test_buyer_login.png" alt="image-20210807212345080" width = "400"/>
 
-<img src="../images/test_buyer_login_succeed.png" alt="image-20210807212358303" width = "200" />
+####  <a name='3.3.3.3'></a>Feature 3: Showing user account details
 
 ####  <a name='3.3.3.4'></a>Feature 4: Editing user information and Deleting user account
 
@@ -1569,6 +1572,8 @@ export class UserDetailsComponent implements OnInit {
 
 
 ##### Test Screenshots:
+
+<img src="../images/test_buyer_login_succeed.png" alt="image-20210807212358303" width = "200" />
 
 <img src="../images/test_buyer_modifying_user.png" alt="image-20210807212621834" width = "200" />
 
