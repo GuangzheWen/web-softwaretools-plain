@@ -4,21 +4,21 @@
 
 [2. Features](#2)
 
-​        [Feature 1：User Authentication](#2.1)
+&nbsp; [Feature 1：User Authentication](#2.1)
 
-​        [Feature 2：Modifying Pet's information](#2.2)
+&emsp; [Feature 2：Modifying Pet's information](#2.2)
 
-​        [Feature 3：Searching pets by category or name](#2.3)
+&emsp; [Feature 3：Searching pets by category or name](#2.3)
 
-​        [Feature 4：Message Pad](#2.4)
+&emsp; [Feature 4：Message Pad](#2.4)
 
 [3. Testing](#3)
 
-​        [1. API features testing. ](#3.1)
+&emsp; [1. API features testing. ](#3.1)
 
-​        [2. Some API problems fixing. ](#3.2)
+&emsp; [2. Some API problems fixing. ](#3.2)
 
-​        [3. Features implementing one by one as component. ](#3.3)
+&emsp; [3. Features implementing one by one as component. ](#3.3)
 
 
 
