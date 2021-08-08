@@ -1,5 +1,25 @@
  [Possible Features](#1)
 
+[Features](#2.1)
+
+​	[Feature 1：User Authentication](#2.1)
+
+​	[Feature 2：Modifying Pet's information](#2.2)
+
+​	[Feature 3：Searching pets by category or name](#2.3)
+
+​	[Feature 4：Message Pad](#2.4)
+
+[Testing](#3)
+
+​	[1. API features testing. ](#3.1)
+
+​	[2. Some API problems fixing. ](#3.2)
+
+​	[3. Features implementing one by one as component. ](#3.3)
+
+
+
 
 
 We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
@@ -74,7 +94,7 @@ In reality, product specialists basically choose add features by user demand res
 
 Actually we are going to follow such principles, but there is going to be some minor changes, because of the using of public API, which means we cannot access any part of backend. This constraint is such of strength pulling us back, so we have to be considering existing API’s functions, which is based on feasibility analysis concept.
 
-# Feature 1：User Authentication <a name='2.1'></a>
+# <a name='2.1'></a>Feature 1：User Authentication 
 
 **Sub-features:**
 
@@ -130,7 +150,7 @@ In the user survey, it was found that the user login function is necessary, but 
 
 
 
-# Feature 2：Modifying Pet's information<a name='2.2'></a>
+# <a name='2.2'></a>Feature 2：Modifying Pet's information
 
 **Sub-features:**
 
@@ -151,7 +171,7 @@ From the seller's point of view, he wanted a more usable user interface to manag
 
 Sellers may use this feature to achieve the following visions, change pet names, categories, status, photos, etc. As it is inevitable that there may be times when the first edit is wrong, or later, for some specific reason, some information needs to be changed, then we provide this interface.
 
-# Feature 3：Searching pets by category or name<a name='2.3'></a>
+# <a name='2.3'></a>Feature 3：Searching pets by category or name
 
 The last question in our interview asked potential users what features they would like to see added to the site, and one of them said that they would like to see a categorisation feature, an idea that inspired us. After all, this is a very common and necessary feature in our extensive experience with the site, so we decided to add it.
 
@@ -165,7 +185,7 @@ However, this feature will not be implemented as the first step in the developme
 
 **User Stories:** As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
-# Feature 4：Message Pad<a name='2.4'></a>
+# <a name='2.4'></a>Feature 4：Message Pad
 
 **Description:** 
 
@@ -179,7 +199,7 @@ One of the keys to UI/UX design is how to design feedback for user actions. Some
 Feedback can come in the form of press states, activity indicators, progress indicators, live previews, Toast, dialog boxes, other sounds, etc.
 Our Message Pad is a component that brings together some of the ideas from the above and is designed to give feedback to the user and improve the user experience.
 
-# Testing<a name='3'></a>
+# <a name='3'></a>Testing
 
 Although, as mentioned above, the public API has many limitations, such as we cannot request it to add or change functionality, there may be bugs that we don't know why, and there may also be problems with a large number of people accessing it resulting in misplaced data. Please don't be disappointed, our team has prepared some surprises.
 
@@ -204,7 +224,7 @@ We will describe our test development process of features in great detail below,
 3. Features implementing one by one as component.
 4. Putting all components together then arrange routing.
 
-##  1. API features testing. <a name='3.1'></a>
+##  <a name='3.1'></a>1. API features testing. 
 
 APIs are like spanners in the hands of a car mechanic - if you're not familiar with them, it's hard to use them properly. So our first step is to test the API functionality, both to see what they can do and to find out what problems are potentially present in the implementation. Figuring this out will save time in future development and prevent you from being stuck wondering what a bug is about.
 
@@ -653,7 +673,7 @@ At this point it is easy to see that not all Responses return an Object (pet or 
 
 
 
-##  2. Some API problems fixing. <a name='3.2'></a>
+##  <a name='3.2'></a>2. Some API problems fixing. 
 
 I apologize for the title, it may be misleading as we don't have access to API configuration and naturally we can't fix problems really, but please excuse me while I explain in detail. To use a metaphor, if you are building a wooden table and the drawing says you should use M6 nominal diameter screws, but you only have M7 screws, it's not impossible to use them. So we do the same thing and will do something on the front end to compensate for the inconvenience of a public API. This is exactly what I call "fix".
 
@@ -826,7 +846,7 @@ We just felt that this was too perfunctory from a user's point of view and didn'
 
 Because our API can retrieve all the information about this user via username, then we use the password in this information to compare the password entered by the user. If the user enters the wrong password, we still won't allow him to access his account information and a pop-up will indicate to him that the password he entered is incorrect. The user will not be able to access or even modify the account details until he has entered the correct password.
 
-##  3. Features implementing one by one as component. <a name='3.3'></a>
+##  <a name='3.3'></a>3. Features implementing one by one as component. 
 
 ###  1. For Both Seller and Buyer
 
