@@ -78,6 +78,7 @@ Nonetheless, we will definitely not create two websites for two different groups
 2. Pets’ photos showing.
 3. Filtering pets’ categories.
 4. Creating account of the website.
+5. Making orders.
 
 - For sellers:
 
@@ -87,6 +88,7 @@ Nonetheless, we will definitely not create two websites for two different groups
 4. Deleting pets (already existed)
 5. List all pets (already existed)
 6. Searching pets.
+7. Handling orders.
 
 - For both:
 
