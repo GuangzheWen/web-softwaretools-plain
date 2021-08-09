@@ -13,7 +13,7 @@ export class CustomerSideComponent implements OnInit {
   originPets: Pet[] = []
   pets: Pet[] = []
   isR: boolean = false
-  isL: boolean = false
+  isL: boolean = true
 
   categoryInput = ""
   nameInput = ""
