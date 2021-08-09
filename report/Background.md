@@ -16,23 +16,29 @@ By 14th August, we decided to spend 8 hours a day to build the website, we agree
 
 # Description of all features 
 
-Here is the full description of all features. When we finished a feature, we would tick the box as appropriate to inform others what we have done.
+Here is the full description of all features. When we finished a feature, we would tick the box as appropriate to inform others what we have done and what needs to be done next.
 
 ## DONE
 
-Follwing completed features could be found detailed imformation in  [Features](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Features.md). 
+Follwing completed features could be found detailed imformation in report [Features](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Features.md). 
 
 - [x] Basic editing operations for the owner, i.e., listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
 - [x] User Authentication. It could be made up of following sub items.
-	- [x] Verifying administration password page
+	- [x] Administration account which need password to login in.
 	- [x] User account registering
 	- [x] User login
 	- [x] User account information showing
 	- [x] User information modifying
 	- [x] User account deleting
 - [x] Modifying Pet's information
+	- [x] Modifying pets details
+	- [x] Adding photos of pets
 - [x] Searching pets by category or name
 - [x] Message Pad
-## TO-DO List
 
-- [ ] 
+## To-Do List
+
+Follwing list features which remain uncompleted and require further work.
+
+- [ ] Make orders online.
+- [ ] Show logistic delivery information of orders.
