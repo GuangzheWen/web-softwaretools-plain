@@ -26,7 +26,7 @@ export class UserService {
       .pipe(
         tap(res => {
           if (res.code == 200){
-            this.log(`added user with username: ${user.username}`)
+            this.log(`Added user with username: \n\t${user.username}`)
           }
         }),
         catchError(this.handleError<ApiResponse>('addUser'))
@@ -41,7 +41,7 @@ export class UserService {
     .pipe(
       tap(res => {
         if (res.code == 200){
-          this.log(`user with username: ${user.username} logged in succeed`)
+          this.log(`User login: \n\t${user.username} logged in succeed`)
         }else{
           // console.log('res')
         }
@@ -57,7 +57,7 @@ export class UserService {
     return this.http.get<User>(url, this.httpOptions)
     .pipe(
       tap(user => {
-          this.log(`user with username: ${user.username} info shows here`)
+          this.log(`Get user info with username:\n\t ${user.username} info shows here`)
       }),
       catchError(this.handleError<User>('user info'))
     )
@@ -70,7 +70,7 @@ export class UserService {
     return this.http.put<User>(url, user, this.httpOptions)
     .pipe(
       tap(user => {
-          this.log(`user with username: ${user.username} updated`)
+          this.log(`Modify user with username: \n\t${user.username} updated`)
       }),
       catchError(this.handleError<User>('user info updated'))
     )
@@ -83,7 +83,7 @@ export class UserService {
     return this.http.delete<User>(url, this.httpOptions)
     .pipe(
       tap(user => {
-          this.log(`user with username: ${user.username} updated`)
+          this.log(`Delete user with username: \n\t${user.username} updated`)
       }),
       catchError(this.handleError<User>('user info updated'))
     )
@@ -97,7 +97,7 @@ export class UserService {
 
   /** Log a PetService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`PetService: ${message}`);
+    this.messageService.add(`User service:\n\t ${message}`);
   }
 
   /**

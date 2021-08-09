@@ -34,7 +34,7 @@ export class PetService {
     this.http.get<Pet[]>(this.petsUrl)
     return this.http.get<Pet[]>(this.petsUrl)
     .pipe(
-      tap(_ => this.log('fetched pets')),
+      tap(_ => this.log('Get pets list')),
       catchError(this.handleError<Pet[]>('getPets', []))
     );
   }
@@ -45,7 +45,7 @@ export class PetService {
     this.http.get(url).subscribe()
     return this.http.get<Pet>(url)
     .pipe(
-      tap(_ => this.log(`fetched pet id=${id}`)),
+      tap(_ => this.log(`Get pet with id: \n\t${id}`)),
       catchError(this.handleError<Pet>(`getPet id=${id}`))
     )
   }
@@ -54,7 +54,7 @@ export class PetService {
   updatePet(pet: Pet): Observable<any> {
     this.http.put(this.baseUrl, pet, this.httpOptions).subscribe()
     return this.http.put(this.baseUrl, pet, this.httpOptions).pipe(
-      tap(_ => this.log(`updated pet id=${pet.id}`)),
+      tap(_ => this.log(`Updated pet with id: \n\t${pet.id}`)),
       catchError(this.handleError<any>('updatePet'))
     );
   }
@@ -63,7 +63,7 @@ export class PetService {
   addPet(pet: Pet): Observable<Pet> {
     this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).subscribe()
     return this.http.post<Pet>(this.baseUrl, pet, this.httpOptions).pipe(
-      tap((newPet: Pet) => this.log(`added pet w/ id=${newPet.id}`)),
+      tap((newPet: Pet) => this.log(`Added pet with id:\n\t${newPet.id}`)),
       catchError(this.handleError<Pet>('addPet'))
     );
   }
@@ -73,7 +73,7 @@ export class PetService {
     const url = `${this.baseUrl}/${id}`;
     this.http.delete<Pet>(url, this.httpOptions).subscribe()
     return this.http.delete<Pet>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted pet id=${id}`)),
+      tap(_ => this.log(`Deleted pet with id: \n\t${id}`)),
       catchError(this.handleError<Pet>('deletePet'))
     );
   }
@@ -85,7 +85,7 @@ export class PetService {
 
   /** Log a PetService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`PetService: ${message}`);
+    this.messageService.add(`Pet Service: \n\t${message}`);
   }
 
   /**
