@@ -13,3 +13,26 @@ To maximize the benefits to the pet shop owner, the system is focus on two parts
 By 14th August, we decided to spend 8 hours a day to build the website, we agreed that the image is one of the most effective features. We divided in teams to work in the design and to kknow how to apply this feature in the website.
 
 # System Design
+
+# Description of all features 
+
+Here is the full description of all features. When we finished a feature, we would tick the box as appropriate to inform others what we have done.
+
+## DONE
+
+Follwing completed features could be found detailed imformation in  [Features](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Features.md). 
+
+- [x] Basic editing operations for the owner, i.e., listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
+- [x] User Authentication. It could be made up of following sub items.
+	- [x] Verifying administration password page
+	- [x] User account registering
+	- [x] User login
+	- [x] User account information showing
+	- [x] User information modifying
+	- [x] User account deleting
+- [x] Modifying Pet's information
+- [x] Searching pets by category or name
+- [x] Message Pad
+## TO-DO List
+
+- [ ] 
