@@ -1,18 +1,41 @@
 <div class="container">
     <div *ngIf="!status">
-        <form>
-            <label>username:</label>
-            <input [(ngModel)]="username" placeholder="username" name="username"><br>
-            <label>first name:</label>
-            <input [(ngModel)]="firstName" placeholder="firstName" name="firstName"><br>
-            <label>last name:</label>
-            <input [(ngModel)]="lastName" placeholder="lastName" name="lastName"><br>
-            <label>password:</label>
-            <input [(ngModel)]="password" placeholder="password" name="password"><br>
-            <button (click)="addUser()"> Resgiter</button>
-        </form>
+        <table>
+            <tr>
+                <td><b>Username:</b>&nbsp;</td>
+                <td><input [(ngModel)]="username" placeholder="Username" name="username"><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>First Name:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="firstName" placeholder="First Name" name="firstName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Last Name:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="lastName" placeholder="Last Name" name="lastName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Password:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="password" placeholder="Password" name="password"><br>
+                </td>
+            </tr>
+            
+            
+            
+        </table>
+        <button (click)="addUser()"> <b>Resgiter</b></button>
     </div>
     <div *ngIf="status">
-        <p>congratulations, register succeed</p>
+        <p><b>Congratulation! Registered succeed.</b></p>
     </div>
 </div>

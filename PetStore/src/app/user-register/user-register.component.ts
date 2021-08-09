@@ -25,6 +25,12 @@ export class UserRegisterComponent implements OnInit {
   }
 
   addUser() {
+    if (this.username == ''){
+      return
+    }
+    if (this.password == ''){
+      return
+    }
     let username = this.username
     let firstName = this.firstName
     let lastName = this.lastName
