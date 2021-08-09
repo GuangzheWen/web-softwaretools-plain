@@ -52,21 +52,7 @@
     background-color: rgba(206, 206, 206, 0.664);
 }
 
-/* For pets list */
-#pets{
-    margin: 10px;
-    padding: 5px;
-}
 
-/* For pet */
-#pet{
-    border: 1px solid red;
-    margin: 20px;
-    padding: 20px;
-    width: 880px;
-    height: 200px;
-    border-radius: 15px;
-}
 
 /* Button */
 .leftButton{
@@ -106,4 +92,50 @@ input{
 
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* For pets list */
+#pets{
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* For pet */
+#pet{
+
+    margin: 20px;
+    padding: 20px;
+    width: 880px;
+    height: 200px;
+    border-radius: 15px;
+    background-image: url('http://img.oulu.me/013%20Heavy%20Rain.png');
+}
+
+.notes {
+    color: rgb(168, 167, 167);
+}
+
+#information {
+    width: 500px;
+    height: 200px;
+    display: inline-block;
+    font-size: 20px;
+}
+#photo{
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+
+    text-align: center;
+
+
+}
+tr{
+    height: 50px;
+}
+img{
+    height: 200px;
+    border-radius: 15px;
 }

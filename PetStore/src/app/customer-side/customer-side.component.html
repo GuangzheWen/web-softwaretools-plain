@@ -38,8 +38,50 @@
             </div>
             <div id="pets">
                 <div id="pet" *ngFor="let pet of pets" >
-                    {{ pet.name }}
-                    {{ pet.id }}
+                    <div id="information">
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>Pet's ID: </b>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    {{ pet.id }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Pet's Name: </b>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>{{ pet.name }}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Pet's Category: </b>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                
+                                <td *ngIf="pet.category.name != ''">{{ pet.category.name }}</td>
+                                <td class="notes" *ngIf="pet.category.name == ''">Seller didn't add category</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div id="photo">
+
+                        <img *ngIf="pet.photoUrls[0] != ''" src="{{pet.photoUrls[0]}}" alt="Seller didn't upload a photo">
+                        <img *ngIf="pet.photoUrls[0] == ''"  src="https://raw.githubusercontent.com/GuangzheWen/Photos/main/noPhoto.png" alt="">
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>

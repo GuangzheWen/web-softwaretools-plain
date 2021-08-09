@@ -19,26 +19,32 @@ export class CustomerSideComponent implements OnInit {
   nameInput = ""
 
   fingByCategory(){
-    let returnPets: Pet[] = []
-    this.originPets.forEach(pet => {
-      if(pet.category.name == this.categoryInput ){
-        returnPets.push(pet)
-      }
-    });
-    this.pets = returnPets
+    if (this.categoryInput != ""){
+      let returnPets: Pet[] = []
+      this.originPets.forEach(pet => {
+        if(pet.category.name == this.categoryInput ){
+          returnPets.push(pet)
+        }
+      });
+      this.pets = returnPets
+    }
   }
 
   findByNane(){
-    let returnPets: Pet[] = []
-    this.originPets.forEach(pet => {
-      if(pet.name == this.nameInput ){
-        returnPets.push(pet)
-      }
-    });
-    this.pets = returnPets
+    if (this.nameInput != "") {
+      let returnPets: Pet[] = []
+      this.originPets.forEach(pet => {
+        if(pet.name == this.nameInput ){
+          returnPets.push(pet)
+        }
+      });
+      this.pets = returnPets
+    }
   }
 
   clear(){
+    this.nameInput = ""
+    this.categoryInput = ""
     this.pets = this.originPets
   }
   constructor(
