@@ -20,6 +20,10 @@ export class HostAdminComponent implements OnInit {
   }
 
   check() {
+    if(this.passwordInput == ''){
+      return
+    }
+
     if (this.passwordInput != this.password){
       alert('wrong password')
     }

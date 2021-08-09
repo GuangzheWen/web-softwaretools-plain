@@ -41,32 +41,18 @@
                     <div id="information">
                         <table>
                             <tr>
-                                <td>
-                                    <b>Pet's ID: </b>
-                                </td>
-                                <td>
-                                    &nbsp;
-                                </td>
-                                <td>
-                                    {{ pet.id }}
-                                </td>
+                                <td><b>Pet's ID: </b></td>
+                                <td>&nbsp;</td>
+                                <td>{{ pet.id }}</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <b>Pet's Name: </b>
-                                </td>
-                                <td>
-                                    &nbsp;
-                                </td>
+                                <td><b>Pet's Name: </b></td>
+                                <td>&nbsp;</td>
                                 <td>{{ pet.name }}</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <b>Pet's Category: </b>
-                                </td>
-                                <td>
-                                    &nbsp;
-                                </td>
+                                <td><b>Pet's Category: </b></td>
+                                <td>&nbsp;</td>
                                 
                                 <td *ngIf="pet.category.name != ''">{{ pet.category.name }}</td>
                                 <td class="notes" *ngIf="pet.category.name == ''">Seller didn't add category</td>

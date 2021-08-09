@@ -24,6 +24,11 @@ button{
     margin-left: 20px;
 }
 
+button:hover{
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
 input{
     outline-style: none ;
     border: 1px solid #ccc; 
@@ -48,3 +53,4 @@ input:focus{
     left: 350px;
     min-width: 1000px;
 }
+

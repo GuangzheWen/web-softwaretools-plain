@@ -66,7 +66,7 @@
     border-radius: 8px;
     border: none; 
     color: #FFFFFF;
-
+    cursor: pointer;
     font-weight: bold;
 }
 
@@ -77,7 +77,7 @@
     height: 20px;
     font-size: 12px;
     background-color: #54aa0d;
-
+    cursor: pointer;
     border-radius: 8px;
     border: none; 
     color: #FFFFFF;
@@ -129,8 +129,6 @@ input{
     display: inline-block;
 
     text-align: center;
-
-
 }
 tr{
     height: 50px;
