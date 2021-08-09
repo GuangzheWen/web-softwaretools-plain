@@ -22,6 +22,7 @@ button{
     outline: none;
     box-shadow: -6px 6px 0 hsl(139, 7%, 45%);
     margin-left: 20px;
+    cursor: pointer;
 }
 
 button:hover{

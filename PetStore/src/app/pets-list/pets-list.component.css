@@ -94,6 +94,7 @@ input:focus{
     outline: none;
     box-shadow: -6px 6px 0 hsl(139, 7%, 45%);
     margin-left: 20px;
+    cursor: pointer;
 }
 #buttonAdd:hover{
 
@@ -109,4 +110,5 @@ input:focus{
     color: white;
     width: 10px;
     height: 12px;
+    cursor: pointer;
 }
