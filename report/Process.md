@@ -1,6 +1,10 @@
-# Group Working
+# Table of contents
 
+[1. Group working](#1)
 
+[2. Team Roles](#2)
+
+# <a name='1'></a>Group Working
 
 ## Agile Scrum methodology
 
@@ -40,7 +44,7 @@ Before the meeting starts, each member needs to send his recent progress and dis
 - We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
 - Owing to the fact that most of our teams are chinese, the chinese people use Wechat, one kind of immediate communication tool which is popular in China, to share opinions. Although immediate communication sometimes seem to be annoying, but it quite suits during short-time development.
 
-# Team Roles
+# </span>Team Roles
 
 # Sprints
 
