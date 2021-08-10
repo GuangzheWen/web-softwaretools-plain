@@ -2,27 +2,27 @@
 
 [1. Group working](#1)
 
-​	[1.1 Agile Scrum methodology](#1.1)
+&emsp;[1.1 Agile Scrum methodology](#1.1)
 
-​	[1.2 Communication Channel](#1.2)
+&emsp;[1.2 Communication Channel](#1.2)
 
 [2. Team Roles](#2)
 
 [3. Sprints](#3)
 
-​	[3.1 Timeline](#3.1)
+&emsp;[3.1 Timeline](#3.1)
 
-​	[3.2 Startup Phase](#3.2)
+&emsp;[3.2 Startup Phase](#3.2)
 
-​	[3.3 Project Implementation Phase](#3.3)
+&emsp;[3.3 Project Implementation Phase](#3.3)
 
-​		[3.3.1 Sprint 1: User Research and API Bug Fixed](#3.3.1)
+&emsp;&emsp;[3.3.1 Sprint 1: User Research and API Bug Fixed](#3.3.1)
 
-​		[3.3.2 Sprint 2: Authenticating Users](#3.3.2)
+&emsp;&emsp;[3.3.2 Sprint 2: Authenticating Users](#3.3.2)
 
-​		[3.3.3 Sprint 3: Modifying Pet Information](#3.3.3)
+&emsp;&emsp;[3.3.3 Sprint 3: Modifying Pet Information](#3.3.3)
 
-​		[3.3.4 Sprint 4: Searching](#3.3.4)
+&emsp;&emsp;[3.3.4 Sprint 4: Searching](#3.3.4)
 
 [4. Continuous Integration](#4)
 
@@ -430,7 +430,7 @@ xxxx(温)
 
 Time: 11:00am-11:40am
 
-Date: 7th August
+Date: 9th August
 
 Place: Teams
 
@@ -446,7 +446,7 @@ The Meeting Point:
 
 Time: 11:00am-11:20am
 
-Date: 9th August
+Date: 10th August
 
 Place: Teams
 
