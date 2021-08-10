@@ -1,5 +1,7 @@
 # Group Working
 
+
+
 ## Agile Scrum methodology
 
 Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
@@ -292,7 +294,7 @@ The Meeting Point:
 
 Then, we have used the tested API of user category to implement demonstrations for features as following, user registering, user login, user information displaying. By using components and HttpClient built-in tools of Angular.
 
-**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information and deleting user account. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of traveling among the components also need to be designed, which we do so.
+**4th Aug:** Continuing on completing authentication, we decided that the website should have two mode: one is made for customer, the other is designed for the host of the pet store. On the mode Customer-side, added features like modifying user information. On the mode Host-side, add an authentication page to let host to input password meanwhile avoiding customer logging in then modifying pets data, after all only host can edit the pets data. Apart from these, the logic of traveling among the components also need to be designed, which we do so.
 
 ### Sprint 3: Modifying Pet Information
 
@@ -343,8 +345,36 @@ The Meeting Point:
 
 1. Guangzhe has demonstrated the Modifying Pet Information feature by sharing the desktop.
 2. It was decided to begin designing the front end for the Authenticating Users and Modifying Pet Information features. The first task is to interview users and ask them what their ideal front page would look like.
-3. It was decided to show the Authenticating Users and Modifying Pet Information Features to Users in an attempt to get some user feedback
+3. It was decided to show the Authenticating Users and Modifying Pet Information Features to Users in an attempt to get some user feedback.
 4. The next Sprint task is determined to be the search feature development.
+
+##### Meeting 6
+
+Time: 11:00am-11:20am
+
+Date: 7th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. After feedback from users, Guangzhe has modified some elements of the feature and we disscussed about it:
+
+- feedback 1: When pet store owner log in, they don't want to have too many steps, they need to do it quickly.
+
+  solution: Change the login information bar to require only the password.
+
+- feedback 2: Too much information was entered when creating the pet, especially ID.
+
+  solution: An ID is automatically generated when creating a pet.
+
+- feedback 3: Customers want to have an option to delete their account to protect their privacy.
+
+  solution: Add deletion option when customers log in.
+
+2. Disscussed the front-end design, which was modified based on user feedback on features. Specific modifications are described in [Front End UX.md](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md).
 
 #### Technical Log
 
@@ -353,8 +383,6 @@ But here the resolution does not mean modifying the API itself, as we have no wa
 So, the functionality regarding pets was implemented without any problems, with the display of a list of pets (including images) and the addition of the ability to modify and delete pets. There are two explanations to be made here.
 One, both the seller side and the buyer side can load the pet list, but the seller side can route each pet by clicking on it and then edit the pet's details, the buyer side cannot.
 Secondly, there is a dedicated API for uploading images, but probably because of the public API, it doesn't actually receive an image file, it just uses a string instead, to keep the database from filling up. So this API function doesn't really work, so we use the upload URL of image instead of upload image.In addition, there was a bug during yesterday's demo that was not anticipated during the development phase, mainly in the page jumping logic, which has been resolved today.
-
-
 
 ### Sprint 4: Searching
 
@@ -368,9 +396,41 @@ Develop the feature of searching, and test it.
 
 #### Highlights
 
+xxxx(温)
+
 #### Meeting Log
 
-##### Meeting 5
+##### Meeting 7
+
+Time: 11:00am-11:40am
+
+Date: 7th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
+
+The Meeting Point:
+
+1. Guangzhe has demonstrated the searching capability by sharing the desktop. 
+2. Guangzhe and Chongyan has demostrated the front end and UI of the searching.
+3. The current progress of the project and future plans were discussed. After the user evaluates the Searching feature, it is necessary to sum up all the functions completed before and make optimization.
+
+##### Meeting 8
+
+Time: 11:00am-11:20am
+
+Date: 9th August
+
+Place: Teams
+
+Attendees: Guangzhe Wen, Jiangqi Lou, Gang Li
+
+The Meeting Point:
+
+1. The feedback of users is discussed, and the users are satisfied with the search function. But when they tried to search, and they used uppercase letters, or a mix of uppercase letters, they did not get the results they expect. For this, search optimization was performed.
+
+2. Disscussed the front-end design, which was modified based on user feedback on features.
 
 #### Technical Log
 
