@@ -341,7 +341,7 @@ Develop the feature of modifying pet information, including uploading the pictur
    2. Used **API: [get] /pet/findByStatus** with our own status "team2" to load all our group's own pets.
 2. Feature 2:
    1. Seller-**Pet's details**.
-   2. Used **API: [get] /pet/{petId}** with pet id in path, then get certain pet's information. 
+   2. Used **API: [get] /pet/{petId}** with pet id in path, then get certain pet's information.
 3. Feature 3:
    1. **Seller-Modify pet's information**.
    2. Used **API: [put] /pet** updating an existing pet's information with body (pet object). including adding photoURL to pet's object.
@@ -382,7 +382,7 @@ Date: 7th August
 
 Place: Teams
 
-Attendees: Guangzhe Wen, Gang Li, Chongyan Qi
+Attendees: Guangzhe Wen, Gang Li, Alfymora Joseph, Chongyan Qi
 
 The Meeting Point:
 
@@ -438,7 +438,7 @@ Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li, Chongyan Qi
 
 The Meeting Point:
 
-1. Guangzhe has demonstrated the searching capability by sharing the desktop. 
+1. Guangzhe has demonstrated the searching capability by sharing the desktop.
 2. Guangzhe and Chongyan has demostrated the front end and UI of the searching.
 3. The current progress of the project and future plans were discussed. After the user evaluates the Searching feature, it is necessary to sum up all the functions completed before and make optimization.
 
@@ -450,7 +450,7 @@ Date: 10th August
 
 Place: Teams
 
-Attendees: Guangzhe Wen, Jiangqi Lou, Gang Li
+Attendees: Guangzhe Wen, Jiangqi Lou, Alfymora Joseph, Gang Li
 
 The Meeting Point:
 
