@@ -139,7 +139,7 @@ In this section we will show the evolution of our design in the form of a screen
 
   The diagram below shows the complete iterative upgrade process of the pet list in buyer mode.
 
-![image-20210811011335660](../images/UI_buyer_mode_evolution.png)
+![image-20210811042110290](../images/UI_buyer_petsList_evolution.png)
 
 - Buyer mode - Account area:
 
