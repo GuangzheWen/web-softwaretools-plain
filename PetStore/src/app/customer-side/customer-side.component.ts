@@ -22,7 +22,7 @@ export class CustomerSideComponent implements OnInit {
     if (this.categoryInput != ""){
       let returnPets: Pet[] = []
       this.originPets.forEach(pet => {
-        if(pet.category.name == this.categoryInput ){
+        if(pet.category.name.search(this.categoryInput) != -1 ){
           returnPets.push(pet)
         }
       });
@@ -34,7 +34,7 @@ export class CustomerSideComponent implements OnInit {
     if (this.nameInput != "") {
       let returnPets: Pet[] = []
       this.originPets.forEach(pet => {
-        if(pet.name == this.nameInput ){
+        if(pet.name.search(this.nameInput) != -1 ){
           returnPets.push(pet)
         }
       });
