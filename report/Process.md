@@ -30,7 +30,7 @@
 
 ## <a name='1.1'></a>Agile Scrum methodology
 
-Scrum is a framework utilising an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
+Scrum is a framework utilizing an agile mindset for developing, delivering, and sustaining products in a complex environment. Our Scrum Team assess progress in daily scrums of almost 20 minutes. At the end of the sprint, we held two further meetings: the sprint review which evaluate the work we had done, and sprint retrospective which enables us to reflect and improve.
 
 At our group's first meeting, we discussed and compared several different agile development methods, such as Scrum, Kanban, Extreme Programming, Dynamic Systems Development Method and so on.
 
