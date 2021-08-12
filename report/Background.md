@@ -17,6 +17,7 @@ The owner is the client who will use the app to sell pets, and he is also the pe
 Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[^1] Moreover, we will collect their feedback for further development in the future.
 
 Here is process the map for our User-Centered design.
+![User-Centered Design](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Centered.png)
 
 Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner. like deleting and editing existing pets.
 
@@ -25,7 +26,7 @@ Besides, since the system is still under active development, we must face the fa
 The  checklist against which we can evaluate at last.
 
 - [x] An interviewer with the owner to learn about his attitudes, ideas, and desires.
-- [x] Perform Focus Groups methodology to do user research and form the user stories.
+- [x] Perform Focus Groups[^2] methodology to do user research and form the user stories.
 - [x] Take the codebase of the pet store and improve pet store api in need.
 - [x] Analyze our site according to the results of user research and the interview with customers and the owner.
 - [x] Add essential new features to meet the demands from users.
@@ -67,3 +68,4 @@ The following list features which remain uncompleted and require further work.
 - [ ] Communication Tool. Customers and the owner could have a chat with this tool to discuss or bargain.
 
 [^1]: https://www.usability.gov/what-and-why/user-research.html
+[^2]: https://www.usability.gov/how-to-and-tools/methods/focus-groups.html
