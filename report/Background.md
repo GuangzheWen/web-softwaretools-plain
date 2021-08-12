@@ -16,7 +16,22 @@ The owner is the client who will use the app to sell pets, and he is also the pe
 
 Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[^1] Moreover, we will collect their feedback for further development in the future.
 
+Here is process the map for our User-Centered design.
+
 Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner. like deleting and editing existing pets.
+
+## Checklist
+
+The  checklist against which we can evaluate at last.
+
+- [x] An interviewer with the owner to learn about his attitudes, ideas, and desires.
+- [x] Perform Focus Groups methodology to do user research and form the user stories.
+- [x] Take the codebase of the pet store and improve pet store api in need.
+- [x] Analyze our site according to the results of user research and the interview with customers and the owner.
+- [x] Add essential new features to meet the demands from users.
+- [x] Unit testing and integration testing with user input to make sure the website could run correctly.
+- [x] Do a survey to find out items need to be improved in the next step.
+- [x] Scheduled product delivery and get feedback from users.
 
 # System Design
 
@@ -28,19 +43,19 @@ Here is the full description of all features. When we finished a feature, we wou
 
 Following completed features could be found detailed information in report [Features](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Features.md). 
 
-- [x] Basic editing operations for the owner, i.e listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
-- [x] User Authentication. It could be made up of following sub items.
-	- [x] Administrator account which need password to login in. Obviously, the owner of the pet shop should get access to Administrator account and be the only one who have the right to edit, add, delete pets lists and even change the orders for customers. So, the administrator is supposed to have unique account to get this special authority when other users cannot.
-	- [x] User account register. Customers should register first when they purchase desired pets in order to follow their order details, transportation and so on.
-	- [x] User login entry where customers input their user names and passwords to login in their own accounts.
-	- [x] User account information page. Show users account information.
-	- [x] Modify user information. Users could change their personal information like name and address.
-	- [x] Delete user account. Users could delete their own account when they don't need it anymore.
-- [x] Modify pets' information
-	- [x] Modify pets details. Basic editing operation since the owner may need to change the pets' information owing to various reasons, like changes of pets' appearance or misrepresentation by mistake.
-	- [x] Add photos of pets. According to [The Results of User Research](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-results-of-user-research), customers are eager to have chance of viewing the photos of lovely pets before making a decision.
-- [x] Searching pets by category or name. It's quite helpful if the website could filter animals by key words, such as price range, breed, color, to find the targets more quickly.
-- [x] Message Pad. Users are able to get instant feedback on the response to each action via Message Pad.
+- Basic editing operations for the owner, i.e listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
+- User Authentication. It could be made up of following sub items.
+	- Administrator account which need password to login in. Obviously, the owner of the pet shop should get access to Administrator account and be the only one who have the right to edit, add, delete pets lists and even change the orders for customers. So, the administrator is supposed to have unique account to get this special authority when other users cannot.
+	- User account register. Customers should register first when they purchase desired pets in order to follow their order details, transportation and so on.
+	- User login entry where customers input their user names and passwords to login in their own accounts.
+	- User account information page. Show users account information.
+	- Modify user information. Users could change their personal information like name and address.
+	- Delete user account. Users could delete their own account when they don't need it anymore.
+- Modify pets' information
+	- Modify pets details. Basic editing operation since the owner may need to change the pets' information owing to various reasons, like changes of pets' appearance or misrepresentation by mistake.
+	- Add photos of pets. According to [The Results of User Research](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-results-of-user-research), customers are eager to have chance of viewing the photos of lovely pets before making a decision.
+- Searching pets by category or name. It's quite helpful if the website could filter animals by key words, such as price range, breed, color, to find the targets more quickly.
+- Message Pad. Users are able to get instant feedback on the response to each action via Message Pad.
 
 ## To-Do List
 
