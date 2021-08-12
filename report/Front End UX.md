@@ -1,6 +1,6 @@
 <h1>Content: </h1>
 
-[UX Development](#1)
+[1. UX Development](#1)
 
 &emsp;[1. Wireframes showing planned design](#1.1)
 
@@ -8,7 +8,7 @@
 
 &emsp;[3. Design evolution overtime](#1.3)
 
-[Final UX](#2)
+[2. Final UX](#2)
 
 &emsp;[1. Theoretical support](#2.1)
 
@@ -16,15 +16,15 @@
 
 &emsp;[3. Documents](#2.3)
 
-[Design Choices](#3)
+[3. Design Choices](#3)
 
-[Evaluation](#4)
+[4. Evaluation](#4)
 
 &emsp;[1. Before prgramming](#4.1)
 
 &emsp;[2. Within prgramming](#4.2)
 
-&emsp;[3. Positive feedback loop among versions](#4.3)
+&emsp;[3. After feedback from users](#4.3)
 
 
 
@@ -513,5 +513,22 @@ In practice, different feedback methods need to be chosen for different scenario
 
 ## <a name="4.3"></a>After feedback from users
 
-1. With the filtering function, users expect more of a fuzzy search rather than an exact search.
-2. Add examples after filtering by category feature.
+After the initial completion of the site, a self-assessment by the development team was necessary, but to lighten this part of the workload, we front-loaded some of the testing and validation work. This meant that at this point, we could simply consult the minutes of previous meetings or technical logs to draw preliminary conclusions and the vision we had discussed up front was largely realised.
+
+However, self-assessment within the development team is often not sufficient. It's like being a psychiatrist but having a hard time seeing yourself. We, as developers, are often imprisoned in our own minds and do not see the fuller picture. This is also the case in every part of the development team, where we find that everyone can think of different starting points and directions for the main points. If we rely on the arbitrary decisions of one person, then the results obtained are often one-sided; if we rely on the members working together, then the results will be more comprehensive and dialectical.
+
+Then, looking beyond the perspective of the development team, if we develop a website that has potential users to experience and evaluate it, then they must be able to see a view that we cannot. So we offered our initial website to potential users to experience it and to give us their opinions and suggestions. Based on their ideas, we discuss them internally and if we agree that they are reasonable, then we decide to add or modify the sections accordingly. Here is an analysis of our experience, from a technical point of view.
+
+1. User request to add a search function
+
+   Through the initial experience of the users, it was felt that our website had basically met their expectations. This is also closely related to the user survey and demand sub-ball that we have done in the early stage. We did develop the website features and page layouts according to the user needs. However, after experiencing the initial website, the users still came up with some new ideas. They wanted to add a lookup function to the site to find by name or pet category. Our development team agreed that such a suggested change was very reasonable and, from a technical point of view, highly feasible. So we added the ability to filter by pet name and category to the top end of the pet list and the tests are working well.
+
+2. User request to change the search function from an exact search to a fuzzy search
+
+   Once the internal functional testing was completed, we made the improved website available for further evaluation by users. We had expected a satisfactory response from our users. However, this was not the case and the users were not happy with the functionality. We were told through interviews that the users were expecting a fuzzy search rather than an exact search. Yes, we did implement the exact search function, for example searching for "dog" only produced results for "dog". What users were expecting was that a search for "d" would bring up "dog" and a search for "dog" would bring up "dog". " and "dogs". In this process, we found that there were differences in understanding the same function, which on the one hand shows that we did not clarify the details of the new user requirements in the first user evaluation feedback. The second aspect also illustrates that evaluation, feedback and communication are positive and effective actions. Although it may only be a matter of a single line of code, the change will make the user experience much better.
+
+3. Post an example of input next to the find box
+
+   To further enhance the user experience, we decided to add a sample input next to the search box "category" so that users know roughly what fields they can enter. This is intended as a guide.
+
+   
