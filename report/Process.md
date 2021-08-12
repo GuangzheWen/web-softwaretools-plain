@@ -422,7 +422,10 @@ Develop the feature of searching, and test it.
 
 #### Highlights
 
-xxxx(温)
+1. Added features of seraching or filtering, by name and category. And the pets list below will re-render by the filtering input in real time. 
+2. Change search method from exact to fuzzy search.
+3. Added Clear button to  restore the pets list below.
+4. A new input sample has been added to provide guidance.
 
 #### Meeting Log
 
