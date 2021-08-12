@@ -1,0 +1,110 @@
+<div class="container">
+    <div *ngIf="!modify">
+        <div *ngIf="user">
+            <table>
+                <tr>
+                    <td><b>Username:</b></td>
+                    <td>{{user.username}}</td>
+                </tr>
+                <tr>
+                    <td><b>First name:</b></td>
+                    <td>{{user.firstName}}</td>
+                </tr>
+                <tr>
+                    <td><b>Last name:</b></td>
+                    <td>{{user.lastName}}</td>
+                </tr>
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>{{user.email}}</td>
+                </tr>
+                <tr>
+                    <td><b>Phone:</b></td>
+                    <td>{{user.phone}}</td>
+                </tr>
+                <tr>
+                    <td><b>Password:</b></td>
+                    <td>{{user.password}}</td>
+                </tr>
+            </table>
+        
+        </div>
+        <button (click)="modify=true">
+            <b>Modify info</b>
+        </button>
+    </div>
+    
+    <div *ngIf="modify">
+        <div *ngIf="user">
+            <table>
+                <tr>
+                    <td><b>Username:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>
+                        <input [(ngModel)]="user.username" value="user.username" placeholder="Username">  
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>First name:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.firstName}}</td>
+                    <td>
+                        <input [(ngModel)]="user.firstName" value="user.firstName" placeholder="First name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Last name:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.lastName}}</td>
+                    <td>
+                        <input [(ngModel)]="user.lastName" value="user.lastName" placeholder="Last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Email:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.email}}</td>
+                    <td>
+                        <input [(ngModel)]="user.email" value="user.email" placeholder="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Phone:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.phone}}</td>
+                    <td>
+                        <input [(ngModel)]="user.phone" value="user.phone" placeholder="Phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Password:</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>{{user.password}}</td>
+                    <td>
+                        <input [(ngModel)]="user.password" value="user.password" placeholder="Password">
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        <button (click)="modify=false; modifyUser()"><b>Save</b></button>
+        
+        <button (click)="deleteUser(); modify = false"><b>Delete account</b></button>
+        
+        
+    </div>
+
+</div>

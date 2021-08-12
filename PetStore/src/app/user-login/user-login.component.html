@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="!status">
+
+
+        <table>
+            <tr>
+                <td><b>Username:</b>&nbsp;</td>
+                <td><input [(ngModel)]="username" placeholder="Username" name="username"><br></td>
+            </tr>
+            <tr>
+                <td><b>Password:</b>&nbsp;</td>
+                <td><input [(ngModel)]="password" placeholder="Password" name="password"><br></td>
+            </tr>
+        </table>
+            
+        <button (click)="login()"> 
+        <b>Log in</b>    
+        </button>
+
+    </div>
+    <div *ngIf="status">
+        <!-- <p>congratulations, login succeed</p> -->
+        <app-user-details (backEvent)="logout()" [loginUsername]="username"></app-user-details>
+    </div>
+</div>

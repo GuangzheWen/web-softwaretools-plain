@@ -1,0 +1,67 @@
+<div class="container">
+    <!-- add new pet -->
+    <div id="add">
+        <div>
+            <h1>
+                Why not add a pet with name first?
+            </h1>
+        </div>
+        <input #petName placeholder="New pet name"/>
+        
+        <button id="buttonAdd" (click)="add(petName.value) ; petName.value = '' ">Add</button>
+
+        
+    </div>
+    <hr>
+    <!-- Showing pets list -->
+        <div id="pets">
+            <div id="petlist" *ngFor="let pet of pets">
+                <div id="pet">
+                    <div id="information">
+                        <a routerLink="/detail/{{pet.id}}">
+                            <table>
+                                <tr>
+                                    <td><b>Pet's ID: </b></td>
+                                    <td>&nbsp;</td>
+                                    <td>{{ pet.id }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Pet's Name: </b></td>
+                                    <td>&nbsp;</td>
+                                    <td>{{ pet.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Pet's Category: </b></td>
+                                    <td>&nbsp;</td>
+                                    
+                                    <td *ngIf="pet.category.name != ''">{{ pet.category.name }}</td>
+                                    <td class="notes" *ngIf="pet.category.name == ''">Seller didn't add category</td>
+                                </tr>
+                               
+                            </table>
+                            
+                        </a>
+                        <table>
+                            <tr>
+                                <td><b>Delete this pet: </b></td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <button id="buttonDelete" title="delete pet"
+                        (click)="delete(pet)">
+                        <img src="https://raw.githubusercontent.com/GuangzheWen/Photos/29e2dc0f1bcdef318c66def5f716f61502e69407/delete-icon.svg" alt="">
+                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                    <div id="photo">
+                        <img *ngIf="pet.photoUrls[0] != ''" src="{{pet.photoUrls[0]}}" alt="Seller didn't upload a photo">
+                        <img *ngIf="pet.photoUrls[0] == ''"  src="https://raw.githubusercontent.com/GuangzheWen/Photos/main/noPhoto.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+</div>
+

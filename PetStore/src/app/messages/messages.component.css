@@ -1,0 +1,47 @@
+
+#messageBox {
+  background-color: rgba(7, 209, 94, 0.363);
+  border-radius: 15px;
+  border-style: groove;
+  padding: 20;
+  height: 250px;
+  width: 200px;
+}
+
+#messageContent{
+  height: 200px;
+  width: 190px;
+  background-color: rgba(12, 8, 8, 0.842);
+  border-style: groove;
+  overflow-y:auto;
+  overflow-x:hidden;
+  word-break: break-all;
+  margin-top: 20px;
+  color: whitesmoke;
+  font-size: small;
+  padding: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#messageBox span {
+  font-weight: bold;
+  padding-right: 40px;
+}
+
+::-webkit-scrollbar
+{
+    width:10px;
+    height:16px;
+    background-color:rgba(7, 209, 94, 0.363);
+}
+
+::-webkit-scrollbar-track
+{
+    border-radius:10px;
+    background-color:#F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius:10px;
+    background-color:#555;
+}

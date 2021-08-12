@@ -1,0 +1,41 @@
+<div class="container">
+    <div *ngIf="!status">
+        <table>
+            <tr>
+                <td><b>Username:</b>&nbsp;</td>
+                <td><input [(ngModel)]="username" placeholder="Username" name="username"><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>First Name:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="firstName" placeholder="First Name" name="firstName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Last Name:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="lastName" placeholder="Last Name" name="lastName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Password:</b>&nbsp;
+                </td>
+                <td>
+                    <input [(ngModel)]="password" placeholder="Password" name="password"><br>
+                </td>
+            </tr>
+            
+            
+            
+        </table>
+        <button (click)="addUser()"> <b>Resgiter</b></button>
+    </div>
+    <div *ngIf="status">
+        <p><b>Congratulation! Registered succeed.</b></p>
+    </div>
+</div>

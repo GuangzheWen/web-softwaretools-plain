@@ -1,0 +1,12 @@
+<div id="messageBox" style="padding: 20px;">
+        <span>Messages: </span>  
+        <button (click)="messageService.clear()">Clear</button>
+        <div id="messageContent">
+                <div *ngIf="messageService.messages.length"> 
+                        <div *ngFor='let message of messageService.messages'> 
+                                <textarea style="background:none; color:white;border: none;overflow:hidden">{{message}}</textarea>
+                        </div>
+                </div>
+        </div>
+        
+</div>
