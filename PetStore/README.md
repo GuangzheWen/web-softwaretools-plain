@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## ng serve
 If you got error when 'ng serve', you might need need this command`npm i --save-dev @angular-devkit/core`
 
+```shell
+
 example
 wayne@Mac PetStore % ng serve
 An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'
@@ -99,3 +101,6 @@ Some issues need review, and may require choosing
 a different dependency.
 
 Run `npm audit` for details.
+
+```
+
