@@ -14,7 +14,7 @@ We will consider two parts - the owner and the customers - to make the website m
 
 The owner is the client who will use the app to sell pets, and he is also the person to whom we will deliver the product finally. We need to have a interview with him firstly and figure out what features he wants. Therefore, we should be responsible for him to come up with a reasonable plan to make both happy and get satisfying comment in the end.
 
-Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[^1] Moreover, we will collect their feedback for further development in the future.
+Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[1] Moreover, we will collect their feedback for further development in the future.
 
 Here is process the map for our User-Centered design.
 ![User-Centered Design](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Centered.png)
@@ -26,7 +26,7 @@ Besides, since the system is still under active development, we must face the fa
 The  checklist against which we can evaluate at last.
 
 - [x] An interviewer with the owner to learn about his attitudes, ideas, and desires.
-- [x] Perform Focus Groups[^2] methodology to do user research and form the user stories.
+- [x] Perform Focus Groups[2] methodology to do user research and form the user stories.
 - [x] Take the codebase of the pet store and improve pet store api in need.
 - [x] Analyze our site according to the results of user research and the interview with customers and the owner.
 - [x] Add essential new features to meet the demands from users.
@@ -35,6 +35,10 @@ The  checklist against which we can evaluate at last.
 - [x] Scheduled product delivery and get feedback from users.
 
 # System Design
+
+Website development work is a growing aspect of the IT activities within many organizations nowadays.[3] One of the biggest challenges faced by our teams is how to develop user friendly software . When creating a website, the first question thing that we thinks about is what qualities the online shopping website should have.
+
+We believe creating a positive user experience is the key to developing user friendly software. So, we have paid a great deal of time to conduct user research and to collect feedback from them, which could be sufficient grounds to decide every choice in system design.
 
 # Description of all features 
 
@@ -67,5 +71,8 @@ The following list features which remain uncompleted and require further work.
 - [ ] Help center. Where to find the documentation how to use the website and where to give feedback or report any issues.
 - [ ] Communication Tool. Customers and the owner could have a chat with this tool to discuss or bargain.
 
-[^1]: https://www.usability.gov/what-and-why/user-research.html
-[^2]: https://www.usability.gov/how-to-and-tools/methods/focus-groups.html
+**References**
+
+1. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/what-and-why/user-research.html> [Accessed 3 August 2021].
+2. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/how-to-and-tools/methods/focus-groups.html> [Accessed 3 August 2021].
+3. Taylor, M., McWilliam, J., Forsyth, H. and Wade, S., 2002. Methodologies and website development: a survey of practice. Information and Software Technology, 44(6), pp.381-391.
