@@ -10,6 +10,14 @@ To maximize the benefits to the pet shop owner, the system is focus on two parts
 
 # Objectives
 
+We will consider two parts - the owner and the customers - to make the website more appealing and functional to use, because the owner of the website (only one person in this example) and buyers who are potentially interested in shopping online must use different features and will tackle problems under different situations.
+
+The owner is the client who will use the app to sell pets, and he is also the person to whom we will deliver the product finally. We need to have a interview with him firstly and figure out what features he wants. Therefore, we should be responsible for him to come up with a reasonable plan to make both happy and get satisfying comment in the end.
+
+Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[^1] Moreover, we will collect their feedback for further development in the future.
+
+Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner. like deleting and editing existing pets.
+
 # System Design
 
 # Description of all features 
@@ -20,7 +28,7 @@ Here is the full description of all features. When we finished a feature, we wou
 
 Following completed features could be found detailed information in report [Features](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Features.md). 
 
-- [x] Basic editing operations for the owner, i.e., listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
+- [x] Basic editing operations for the owner, i.e listing available pets, adding new pets, and deleting a pet. These features are existing but uncompleted when our team took over the project.
 - [x] User Authentication. It could be made up of following sub items.
 	- [x] Administrator account which need password to login in. Obviously, the owner of the pet shop should get access to Administrator account and be the only one who have the right to edit, add, delete pets lists and even change the orders for customers. So, the administrator is supposed to have unique account to get this special authority when other users cannot.
 	- [x] User account register. Customers should register first when they purchase desired pets in order to follow their order details, transportation and so on.
@@ -42,3 +50,5 @@ The following list features which remain uncompleted and require further work.
 - [ ] Show logistic delivery information of orders. Users could get logistic delivery information from their orders page easily.
 - [ ] Help center. Where to find the documentation how to use the website and where to give feedback or report any issues.
 - [ ] Communication Tool. Customers and the owner could have a chat with this tool to discuss or bargain.
+
+[^1]: https://www.usability.gov/what-and-why/user-research.html
