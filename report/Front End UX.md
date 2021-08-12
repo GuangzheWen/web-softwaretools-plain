@@ -164,6 +164,8 @@ In this section we will show the evolution of our design in the form of a screen
 In the previous section the results of our user interface were presented, in this section we describe the more technical aspects, some of the code and documentation including the use of the framework.
 Along with this task, we received the demo website, which does not use the framework, but only pure JavaScript. pure JavaScript can certainly implement this page, but in general, it is not as beneficial as the framework, where we benefit the most from the modular design and the MVC design pattern.
 
+![image-20210812125647180](../images/UX_final.png)
+
 ## <a name="2.1"></a>Theoretical support
 
 We developed frontend by using a coulple of principles, MVC design model, test-driven development, Modular design, Parallel development. With using Angular framework, we can create components for each feature, in which there are mainly three files, *-component.html, *-component.css, and *-component.ts. HTML and CSS file construct the view of one component, while TS file is the controller for the components. 
