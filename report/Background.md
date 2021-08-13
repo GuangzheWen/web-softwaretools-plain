@@ -53,12 +53,12 @@ Overall <span id="jump">user-interface</span> based on user stories and user fee
 ## Buyer and Seller Mode
 
 We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should login in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
-![two-modes](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png)
+![two-modes](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png){:height="50%" width="50%"}
 
 ## Interaction flow diagram for User Authentication
 
 For decades, the password has been the standard means for user authentication on computers. So, we still choose this common but lowest-hanging method. Here is its interaction flow diagram.
-![User-Authentication](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png)
+![User-Authentication](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png){:height="75%" width="75%"}
 
 ## Sequence Diagrams for features
 
@@ -96,7 +96,7 @@ The following list features which remain uncompleted and require further work.
 - [ ] Communication Tool. Customers and the owner could have a chat with this tool to discuss or bargain.
 - [ ] Two-factor user authentication. The password has been the standard means for user authentication on computers. However,  it is evident that a more convenient and secure solution to user authentication is necessary. [4] We want to utilize Two-factor user authentication to make the system more secure.
 
-**References**
+# References
 
 1. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/what-and-why/user-research.html> [Accessed 3 August 2021].
 2. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/how-to-and-tools/methods/focus-groups.html> [Accessed 3 August 2021].
