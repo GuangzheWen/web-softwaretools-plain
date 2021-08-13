@@ -44,11 +44,25 @@ We believe creating a positive user experience is the key to developing user fri
 
 As what is illustrated by the analysis, the pet shop website should consists of two parts - the buyer mode and the sellers mode. The seller mode is designed for the owner to manage shop pets, like adding or removing them, or even changing their information, while the buyer mode is designed for customers to view pets list or to make transactions by this mode.
 
-Overall user-interface based on user stories and user feedback could be showed in the diagram below, while boxes with a blue background are new pages or alerts, and underlined boxes are components, and green dashed lines indicate interaction events and response links.
+## User-interface
+
+Overall <span id="jump">user-interface</span> based on user stories and user feedback could be showed in the diagram below, while boxes with a blue background are new pages or alerts, and underlined boxes are components, and green dashed lines indicate interaction events and response links.
 ![layout_and_interaction](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/layout_and_interaction_logic.png)
+
+
+## Buyer and Seller Mode
 
 We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should login in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
 ![two-modes](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png)
+
+## Interaction flow diagram for User Authentication
+
+For decades, the password has been the standard means for user authentication on computers. So, we still choose this common but lowest-hanging method. Here is its interaction flow diagram.
+![User-Authentication](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png)
+
+## Sequence Diagrams for features
+
+As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional.
 
 # Description of all features 
 
@@ -80,9 +94,11 @@ The following list features which remain uncompleted and require further work.
 - [ ] Show logistic delivery information of orders. Users could get logistic delivery information from their orders page easily.
 - [ ] Help center. Where to find the documentation how to use the website and where to give feedback or report any issues.
 - [ ] Communication Tool. Customers and the owner could have a chat with this tool to discuss or bargain.
+- [ ] Two-factor user authentication. The password has been the standard means for user authentication on computers. However,  it is evident that a more convenient and secure solution to user authentication is necessary. [4] We want to utilize Two-factor user authentication to make the system more secure.
 
 **References**
 
 1. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/what-and-why/user-research.html> [Accessed 3 August 2021].
 2. Usability.gov. 2021. User Research Basics | Usability.gov. [online] Available at: <https://www.usability.gov/how-to-and-tools/methods/focus-groups.html> [Accessed 3 August 2021].
 3. Taylor, M., McWilliam, J., Forsyth, H. and Wade, S., 2002. Methodologies and website development: a survey of practice. Information and Software Technology, 44(6), pp.381-391.
+4. M. L. Das, "Two-factor user authentication in wireless sensor networks," in IEEE Transactions on Wireless Communications, vol. 8, no. 3, pp. 1086-1090, March 2009, doi: 10.1109/TWC.2008.080128.
