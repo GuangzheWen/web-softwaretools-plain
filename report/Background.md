@@ -8,6 +8,8 @@ Our team carried out sufficient user research before the developing, such as giv
 
 To maximize the benefits to the pet shop owner, the system is focus on two parts: the need from the owner and the view from customers. As for the owner, he needs the basic operation function upon the website, such as adding, deleting, and editing the information of pets. For the perspective from customers, they want the website has a beautiful UI to give a good impression on them and could be easily used to search their target pets.
 
+In the end,  we put functional modules together which had previously passed the test to build the final page, which is considered to be useful to the owner and to be attractive to buyers.
+
 # Objectives
 
 We will consider two parts - the owner and the customers - to make the website more appealing and functional to use, because the owner of the website (only one person in this example) and buyers who are potentially interested in shopping online must use different features and will tackle problems under different situations.
@@ -39,6 +41,14 @@ The  checklist against which we can evaluate at last.
 Website development work is a growing aspect of the IT activities within many organizations nowadays.[3] One of the biggest challenges faced by our teams is how to develop user friendly software . When creating a website, the first question thing that we thinks about is what qualities the online shopping website should have.
 
 We believe creating a positive user experience is the key to developing user friendly software. So, we have paid a great deal of time to conduct user research and to collect feedback from them, which could be sufficient grounds to decide every choice in system design.
+
+As what is illustrated by the analysis, the pet shop website should consists of two parts - the buyer mode and the sellers mode. The seller mode is designed for the owner to manage shop pets, like adding or removing them, or even changing their information, while the buyer mode is designed for customers to view pets list or to make transactions by this mode.
+
+Overall user-interface based on user stories and user feedback could be showed in the diagram below, while boxes with a blue background are new pages or alerts, and underlined boxes are components, and green dashed lines indicate interaction events and response links.
+![layout_and_interaction](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/layout_and_interaction_logic.png)
+
+We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should login in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
+![two-modes](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png)
 
 # Description of all features 
 
