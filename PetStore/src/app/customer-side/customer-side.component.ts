@@ -22,7 +22,7 @@ export class CustomerSideComponent implements OnInit {
     if (this.categoryInput != ""){
       let returnPets: Pet[] = []
       this.originPets.forEach(pet => {
-        if(pet.category.name.search(this.categoryInput) != -1 ){
+        if(pet.category.name.toUpperCase().search(this.categoryInput.toUpperCase()) != -1 ){
           returnPets.push(pet)
         }
       });
@@ -34,7 +34,7 @@ export class CustomerSideComponent implements OnInit {
     if (this.nameInput != "") {
       let returnPets: Pet[] = []
       this.originPets.forEach(pet => {
-        if(pet.name.search(this.nameInput) != -1 ){
+        if(pet.name.toUpperCase().search(this.nameInput.toUpperCase()) != -1 ){
           returnPets.push(pet)
         }
       });
