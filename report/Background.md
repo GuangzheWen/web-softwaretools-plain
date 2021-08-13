@@ -19,6 +19,7 @@ The owner is the client who will use the app to sell pets, and he is also the pe
 Obviously, then we need to get requirements from customers and take it into consideration what they are looking for. As a result, we decide to focuses on understanding user behaviors, needs, and motivations through the project by user research, which  is an iterative process in the demands from users to make it sense for which solutions are proposed. Mike Kuniaysky further notes that it is “the process of understanding the impact of design on an audience.”[1] Moreover, we will collect their feedback for further development in the future.
 
 Here is process the map for our User-Centered design.
+
 ![User-Centered Design](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Centered.png)
 
 Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner, like deleting and editing existing pets.
@@ -56,22 +57,26 @@ As what is illustrated by the analysis, the pet shop website should consists of 
 ## User-interface
 
 Overall <span id="jump">user-interface</span> based on user stories and user feedback could be showed in the diagram below, while boxes with a blue background are new pages or alerts, and underlined boxes are components, and green dashed lines indicate interaction events and response links.
+
 ![layout_and_interaction](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/layout_and_interaction_logic.png)
 
 
 ## Buyer and Seller Mode
 
 We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should login in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
+
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png" width = "30%" />
 
 ## Interaction flow diagram for User Authentication
 
 For decades, the password has been the standard means for user authentication on computers. So, we still choose this common but lowest-hanging method. Here is its interaction flow diagram.
+
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png" width = "50%" />
 
 ## Sequence Diagrams for features
 
 As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional. While the post api is to manage pets' information of the system, the user api is to manage the login and signup function of the application ect. Take one feature, searching pets by names, for example.
+
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Sequence-Diagrams.png" width = "50%" />
 
 # Description of all features 
