@@ -21,20 +21,29 @@ Obviously, then we need to get requirements from customers and take it into cons
 Here is process the map for our User-Centered design.
 ![User-Centered Design](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Centered.png)
 
-Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner. like deleting and editing existing pets.
+Besides, since the system is still under active development, we must face the fact that the pet store API is imperfect and some operations remains to be fixed. Most of them are suitable to the owner, like deleting and editing existing pets.
+
+## Project Objectives
+
+After the analysize above, we can make our objectives clear in this project.
+
+- Design and build a functional pet shop website with questionnaire
+- Complete essentail API and fix bug of operations that return inconsistent results
+- Develop a relevant and improved graphical user-interface for users
+- Demonstrate the website is satisfactory and attractive
 
 ## Checklist
 
-The  checklist against which we can evaluate at last.
+The checklist against which we can evaluate at last.
 
-- [x] An interviewer with the owner to learn about his attitudes, ideas, and desires.
-- [x] Perform Focus Groups[2] methodology to do user research and form the user stories.
-- [x] Take the codebase of the pet store and improve pet store api in need.
-- [x] Analyze our site according to the results of user research and the interview with customers and the owner.
-- [x] Add essential new features to meet the demands from users.
-- [x] Unit testing and integration testing with user input to make sure the website could run correctly.
-- [x] Do a survey to find out items need to be improved in the next step.
-- [x] Scheduled product delivery and get feedback from users.
+- [ ] An interviewer with the owner to learn about his attitudes, ideas, and desires.
+- [ ] Perform Focus Groups[2] methodology to do user research and form the user stories.
+- [ ] Take the codebase of the pet store and improve pet store api in need.
+- [ ] Analyze our site according to the results of user research and the interview with customers and the own r.
+- [ ] Add essential new features to meet the demands from users.
+- [ ] Unit testing and integration testing with user input to make sure the website could run correctly.
+- [ ] Do a survey to find out items need to be improved in the next step.
+- [ ] Scheduled product delivery and get feedback from users.
 
 # System Design
 
@@ -53,16 +62,17 @@ Overall <span id="jump">user-interface</span> based on user stories and user fee
 ## Buyer and Seller Mode
 
 We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should login in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
-<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png" width = "50%" />
+<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png" width = "30%" />
 
 ## Interaction flow diagram for User Authentication
 
 For decades, the password has been the standard means for user authentication on computers. So, we still choose this common but lowest-hanging method. Here is its interaction flow diagram.
-<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png" width = "70%" />
+<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png" width = "50%" />
 
 ## Sequence Diagrams for features
 
-As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional.
+As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional. While the post api is to manage pets' information of the system, the user api is to manage the login and signup function of the application ect. Take one feature, searching pets by names, for example.
+<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Sequence-Diagrams.png" width = "50%" />
 
 # Description of all features 
 
