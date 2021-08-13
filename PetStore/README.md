@@ -1,37 +1,36 @@
 # PetStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+## Instruction
 
-## Development server
+You are likely to **follow** this instructions to run the program.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. You should ensure that AngularCLI should be installed on your machine.
 
-## Code scaffolding
+2. Then in the directory "/PetStore", input command `ng serve --open`  and automatically navigate to `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. If you encounter error on Terminal at step 2, use this `npm i --save-dev @angular-devkit/core `command then re-try step 2.
 
-## Build
+4. After ng serve sucessfully, you can see our website running with no pets in database, so the fisrt step should be to add new pets in Seller Mode by clicking button at right-top corner.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ( We set default state of database is no pets there )
 
-## Running unit tests
+5. To access Seller's pets-managing page, you should know the password, which is "admin".
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+6. When you try to add Photo URL to a pet, we provide a couple of example URLs here, feel free to take it.
 
-## Running end-to-end tests
+   https://raw.githubusercontent.com/GuangzheWen/Photos/main/sampleCat.png
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   https://raw.githubusercontent.com/GuangzheWen/Photos/main/sampleDog.png
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+IF you still have any questions about our website though followed by instructions above, please eamil me through jt20452@bristol.ac.uk
 
-## ng serve
-If you got error when 'ng serve', you might need need this command`npm i --save-dev @angular-devkit/core`
+## ng serve process Example
+If you got error when 'ng serve', you might need need this command
 
 ```shell
-
-example
+ng s
 wayne@Mac PetStore % ng serve
 An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'
 Require stack:
