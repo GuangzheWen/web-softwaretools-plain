@@ -533,4 +533,8 @@ Then, looking beyond the perspective of the development team, if we develop a we
 
    To further enhance the user experience, we decided to add a sample input next to the search box "category" so that users know roughly what fields they can enter. This is intended as a guide.
 
+4. FIxed searching input as case insensitive
+
+   Help user by increasing false input tolerance when they are searching for pets.
+
    
