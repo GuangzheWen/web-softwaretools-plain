@@ -94,7 +94,7 @@ We used the Gantt chart to plan our overall project timeline, which began after 
 
   This is the actual timeline we use after discussion and modification. It reasonably plans the tasks we need to complete in each time period, which is also convenient for everyone in the team to follow up the project.
 
-![Project Timeline Update](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/project%20timeline%20update.jpg)
+![Project Timeline Update](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/project%20timeline%20upadate.jpg)
 
 ## <a name='3.2'></a>Startup Phase
 
