@@ -32,6 +32,7 @@ After the analysize above, we can make our objectives clear in this project.
 - Complete essentail API and fix bug of operations that return inconsistent results
 - Develop a relevant and improved graphical user-interface for users
 - Demonstrate the website is satisfactory and attractive
+- Engage in group work to get skills how to build a user-friendly website with group practice.
 
 ## Checklist
 
