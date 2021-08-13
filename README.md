@@ -1,17 +1,17 @@
 # Document folders description
-1. /PetStore: 
+1. **/PetStore:** 
 
   Programme files inside
 
-2. /bin:
+2. **/bin:**
 
    Process junk files inside, you can just ignore it
 
-3. /images:
+3. **/images:**
 
    We used image links in report, raw images inside here
 
-4. /report:
+4. **/report:**
 
    Five report files: 
 
