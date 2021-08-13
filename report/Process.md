@@ -440,7 +440,10 @@ Develop the feature of searching, and test it.
 
 #### Highlights
 
-xxxx(温)
+1. Added features of seraching or filtering, by name and category. And the pets list below will re-render by the filtering input in real time. 
+2. Change search method from exact to fuzzy search.
+3. Added Clear button to  restore the pets list below.
+4. A new input sample has been added to provide guidance.
 
 #### Meeting Log
 
@@ -483,3 +486,50 @@ Of course, since we have to filter category to have the value of category, we se
 All went well and it worked fine.
 
 # <a name='4'></a>Continuous Integration
+
+Continuous integration refers to the frequent integration of code into the backbone. Continuous integration tools allow products to be iterated quickly while still maintaining high quality, allowing bugs to be found quickly and preventing deviations from the backbone.
+We use GitHub's remote repository to keep our code and we think that GitHub is perfect for team development, where members can share contributions on it. In our opinion, GitHub is more than just a web cloud drive, it is a platform for multiple people to work simultaneously, providing sharing features, version control features, and member contribution statistics.
+
+One of our team members first forked Allison's Repository on the GitHub site and then shared his GitHub page with team members in Teams. The administrator of the GitHub repository on the team then needs to give each member access on the Settings page, otherwise others will not be able to commit changes once they have git cloned on their computers. Adding access is done by identifying members by username or email. We completed this first task on the first day of our set up. To make it easier for everyone to access and commit changes.
+
+```shell
+git clone https://github.com/GuangzheWen/web-softwaretools-plain.git
+
+// Before start working
+git pull
+
+// After changes
+git add . 
+git commit -m "comments"
+git push
+```
+
+
+
+1. Managed sharing of code
+
+   A dev branch has been created to assist with the development side of the code. During the development phase, almost all of the code is stored in this branch, and it also keeps the main branch clean and tidy. The main branch is where we keep track of user research, background research and other product manager processes and results. In addition to this, our project's report files are also kept in this branch. When development is complete, we transfer the code from the dev branch to the main branch.
+
+   ```shell
+   // Switching branches if necessary
+   git checkout main
+   git checkout dev
+   ```
+
+   
+
+2. Parallel development
+
+   It was a small team of 5 people and a small project, and after the division of labour, not everyone had the responsibility to be involved in the code development part. So rather than editing the code in parallel it was better to call it a project produced in parallel. The two front-end developers did the front-end development and we worked together on the reports.
+
+   Dealing with conflicts can be a real headache, so we agreed at the first meeting to try to remember to pull before making changes and then push if possible, but some work can take a long time to complete, and in that time frame other members can edit the file and create conflicts. We just need to re-edit the file to deal with the conflict.
+   To avoid conflicts, we have also modularised the testing and development process so that developers can work on individual modules independently, rather than having two people editing a single file at the same time. Any conflicts that occur this way will also be false conflicts, and git will resolve them automatically.
+
+3. Supporting workflows throughout the project
+
+   Our meeting logs are documented in the Process.md file under the report folder. gang is responsible for the meeting logs and guangzhe, as the developer, accompanies each meeting by writing technical logs before and after each meeting to give feedback to members on the real-time implementation progress of the project development. The developers had easy access to some of the users' requirements as they were written in the corresponding files.
+
+4. Offering security of work files
+
+   In my workflow, I found that the MacOS iCloud auto-backup feature would conflict with GitHub's local repository. This manifested itself as this phenomenon, secretly generating old versions of files in the background. For example, I add a folder "pet" and update the files in it, then at some point a folder "pet 2" is created in the same directory with the files from before the changes were made. When I found this out, I turned off the automatic iCloud backup feature. The good news is that the files in the GitHub repository were not modified and we were able to easily re-git clone to the project files intact. Again if anything else happens, the remote repository will save the code for you. Even if the remote is changed by your push, as long as one member has the correct version locally, then your work is covered.
+
