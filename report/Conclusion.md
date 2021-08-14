@@ -1,4 +1,15 @@
 # Summary
+Problem Statements
+Building a reliable website to help a local pet shop owner to sell their pets and reach out to many customers online.
+Through customers interviews, we found 90% of customers have expressed a real need for seeing our pets online before deciding to buy.
+
+Proposed solutions
+Our group agreed that the image feature is the key to help customers to find their favourite pet.
+
+Secondly, we added other features to help the owner to add or edit details of their available pets.
+
+Final thoughts and next steps:
+Conclusion on overall, our website has achieved its objectives. The website has provided all the possible ways to help the local pet shop owner to expand his business for having more customers through online with an effective way.
 
 # Analysis
 
