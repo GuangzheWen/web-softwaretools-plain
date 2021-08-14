@@ -152,3 +152,18 @@ In spite of covid restrictions and working remotely, we found that our communica
 
 ## Personal feelings
 
+> This project gave me a new experience. Fixed topics and random teammates add a lot of challenges to this project, but this is the charm of group cooperation. In future work or life scenes, we can never choose the environment we are familiar with 100%, there is always a process of adaptation. Fortunately, all five members of the team were very active in this project. I was mainly responsible for the management and progress control of the whole project, so I often communicated with each team member about their work and difficulties, and tried to solve problems together, which made me feel the importance of team communication for the completion of the project. I was also very happy to participate in the user survey and chat with users, which made me feel that our project is very meaningful. What surprised me more was that, through group cooperation, the seemingly grand work could be finished with high quality in such a short period of time. It also helps me understand what Allison said to me earlier, that we have the ability to do more than just code!
+> -- Gang Li
+
+> That was a privilege to work with different friendly course mates in a project.
+> I have been learning different skills through this experience. I can tell that group working can make study more efficient and fun. Working with my team project enables me to pool my ideas and see problems from different perspectives. In my group, we have achieved more tasks that couldn’t have been accomplished by myself. During that experience, I have managed to develop some essential skills such as:
+> Effective communication: As we agreed to meet on daily basis at 11am via teams to discuss the project’s aspects and each one’s progress. Also, we were always available online during the day to share questions relevant to the project.
+> Group roles: All five members have got a specific role to be able to monitor our progress.
+> Group working is likely to become an important aspect of our working life
+> -- Alfymora Joseph
+
+> To be honest, it is really a hard period for me and I often felt depressed at the end of July. But the regular conversation in this group encourage me and keep me busy so that I have chance to forget something unhappy. I hope everyone in our group could eat healthily, have a good sleep routine, and get outside for fresh air and exercise each day. These things can all have a positive effect on your mood. Working in a new team is so amazing!
+> -- Jiangqi Lou
+
+> What was different this time compared to the last group project was that I had an extremely strong sense of involvement. With the help of Gang's plan, each of us successfully completed our part of the project. It gave me a taste of the sweetness of teamwork, which is the happiness of having your head buried in a job you love and are good at. In the past, I had I had a fluke mentality, expecting my teammates to do more, this time I adjusted my mindset and tried to do what I could to contribute to the team, and it was in this team spirit that each of us got the job done. I also saw how we helped each other out, for example, discussing bugs when we didn't know how to fix them, helping someone upload a GitHub CLI when it wasn't working well, and so on. This Resit has allowed me to discover new possibilities for my future work, and thankfully, it has been worthwhile and has made me feel that I am more deserving of this degree.
+> -- Guangzhe Wen
