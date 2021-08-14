@@ -174,6 +174,6 @@ In spite of covid restrictions and working remotely, we found that our communica
 > 
 > -- Guangzhe Wen
 
-This project made me more deeply understand the significance of the team project. Different from the previous project, the project team has a clearer purpose and detailed records. Under Gang's organization, we hold regular meetings to discuss and improve the project. Make a schedule to make your work more efficient. What I got was front-end design, which was my last role in the team. Therefore, my work is also more efficient, and I discuss with the team members in the meeting to get a better plan. The charm of the team is to let different people learn from each other and make progress in cooperation. This summer vacation has been enriched. I think such cooperation is worth it.
-
-  -- Chongyan Qi
+> This project made me more deeply understand the significance of the team project. Different from the previous project, the project team has a clearer purpose and detailed records. Under Gang's organization, we hold regular meetings to discuss and improve the project. Make a schedule to make your work more efficient. What I got was front-end design, which was my last role in the team. Therefore, my work is also more efficient, and I discuss with the team members in the meeting to get a better plan. The charm of the team is to let different people learn from each other and make progress in cooperation. This summer vacation has been enriched. I think such cooperation is worth it.
+>
+> -- Chongyan Qi
