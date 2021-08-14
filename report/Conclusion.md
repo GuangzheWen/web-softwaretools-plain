@@ -39,7 +39,7 @@ Here we would like to display our group practice.
 
 ### Regular meeting
 
-When our team first got together, we all were confused since we were assigned randomly after receiving the resit email. Gang advised we could have an online meeting to get familiar with each outher. But just as Jiangqi once said:" We likely sit around in front of the computers and look at each other, not knowing how to begin in our first meeting." Initially we are not likely a team.
+When our team first got together, we all were confused since we were assigned randomly after receiving the resit email. Gang advised we could have an online meeting to get familiar with each other. But just as Jiangqi once said:" We likely sit around in front of the computers and look at each other, not knowing how to begin in our first meeting." Initially we are not likely a team.
 
 However, team effectiveness is enhanced by daily meeting at the beginning. Over time we were getting to know each other, to know what to expect from each other, and to know how to divide the labor and assign tasks. Through this process, we begin to operate as a team instead of a collection of individuals.
 
@@ -69,10 +69,39 @@ Here is a part of our [survey](https://github.com/GuangzheWen/web-softwaretools-
 >
 > 6. Do you recommend any different feature that you think will value the pets shop website?
 
-We chose some persons to have interviews with them and had records of the conversation after permission, which is conclued in [The Answers](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers).
+We chose some persons to have interviews with them and had records of the conversation after permission, which is concluded in [The Answers](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers).
 
 During this process, we learned to listen to users’ words in their perspectives, and covered any new problems and spot trends to figure out user stories. The user stories are clear on our [third meeting](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#meeting-log-1), which is really helpful for us to create software that users find desirable and easy to use.
 
 ### COVID-19 effect
 
+As the coronavirus outbreak has intensified last year, the negative consequential effects begins to appear. Obviously, our team work was affected by the COVID-19, which could be concluded in two aspects.
+
+On the one hand, people can not have a face-to-face talk owning to relevant rules, and some members have returned to their country rather than staying in the Bristol. This increased the cost of exchanging ideas and discussion with team members. Besides, it has presented challenges when we did user research over time through questionnaires.
+
+On the other hand, the pandemic impacted our physical and psychological health indeed. Some left the Bristol and returned to their home may face the self-isolation, which made it more difficult to stay enthusiastic and motivated throughout the project, specially in front of the computer screen for a whole day. Alfymore even felt uncomfortable after vaccine.
+
+Under this difficult period, we have tried our best to tackle the problems. Regular meeting prevented us from feelings of isolation lonely as all group members were able to think aloud study and talk with each other online if he like. If somebody feel uncomfortable today, we'd like to comfort him, persuade him to have a rest with the absence for today's meeting. He will get the information and his assigned task from the meeting log or the chat on Teams.
+
+In a conclusion, COVID-19 cause troubles for us, but we share our feelings and encourage each other to face the problems through this tough period.
+
+
 ## Teamwork
+
+In spite of covid restrictions and working remotely, we found that our communication channels worked fluently and finished our teamwork after all.
+
+Microsoft Teams is main communication channels for us to discuss and organize daily meeting. We arrange the regular meeting at proper time in order that everyone could be full of energy to participate it geiven the different time zones.
+
+<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Teams.png" width = "30%" />
+
+Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
+
+The questionnaire was designed and shared by Microsoft 365, so we could edit it together and comment whatever we prefer to express own thoughts.
+
+We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
+
+"Technical Log" is necessary to record development process, since other members will have better understanding of the progress.
+
+Owing to the fact that most of our team members are Chinese, the Chinese use WeChat to share opinions, one kind of immediate communication tool which is popular in China. Although immediate communication sometimes seems to be annoying, but it's quite suitable during short-time development.
+
+<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/wechat.png" width = "30%" />
