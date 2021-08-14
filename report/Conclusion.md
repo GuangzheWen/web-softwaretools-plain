@@ -1,15 +1,14 @@
 # Summary
-Problem Statements
-Building a reliable website to help a local pet shop owner to sell their pets and reach out to many customers online.
-Through customers interviews, we found 90% of customers have expressed a real need for seeing our pets online before deciding to buy.
 
-Proposed solutions
-Our group agreed that the image feature is the key to help customers to find their favourite pet.
+Overall, the website has achieved its objectives. It has provided all the possible ways to help the local pet shop owner to expand his business since more customers go shopping online with this special and appealing website.
 
-Secondly, we added other features to help the owner to add or edit details of their available pets.
+Our team has done sufficient user research before the developing, like questionnaires, polls and interviews to the customers who are potentially watching his pet shop online to find out what they are looking for.
 
-Final thoughts and next steps:
-Conclusion on overall, our website has achieved its objectives. The website has provided all the possible ways to help the local pet shop owner to expand his business for having more customers through online with an effective way.
+And then, we utilize scrum methodology as our agile mindset to develop the website and collect feedback from users to build user-friendly products.
+
+In addition to having the presentation through the gorgeous design and the detailed interaction logic, good product design should also have the functioning of the product itself as its core. As for UX design, drawings are required as a basis for realisation in our software development, which help us to form the overall interaction logic diagram.
+
+In the end, we put functional modules together which had previously passed the test to build the final page, which is considered to be useful to the owner and to be attractive to buyers. A evaluation model has been used to evaluate effectiveness of the page and get valuable feedback from the users. It is universally acknowledged that the evaluation of a project will provide us with a new perspective and an open space about future work.
 
 # Analysis
 
@@ -150,3 +149,6 @@ In spite of covid restrictions and working remotely, we found that our communica
 - Owing to the fact that most of our team members are Chinese, the Chinese use WeChat to share opinions, one kind of immediate communication tool which is popular in China. Although immediate communication sometimes seems to be annoying, but it's quite suitable during short-time development.
 
 	<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/wechat.png" width = "30%" />
+
+## Personal feelings
+

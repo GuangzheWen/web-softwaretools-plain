@@ -4,11 +4,11 @@ A local pet shop’s owner has been working on developing a website to show his 
 
 We are interested in the website and trying to make it more appealing and versatile. Besides, we develop an improved graphical user-interface in order to make it more functional to use based on user research.
 
-Our team carried out sufficient user research before the developing, such as giving out questionnaires, polls and interviews  to the customers who are potentially watching his pet shop online  to find out what they are looking for and what kind of features are mostly wanted. And then, we choose [scrum methodology](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#agile-scrum-methodology) as our agile mindset to develop the website and collect feedback from users to build user-friendly products.
+Our team carried out sufficient user research before the developing, such as giving out questionnaires, polls and interviews to the customers who are potentially watching his pet shop online to find out what they are looking for and what kind of features are mostly wanted. And then, we choose [scrum methodology](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#agile-scrum-methodology) as our agile mindset to develop the website and collect feedback from users to build user-friendly products.
 
 To maximize the benefits to the pet shop owner, the system is focus on two parts: the need from the owner and the view from customers. As for the owner, he needs the basic operation function upon the website, such as adding, deleting, and editing the information of pets. For the perspective from customers, they want the website has a beautiful UI to give a good impression on them and could be easily used to search their target pets.
 
-In the end,  we put functional modules together which had previously passed the test to build the final page, which is considered to be useful to the owner and to be attractive to buyers.
+In the end, we put functional modules together which had previously passed the test to build the final page, which is considered to be useful to the owner and to be attractive to buyers.
 
 # Objectives
 
