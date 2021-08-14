@@ -1,16 +1,18 @@
 # PetStore
 
+**Password of Seller mode:** admin
+
 ## Instruction
 
-You are likely to **follow** this instructions to run the program.
+You are likely to follow this instructions to run the program.
 
 1. You should ensure that AngularCLI should be installed on your machine.
 
-2. Then in the directory "/PetStore", input command `ng serve --open`  and automatically navigate to `http://localhost:4200/`.
+2. Then in the directory "/PetStore", input command `ng serve --open` inside Terminal and automatically navigate to `http://localhost:4200/`.
 
-3. If you encounter error on Terminal at step 2, use this `npm i --save-dev @angular-devkit/core `command then re-try step 2.
+3. If you encounter error in Terminal at step 2, use this `npm i --save-dev @angular-devkit/core `command then re-try step 2.
 
-4. After ng serve sucessfully, you can see our website running with no pets in database, so the fisrt step should be to add new pets in Seller Mode by clicking button at right-top corner.
+4. After ng serve successfully, you can see our website running with no pets in database, so the first step should be to add new pets in Seller Mode by clicking button at right-top corner.
 
    ( We set default state of database is no pets there )
 
@@ -24,9 +26,10 @@ You are likely to **follow** this instructions to run the program.
 
 ## Further help
 
-IF you still have any questions about our website though followed by instructions above, please eamil me through jt20452@bristol.ac.uk
+IF you still have any questions about our website though followed by instructions above, please Email me through jt20452@bristol.ac.uk
 
 ## ng serve process Example
+
 If you got error when 'ng serve', you might need need this command
 
 ```shell

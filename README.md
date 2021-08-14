@@ -1,11 +1,12 @@
 # Document folders description
-1. **/PetStore:**     Programme files and running instructions (README.md) inside.
 
-2. **/bin:**               Process junk files inside, you can just ignore it. 
+1. **/PetStore:**     Program files and running instructions (README.md) inside.
+
+2. **/bin:**               Process junk files inside, you can just ignore it.
 
 3. **/images:**       We used image links in report, raw images inside here.
 
-4. **/report:**         Five report files: 
+4. **/report:**         Five report files:
 
    ​	[Background ](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Background.md)
 
