@@ -494,6 +494,7 @@ Finally, all the components are shown in the screenshots and are basically expla
 # <a name="3"></a>Design Choices
 
 In the UX design philosophy there is one, visual unity. The visual aspect of the website should be consistent and have a visual connection to the business or product. For this project, we decided to continue with the Petstore page on the Swagger Public API website, using green and black as the main colour scheme to maintain a uniformity on the page. In our pages, some of the components with similar functionality are also designed in the same style to give the user the right guidance and avoid misinformation.
+Our team initially conceived of arranging all the contents on the web page in turn, so that users can realize all the functions on the same page. However, according to the feedback of test users, lengthy web pages complicate the operation. So we deleted some unnecessary pictures and words. The separation of user interface and seller interface makes the web page concise and clear.
 
 # <a name="4"></a>Evaluation 
 
