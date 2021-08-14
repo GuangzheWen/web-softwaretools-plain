@@ -32,20 +32,20 @@ After the analysize above, we can make our objectives clear in this project.
 - Complete essentail API and fix bug of operations that return inconsistent results
 - Develop a relevant and improved graphical user-interface for users
 - Demonstrate the website is satisfactory and attractive
-- Engage in group work to get skills how to build a user-friendly website with group practice.
+- Engage in group work to get skills how to build a user-friendly website with group practice
 
 ## Checklist
 
 The checklist against which we can evaluate at last.
 
-- [ ] An interviewer with the owner to learn about his attitudes, ideas, and desires.
-- [ ] Perform Focus Groups[2] methodology to do user research and form the user stories.
-- [ ] Take the codebase of the pet store and improve pet store api in need.
-- [ ] Analyze our site according to the results of user research and the interview with customers and the own r.
-- [ ] Add essential new features to meet the demands from users.
-- [ ] Unit testing and integration testing with user input to make sure the website could run correctly.
-- [ ] Do a survey to find out items need to be improved in the next step.
-- [ ] Scheduled product delivery and get feedback from users.
+- [x] An interviewer with the owner to learn about his attitudes, ideas, and desires.
+- [x] Perform Focus Groups[2] methodology to do user research and form the user stories.
+- [x] Take the codebase of the pet store and improve pet store api in need.
+- [x] Analyze our site according to the results of user research and the interview with customers and the owner.
+- [x] Add essential new features to meet the demands from users.
+- [x] Unit testing and integration testing with user input to make sure the website could run correctly.
+- [x] Do a survey to find out items need to be improved in the next step.
+- [x] Scheduled product delivery and get feedback from users.
 
 # System Design
 
@@ -76,7 +76,7 @@ For decades, the password has been the standard means for user authentication on
 
 ## Sequence Diagrams for features
 
-As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional. While the post api is to manage pets' information of the system, the user api is to manage the login and signup function of the application ect. Take one feature, searching pets by names, for example.
+As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional. While the post api is to manage pets' information of the system, the user api is to manage the login and signup function of the application ect. Take one feature - searching pets by names - for example:
 
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Sequence-Diagrams.png" width = "50%" />
 
