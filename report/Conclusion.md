@@ -8,11 +8,12 @@ Did we meet our project objectives?
 
 Overall, our team successfully achieved the initial objectives and the project is well done to be given to the owner.
 
-- Design and build a functional pet shop website with questionnaire
-- Complete essential API and fix bug of operations that return inconsistent results
-- Develop a relevant and improved graphical user-interface for users
-- Demonstrate the website is satisfactory and attractive
-- Engage in group work to get skills how to build a user-friendly website with group practice
+1. Design and build a functional pet shop website with questionnaire
+
+2. Complete essential API and fix bug of operations that return inconsistent results
+3. Develop a relevant and improved graphical user-interface for users
+4. Demonstrate the website is satisfactory and attractive
+5. Engage in group work to get skills how to build a user-friendly website with group practice
 
 ## Checklist
 
@@ -54,19 +55,12 @@ To maximize the profits of pet stores, we must really understand the needs of us
 Here is a part of our [survey](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-results-of-user-research), for example:
 
 > Questions
->
 > 1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
->
 >    If the interview said filters, ask: Can you list some of the filter conditions that you usually use? (tags, categories, status, inventories etc.)
->
 > 2. Do reviews section important for you? Why?
->
 > 3. Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
->
 > 4. What will make you trust the website to add your personal details for signing up? Positive reviews, Best Selling, or More ads and marketing?
->
 > 5. Do you want to see some pets’ food suggestion or other advice for pets? Why?
->
 > 6. Do you recommend any different feature that you think will value the pets shop website?
 
 We chose some persons to have interviews with them and had records of the conversation after permission, which is concluded in [The Answers](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers).
@@ -90,18 +84,18 @@ In a conclusion, COVID-19 cause troubles for us, but we share our feelings and e
 
 In spite of covid restrictions and working remotely, we found that our communication channels worked fluently and finished our teamwork after all.
 
-Microsoft Teams is main communication channels for us to discuss and organize daily meeting. We arrange the regular meeting at proper time in order that everyone could be full of energy to participate it geiven the different time zones.
+- Microsoft Teams is main communication channels for us to discuss and organize daily meeting. We arrange the regular meeting at proper time in order that everyone could be full of energy to participate it geiven the different time zones.
 
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Teams.png" width = "30%" />
 
-Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
+- Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
-The questionnaire was designed and shared by Microsoft 365, so we could edit it together and comment whatever we prefer to express own thoughts.
+- The questionnaire was designed and shared by Microsoft 365, so we could edit it together and comment whatever we prefer to express own thoughts.
 
-We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
+- We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 
-"Technical Log" is necessary to record development process, since other members will have better understanding of the progress.
+- "Technical Log" is necessary to record development process, since other members will have better understanding of the progress.
 
-Owing to the fact that most of our team members are Chinese, the Chinese use WeChat to share opinions, one kind of immediate communication tool which is popular in China. Although immediate communication sometimes seems to be annoying, but it's quite suitable during short-time development.
+- Owing to the fact that most of our team members are Chinese, the Chinese use WeChat to share opinions, one kind of immediate communication tool which is popular in China. Although immediate communication sometimes seems to be annoying, but it's quite suitable during short-time development.
 
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/wechat.png" width = "30%" />
