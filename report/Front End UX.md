@@ -122,7 +122,7 @@ In Seller mode, at first page, there is authentication part avoiding regular use
 
 ![image-20210810224824382](../images/layout_and_interaction_logic.png)
 
-Those boxes with a blue background are new pages or alerts, the underlined boxes are the components that this page has, and the green dashed lines indicate interaction events and response links. If you look at the map carefully, from the start to the ends, it will be very easy to understand all the operations of our website. If you were confused in the last section, this should make everything clear to you here. We like this graphical presentation and we are sure you will too.
+![flow](../images/flow.png)Those boxes with a blue background are new pages or alerts, the underlined boxes are the components that this page has, and the green dashed lines indicate interaction events and response links. If you look at the map carefully, from the start to the ends, it will be very easy to understand all the operations of our website. If you were confused in the last section, this should make everything clear to you here. We like this graphical presentation and we are sure you will too.
 
 For example, you can see that in the top left hand corner there is a 'Pet Store' which indicates that this is our website and you can take this as a start and then move to the right or down to the bottom of the guide. Each green arrow is an action of your mouse, and the green arrow points to a change in the page corresponding to your action, i.e. a response, which may be a local change in the page or a jump in the page.
 
@@ -143,6 +143,13 @@ Let me give you some examples, such as:
    12. Done.
 
 ![image-20210810224824382](../images/layout_and_interaction_logic 2.png)
+
+We were looking for a way to present our four main functions separately, but also to show the connection between the functions and their distribution in the site. We tried to create a flow chart as follows, where we have divided the different functional areas with different colours. The flowchart is used to indicate which actions the user can perform and in what order they are performed.
+
+First we created a flowchart of the entire website, which contains all the potential actions of the website, and then adapted the layout and divided it into four areas with coloured boxes, each of which contains one of our functional areas. For example, the red area, which is the user authentication area, you can see in this area, we can choose whether there is no seller or buyer from the opening of the website, and then carry out the authentication of the seller or the registration of the buyer's account and other operations. Similarly, in the green area we can see that it is full of operations related to the seller's back office management of pets, which sadly contains operations such as adding, deleting, and changing information about pets. Finally we can see the blue area in the top right corner, which is used to provide buyers with the ability to filter the pet listings by information on the page.
+Below this is a purple area, the Message box, which is always present globally and provides feedback to the user on almost all actions. This is our feature four.
+
+![flow_separate](../images/flow_separate.png)
 
 ## <a name="1.3"></a>Design evolution overtime
 
