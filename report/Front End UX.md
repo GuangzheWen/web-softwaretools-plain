@@ -142,8 +142,6 @@ Let me give you some examples, such as:
    11. Click Save Button, then link back to details showing
    12. Done.
 
-![image-20210810224824382](../images/layout_and_interaction_logic 2.png)
-
 We were looking for a way to present our four main functions separately, but also to show the connection between the functions and their distribution in the site. We tried to create a flow chart as follows, where we have divided the different functional areas with different colours. The flowchart is used to indicate which actions the user can perform and in what order they are performed.
 
 First we created a flowchart of the entire website, which contains all the potential actions of the website, and then adapted the layout and divided it into four areas with coloured boxes, each of which contains one of our functional areas. For example, the red area, which is the user authentication area, you can see in this area, we can choose whether there is no seller or buyer from the opening of the website, and then carry out the authentication of the seller or the registration of the buyer's account and other operations. Similarly, in the green area we can see that it is full of operations related to the seller's back office management of pets, which sadly contains operations such as adding, deleting, and changing information about pets. Finally we can see the blue area in the top right corner, which is used to provide buyers with the ability to filter the pet listings by information on the page.
