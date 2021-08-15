@@ -554,7 +554,7 @@ In fact, our user research and API testing were done in parallel, and the detail
 The core of UX design is to understand the real needs of users. Even if your pages are beautiful and your interactions are attractive, as long as you do not provide users with the functions they want, everything is for nothing.
 Therefore, before development, we did sufficient user research in the form of questionnaires, polls and interviews. We had questions about what features you expect from the website as a pet buyer and what features you expect as a pet buyer.
 In reality, we should leave no stone unturned to fulfil the needs of our users. But being forced to use the public API, we did some feasibility analysis in conjunction with our preliminary API testing. the functionality of the API is limited and we cannot implement all the features that users want. So we chose to develop the features that the users expected, either through the API or through the front-end code. This way we can maximise the functionality that the user wants.
-Once the user's functional requirements were met, we then focused on the visual design and interactive experience of the page.  [We put evidence inside Process.md](#https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md/#3.3.1)
+Once the user's functional requirements were met, we then focused on the visual design and interactive experience of the page.  [We put evidence inside Process.md](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md/#3.3.1)
 
 ## <a name="4.2"></a>Within prgramming
 
