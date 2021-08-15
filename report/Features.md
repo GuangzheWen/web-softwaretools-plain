@@ -396,19 +396,10 @@ Which one do you prefer to sign up to use the website? Compulsory or optional? W
 
 In the user survey, it was found that the user login function is necessary, but it is not necessary to only be able to log in and then see the website information. Having an account would make transactions more trustworthy and reliable, but if users just want to have a casual look, the login function should lie quietly to the side and not interfere with other actions.
 
-**User feedback:**
+**Comparison from competitor:** 
 
-Questions:
-
-1. What do you think the feature is?
-2. Do you think you can quickly understand the function of this feature？
-3. Do you think you need some comments when using this feature?
-4. Do you think this feature gives you feedback on every step you take？
-5. What do you dislike about this feature?
-
-Answers:
-
-
+Almost all websites have a user login function, but this is only for the buyer, in our real project scenario this is not enough, because we developers also have to consider the seller's experience, the seller must want to have an easy to use GUI to manage his pets. So, we added two modes to drive the whole webpage, again with two sets of user authentication systems that do not interfere with each other. This is one of the highlights of our project.
+Both the seller and the buyer can use the same website, but the buyer will not have access to the buyer's pet management interface. The seller will also not have access to the buyer's account details.
 
 # <a name='2.2'></a>Feature 2：Modifying Pet's information
 
@@ -431,19 +422,9 @@ From the seller's point of view, he wanted a more usable user interface to manag
 
 Sellers may use this feature to achieve the following visions, change pet names, categories, status, photos, etc. As it is inevitable that there may be times when the first edit is wrong, or later, for some specific reason, some information needs to be changed, then we provide this interface.
 
-**User feedback:**
+**Comparison from competitor:** 
 
-Questions:
-
-1. What do you think the feature is?
-2. Do you think you can quickly understand the function of this feature？
-3. Do you think you need some comments when using this feature?
-4. Do you think this feature gives you feedback on every step you take？
-5. What do you dislike about this feature?
-
-Answers:
-
-
+This is a function offered to sellers and obviously buyers are not able to change the stock information of pet shop pets. Buyers can add, delete and modify information about their pets, even uploading image URLs, from the user-friendly GUI we provide, which is a part of our competitors' websites that we can't do without.
 
 # <a name='2.3'></a>Feature 3：Searching pets by category or name
 
@@ -459,19 +440,9 @@ However, this feature will not be implemented as the first step in the developme
 
 **User Stories:** As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
 
-**User feedback:**
+**Comparison from competitor:** 
 
-Questions:
-
-1. What do you think the feature is?
-2. Do you think you can quickly understand the function of this feature？
-3. Do you think you need some comments when using this feature?
-4. Do you think this feature gives you feedback on every step you take？
-5. What do you dislike about this feature?
-
-Answers:
-
-
+This is also a very hot and popular feature, which is used in almost all competitor's websites, and even more powerful. Not only can be classified according to the type of pets, but also the breeds of pets can be classified. We can't do this yet, we will take the first step of classifying pets into categories as our goal to achieve it.
 
 # <a name='2.4'></a>Feature 4：Message Pad
 
@@ -487,19 +458,9 @@ One of the keys to UI/UX design is how to design feedback for user actions. Some
 Feedback can come in the form of press states, activity indicators, progress indicators, live previews, Toast, dialog boxes, other sounds, etc.
 Our Message Pad is a component that brings together some of the ideas from the above and is designed to give feedback to the user and improve the user experience.
 
-**User feedback:**
+**Comparison from competitor:** 
 
-Questions:
-
-1. What do you think the feature is?
-2. Do you think you can quickly understand the function of this feature？
-3. Do you think you need some comments when using this feature?
-4. Do you think this feature gives you feedback on every step you take？
-5. What do you dislike about this feature?
-
-Answers:
-
-
+This feature has never been seen on any competing product website. It can be called our highlight, in addition to improving the user experience, it can also add a little bit of fun. It is a function that programmers love very much.
 
 # <a name='3'></a>Testing
 
