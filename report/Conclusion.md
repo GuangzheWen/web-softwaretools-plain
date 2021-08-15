@@ -1,16 +1,22 @@
 # Summary
 
-Overall, the website has achieved its objectives. It has provided all the possible ways to help the local pet shop owner to expand his business since more customers go shopping online with this special and appealing website.
+In the following, I will present a summary of this group project from two perspectives, one from a product perspective and one from a teamwork perspective.
 
-Our team has done sufficient user research before the developing, like questionnaires, polls and interviews to the customers who are potentially watching his pet shop online to find out what they are looking for.
+Product.
+We added six new API-related functions through six API calls, modify pets, register, login, get account info, delete account, modiy account, and enhanced the other three regular functions.
 
-And then, we utilize scrum methodology as our agile mindset to develop the website and collect feedback from users to build user-friendly products.
+The user interface of the website has also been carefully designed and tested for user experience. The final version of the site was further optimised in a user test feedback session to implement a search function to meet the needs of buyers, with the ability to fuzzy search for pets by name or category.
 
-In addition to having the presentation through the gorgeous design and the detailed interaction logic, good product design should also have the functioning of the product itself as its core. As for UX design, drawings are required as a basis for realisation in our software development, which help us to form the overall interaction logic diagram.
+As a result, the site is better accomplished from both a functional and UI perspective, with a high number of APIs used (including the old ones) of nine.
 
-In the end, we put functional modules together which had previously passed the test to build the final page, which is considered to be useful to the owner and to be attractive to buyers. A evaluation model has been used to evaluate effectiveness of the page and get valuable feedback from the users. It is universally acknowledged that the evaluation of a project will provide us with a new perspective and an open space about future work.
+Team.
+On the one hand, it has to be mentioned how much agile development helped us to complete the project quickly.On the other hand, test-driven development has been a highlight of our project, one for feature-based API testing and one for overall user testing of the site based on the experience used.  The former guarantees our development schedule and the latter ensures that we do not deviate from our customer-centric development philosophy.
 
-We have learnt a lot during the project experience for group working is more productive, creative, and motivated than individuals on their own.
+In addition to this, a clear division of labour and careful planning allows the developers to focus more on the use of the Angular framework, the use of the MVC pattern and the practice of modular design. The product specialists focus on collecting user feedback, combining theories of human-computer interaction with proper requirements analysis, and showing the developers the way to avoid detours.
+
+The final result was a website with two modes of application (buyer and seller). The seller has a user-friendly GUI and can manage the pet database by adding, deleting, modifying and searching through authentication. The seller has the option to query the pet list through filtering and can even have functions such as managing accounts as well.
+
+If we have further to go in the future, we will add development of the order and location sections to make this site more towards a true production level. 
 
 # Analysis
 
