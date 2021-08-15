@@ -2,14 +2,14 @@
 
 In the following, I will present a summary of this group project from two perspectives, one from a product perspective and one from a teamwork perspective.
 
-Product.
+**Product:**
 We added six new API-related functions through six API calls, modify pets, register, login, get account info, delete account, modiy account, and enhanced the other three regular functions.
 
 The user interface of the website has also been carefully designed and tested for user experience. The final version of the site was further optimised in a user test feedback session to implement a search function to meet the needs of buyers, with the ability to fuzzy search for pets by name or category.
 
 As a result, the site is better accomplished from both a functional and UI perspective, with a high number of APIs used (including the old ones) of nine.
 
-Team.
+**Team:**
 On the one hand, it has to be mentioned how much agile development helped us to complete the project quickly.On the other hand, test-driven development has been a highlight of our project, one for feature-based API testing and one for overall user testing of the site based on the experience used.  The former guarantees our development schedule and the latter ensures that we do not deviate from our customer-centric development philosophy.
 
 In addition to this, a clear division of labour and careful planning allows the developers to focus more on the use of the Angular framework, the use of the MVC pattern and the practice of modular design. The product specialists focus on collecting user feedback, combining theories of human-computer interaction with proper requirements analysis, and showing the developers the way to avoid detours.
