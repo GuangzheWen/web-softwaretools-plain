@@ -158,29 +158,46 @@ In this section we will show the evolution of our design in the form of a screen
 - The initial state: 
 
   Only the necessary functions and button logic are completed, the diagram below shows all the pages.
+  
+  This image is the first version of our website iteration, and the one without any design. The diagram is not the iterative process of the website and we hope that readers will not misunderstand it. The diagram shows a screenshot of all the pages of the first iteration of our website. In order to reduce the length of the report and to improve readability, we have crammed all the pages into one diagram to try and give you more information. Let me explain, in the first row, from left to right, the list of pets on the buyer's page, the account registration on the buyer's page, the user login on the McStraw page, the user account information on the buyer's page, and the modification of the user account information on the buyer's page. The second row is, the seller password authentication page, the seller pet list and add pet page, and the seller change pet information page.
+  
+  This image is the first version of our website iteration, and the one without any design. The diagram is not the iterative process of the website and we hope that readers will not misunderstand it. The diagram shows a screenshot of all the pages of the first iteration of our website. In order to reduce the length of the report and to improve readability, we have crammed all the pages into one diagram to try and give you more information. Let me explain, in the first row, from left to right, the list of pets on the buyer's page, the account registration on the buyer's page, the user login on the McStraw page, the user account information on the buyer's page, and the modification of the user account information on the buyer's page. The second row is, the seller password authentication page, the seller pet list and add pet page, and the seller change pet information page.
 
 ![image-20210811005710592](../images/UI_plain.png)
 
 - First steps taken:
   Two developers work separately on the design, one starting with the overall framework and one with the detailed features and subsequent integration. As the Swagger API uses a black and green colour scheme, we continued the visual style to achieve a uniform visual effect.
+  
+  This is the beginning of the implementation part of the UI design that we intend to start, please don't think of this as a release or an iteration. This is just to mark the first step in starting UI programming from the point where all our functional testing is complete. The diagram represents, among other things, the beautification of some of the simpler components.
 
 ![image-20210811011302928](../images/UI_first_dev.png)
 
 - Buyer mode - Pets list:
 
   The diagram below shows the complete iterative upgrade process of the pet list in buyer mode.
+  
+  This diagram represents the development process of the Pet List section in our buyer's mode. As we have two modes of website, in the buyer mode there are again two main sections, one section is the pet listings section and the other is the account services section. In this section we will focus on the development process for the Pet List section.
+  
+  The process of going from a plain html list to a card containing information about our pets in the final chapter joined our thoughts in between. We felt that the information about each pet should be presented in groups and have a consistent format. So the concept of cards was born. We tried to create a generic template for the cards and then just add different pet information to the template, including names, ids, categories and pictures.
+  
+  Of course, in addition to the pet card section, we have also added a filtering function above the card list which can also be called a find function. This feature provides buyers with the ability to quickly find pets by name or category. Being at the top here means that it is the most visible place for users to find this feature and means that it will be one of the most used features by users. The green button was chosen to ensure a consistent design throughout the site pages.
 
 ![image-20210811042110290](../images/UI_buyer_petsList_evolution.png)
 
 - Buyer mode - Account area:
 
-  The diagram below shows the complete iterative upgrade process of the account area in buyer mode.
+  The diagram below shows the complete iterative upgrade process of the account area in buyer mode. 
+  
+  In this section, please ignore the left half of each screenshot in the diagram below. Please focus on the change process of the user login screen in the half that is there. Again, it has changed from pure html code to a nice looking form with a nice design.
+  It is very good to understand how they evolved. But the static images don't show the animation we have added to this component very well. We have added, specifically for all the blue buttons, a shape responsive animation and a colour responsive animation, so that when the mouse is hovering over it, the lighter blue you see now will turn into a darker blue and the button will widen, indicating to the user that the button is clickable and encouraging you to click it, and also to see if you have clicked the button. It's all about the detail of the UX design.
 
 ![image-20210811011613230](../images/UI_buyer_mode_account_evolution.png)
 
 - Seller mode: 
 
   The diagram below shows the iterative process of the authentication page, the pet listing, and the edit message page in seller mode.
+  
+  Below, the iterative process of the seller mode related features, the first two images are flat as plain water. Starting with the last image in the first row, you can see that we have added a background image to the password authentication page, the image has been specially processed by adding a white mask and filter. This was done to emphasise the function of entering the password and to create a welcoming atmosphere with a pet environment. As you can see from the fourth image, we used the same cards as on the buyer's page to display the pet's information. This has gone a long way to ensure consistency in the UI of the site and at the same time, has reduced the amount of duplication of work in the code section. Unlike the cards in buyer mode, the cards here have a delete button which can be used to delete the pet. The card can also be clicked on to link to the last image showing the pet's details. On hovering over a card, the card changes colour and becomes larger, allowing the user to focus on which card to manipulate. The small cursor often disappears on the huge computer screen and is not easy to find, but with this design you can find out which card your mouse is on by simply wiggling it around.
 
 ![image-20210811012158784](../images/UI_Seller_mode_evolution.png)
 
@@ -191,6 +208,8 @@ In this section we will show the evolution of our design in the form of a screen
 ![image-20210811012209714](../images/UI_message_box_evolution.png)
 
 # <a name="2"></a>Final UX
+
+This is the second version of the iteration of our website, and I have described the iterative process of the components above. The image below shows how all the components look together after the iterative upgrade, and the overall site page is shown here.
 
 In the previous section the results of our user interface were presented, in this section we describe the more technical aspects, some of the code and documentation including the use of the framework.
 Along with this task, we received the demo website, which does not use the framework, but only pure JavaScript. pure JavaScript can certainly implement this page, but in general, it is not as beneficial as the framework, where we benefit the most from the modular design and the MVC design pattern.
@@ -570,3 +589,14 @@ Then, looking beyond the perspective of the development team, if we develop a we
    Help user by increasing false input tolerance when they are searching for pets.
 
    
+
+No matter before the development, during the development of each Feature, or in the final evaluation, our team has always used the method of user interview to obtain users' ideas. There's a reason for the relentless user interviews.
+
+Compared with the questionnaire, the interview method can obtain more real information, because the interview method is the direct language communication between the researcher and the interviewees. Through the efforts of the researcher, the interviewees can relax their mood, eliminate their defensive mentality and express their real thoughts. The interview method basically adopts the question-and-answer method. The interviewees need to respond to the questions in a very short time and cannot think for a long time. At this time, the answers they give are usually spontaneous responses. Interview method can effectively avoid the interviewees do not answer questions or omit questions. Because this is a face-to-face communication between researchers and interviewees, questions are not easy to be rejected.
+
+Members of our group usually conduct user interviews through telephone, so when the interviewees encounter some questions, we will guide them appropriately. After each question, we also have the opportunity to further inquire, so we can discuss some deep-seated questions with the interviewees. In addition, we can also feel the emotions of the other side through the tone of the other side, so as to better grasp our interview.
+In the previous study life, members of our group rarely had the opportunity to interview users. As a result, I am not an expert in this area, and some circumstances may not be fully considered when designing the interview outline beforehand. Therefore, in the actual interview process, we can adjust or improve the outline according to the specific responses of the interviewees. If the interviewees do not understand the meaning of the question clearly, misunderstanding the meaning of the question, we can also further explain the question.
+
+Our team members also discussed whether we could explore the needs of users through questionnaire survey. That's certainly one way to do it. However, the design of questionnaire questions needs a lot of experience to control the reliability and validity, and the design of the main contents of the questionnaire directly affects the value of the whole thematic survey. Due to the lack of relevant experience, our team members worry that the questionnaire design is not reasonable and the quality of the questionnaire results cannot be guaranteed. In addition, we cannot find many eligible subjects to participate in the questionnaire survey in a short time. If we post a questionnaire online, are the people who fill it out really our ideal users? Do they really have the patience to configure the environment and so forth to run our site?
+
+Combining the abilities and experience of our team members and the background of the project, we agreed that consistent user interviews were the most effective approach.
