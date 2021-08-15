@@ -114,11 +114,35 @@ In buyer mode, the page will be split into two parts, left and right, with the l
 
 While the previous section focused on page composition and layout, this section will focus on the links between its components and between pages.
 
-To more clearly represent the page interaction logic, we will use another diagram to show it. Without further elaboration, let's go straight to the diagram.
+To more clearly represent the page interaction logic, we will use another diagram to show it. Without further elaboration, let's go straight to the diagram. This diagram represents all our pages, functions, events that can be responded to, and the changes that occur in response to events. Our wesite has double mode for seller and buyers, so There is going to be two main parts of the graph, one is growing to right, is buyer mode, the other is growing underward, is seller mode.
+
+In Buyer mode, users can see a pet list, and they can search pets by inputing names or categories. Of course they can also click clear button to restore the pets list. Apart form this, they can also do some stuff with account service, such as, registering account, login, modifying account information, deleting account.
+
+In Seller mode, at first page, there is authentication part avoiding regular users access inside. If the seller wants to get inside the Seller mode, he just input the password, "admin", then the page will link to a page where seller can manage his pets inventory, including adding new pets, deleting existing pets, modify pets information, or even, add photo URL for each pet.
 
 ![image-20210810224824382](../images/layout_and_interaction_logic.png)
 
 Those boxes with a blue background are new pages or alerts, the underlined boxes are the components that this page has, and the green dashed lines indicate interaction events and response links. If you look at the map carefully, from the start to the ends, it will be very easy to understand all the operations of our website. If you were confused in the last section, this should make everything clear to you here. We like this graphical presentation and we are sure you will too.
+
+For example, you can see that in the top left hand corner there is a 'Pet Store' which indicates that this is our website and you can take this as a start and then move to the right or down to the bottom of the guide. Each green arrow is an action of your mouse, and the green arrow points to a change in the page corresponding to your action, i.e. a response, which may be a local change in the page or a jump in the page.
+
+Let me give you some examples, such as:
+
+1. Scene: If you want to create a user account, then login and modify your first name, you should follow the red line:
+   1. Open Pet Store website
+   2. Click Buyer mode, then see Buyer mode page
+   3. Click Register button, then see register boxes
+   4. Input informations needed
+   5. Click Register button below, then see succeed feedback message
+   6. Click Login button, then see login boxes
+   7. Input information needed
+   8. Click Login Button below, then see account details
+   9. Click Modify Button, then see modify boxes
+   10. Change your information
+   11. Click Save Button, then link back to details showing
+   12. Done.
+
+![image-20210810224824382](../images/layout_and_interaction_logic 2.png)
 
 ## <a name="1.3"></a>Design evolution overtime
 

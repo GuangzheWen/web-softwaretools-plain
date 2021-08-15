@@ -60,6 +60,12 @@
 
 
 
+
+
+
+
+
+
 <h1>Body: </h1>
 
 We are intending to indicate the overview of this chapter here at first. This chapter is mainly about features, which are the functions the users will use in the reality. All the features should be created and designed for users, treating users are the center of the whole process. 
@@ -69,6 +75,8 @@ The target users of our website are in two separated groups, one is customers gr
 As above we discussed, our website will be developed by two routes, but synchronized. From the phase of user research, to features choosing, and finally implementing, we are going to keep focus on both two sides. Deciding this working principle have efficiency of development, by avoiding different features for various user groups twisting together, then make the develop process clear, dedicated, and logical. 
 
 Nonetheless, we will definitely not create two websites for two different groups, which looks like a bit counterproductive. Therefore we are preparing to develop a single website which has two mode, switching by a pair of buttons somewhere. In advance of programming we determined that.
+
+
 
 # <a name='1'></a>Possible Features
 
@@ -130,13 +138,211 @@ Nonetheless, we will definitely not create two websites for two different groups
 
 1. Message box to show operations feedback.
 
+
+
+At this stage, we are going to show a table first. This table contains high level features introduction. Then we will describe  why we choose these possible features and why we choose cartain features to add, and more detailed about each feature and.
+
+This table shows:
+
+​	what possible features are, 
+
+​	what existing features now, 
+
+​	what features we have chosen to add, 
+
+​	and what features may be added in the future development if possible.
+
+And which feature is made for buyer or made for seller.
+
+|       Possible features       | Features now | Features added | Features to add in future | For buyers | For seller |
+| :---------------------------: | :----------: | :------------: | :-----------------------: | :--------: | :--------: |
+|           Pets list           |      √       |                |                           |     √      |     √      |
+|          Add new pet          |      √       |                |                           |            |     √      |
+|         Delete a pet          |      √       |                |                           |            |     √      |
+|       Modify pet's info       |              |       √        |                           |            |     √      |
+|       Show pet's photo        |              |       √        |                           |     √      |     √      |
+|      Upload pet's photo       |              |       √        |                           |            |     √      |
+|      Search pet by name       |              |       √        |                           |     √      |            |
+|    Search pet by category     |              |       √        |                           |     √      |            |
+|    Authenticate for seller    |              |       √        |                           |            |     √      |
+|     Register user account     |              |       √        |                           |     √      |            |
+|      Login user account       |              |       √        |                           |     √      |            |
+|      Modify user account      |              |       √        |                           |     √      |            |
+|      Delete user account      |              |       √        |                           |     √      |            |
+| Message pad (show operations) |              |       √        |                           |     √      |     √      |
+|         Making orders         |              |                |             √             |     √      |            |
+|  Add favorite pet to account  |              |                |             √             |     √      |            |
+|       Delivery service        |              |                |             √             |            |     √      |
+|          Help center          |              |                |             √             |     √      |            |
+|     IM communication tool     |              |                |             √             |     √      |     √      |
+|        Managing orders        |              |                |             √             |            |     √      |
+
+
+
+As you can see from the above table list, the largest number are naturally the possible features, where do they come from?  We will explain them in detail below. These features actually come from our development team, analysis of competing websites and research of potential users.
+
+#### 1. Comparison with competitive productions.
+
+1. Website address: https://www.ukpets.com/
+
+   Screenshot of website appearance:
+
+   ![image-20210815193536991](../images/competitor01.png)
+
+   | Main features this website has: |
+   | ------------------------------- |
+   | Commercial Advertisement        |
+   | User account service            |
+   | Pets list                       |
+   | Photo showing                   |
+   | Like button                     |
+   | Search by types and bleed       |
+   | Location service                |
+   | Blog                            |
+   | Post an Ad                      |
+
+   
+
+2. Website address: https://www.pets4homes.co.uk/sell-pets/
+
+   Screenshot of website appearance:
+
+   ![image-20210815193724693](../images/competitor02.png)
+
+   | Main features this website has: |
+   | ------------------------------- |
+   | Commercial Advertisement        |
+   | User account service            |
+   | Pets list                       |
+   | Photo showing                   |
+   | Like button                     |
+   | Search by types and bleed       |
+   | Location service                |
+   | Help center                     |
+   | Pet advice                      |
+
+   
+
+3. Website address: https://www.preloved.co.uk/newadvert/default/2154/pets.html
+
+   Screenshot of website appearance:
+
+   ![image-20210815193752314](../images/competitor03.png)
+
+   | Main features this website has:                   |
+   | ------------------------------------------------- |
+   | Post pet ad as personel seller or business seller |
+   | User account service                              |
+   | Pets list                                         |
+   | Photo showing                                     |
+   | Articles                                          |
+   | Search by types                                   |
+   | Blog and community                                |
+   | Help center                                       |
+   | Pet's story                                       |
+
+   
+
+4. Website address: https://www.freeads.co.uk/uk/buy-sell/pets/
+
+   Screenshot of website appearance:
+
+   ![image-20210815193817073](../images/competitor04.png)
+
+   | Main features this website has:                   |
+   | ------------------------------------------------- |
+   | Post pet ad as personel seller or business seller |
+   | User account service                              |
+   | Pets list                                         |
+   | Photo showing                                     |
+   | Star button                                       |
+   | Search by types                                   |
+
+**Conclusion:** Having visited several of the most popular websites available for the sale of pets, pretending to be consumers, we have come to the following conclusions.
+Firstly, we found that they all have something in common. They all seem to have the following features as pet selling sites: user services, pet listings, pet picture display, and pet listings by category. These are clearly the basic features that are required for a pet selling website. So we intend to implement such basic functions in our website as well.
+The second point is that we found their special features, which are not available on other websites. These are for example, Blog, Advice, etc. These features look more attractive because apart from those basic features that look similar, what makes a website more attractive is just the look and feel, special features, and pet resources. We will also be adding selective features to our website. To cope with our particular scenario of a single seller, we will add a mode specifically designed for the seller to easily manage the inventory of pets he owns.
+The third point is that when visiting pet websites as customers, we have experienced some things we didn't like, and we will be proactive in developing our website to avoid these mistakes so that we don't repeat them. For example, we don't expect to see extraneous commercials and in the third website there are no commercials and it just looks comfortable. Also, we don't pile up a lot of text and other elements on the page, which would look dazzling and the page would not look fresh.
+
+#### 2. User Research
+
 In reality, product specialists basically choose add features by user demand research and analysis from professional team. Because making user-centered strategic decisions has commonly became a magic weapon to win in the fierce market competition. Although sometimes some user requests are obscure and not easy to achieve, developer group members still try their best to make it work, by all kinds of testing and exploring, where sparing no effort to realize the user’s vision.
-
-
 
 Actually we are going to follow such principles, but there is going to be some minor changes, because of the using of public API, which means we cannot access any part of backend. This constraint is such of strength pulling us back, so we have to be considering existing API’s functions, which is based on feasibility analysis concept.
 
+#### The Results of User Research
+
+##### Interview Questions
+
+1. What the most helpful feature do you think when you look for a pet online? (Image, videos, filters, pop up ads, search)
+
+   If the interview said filters, ask: Can you list some of the filter conditions that you usually use? (tags, categories, status, inventories etc.)
+
+   Answers:
+
+   1. image, categories
+   2. I am a big fan of pets with about 10 years’ experience, and I always have been asked from friends and families to help in looking for pets online. The Image feature is definitely my number one method that I rely on finding a pet as it is pretty similar to a dating app in swiping several profile photos until you find the right match for you. Regarding the useful categories, Filters such as( location, price range, breed, type, color, best seller) make my life easier and save my time while I am looking for a pet online.
+   3. Image is the most helpful, honestly the appearance of a pet determines whether I want to buy or not. I can't imagine without pictures, how should people decide
+   4. As a customer, I surely believe showing images is most important feature because it gives me a first impression. I want the owner to upload pictures of pets, so I could see pets' appearance and health, which are of importance when choosing.
+   5. There is no doubt that I think the pet image is an important basis for selection. I need images to confirm the appearance and health of my pet. If possible, it is best to use multi angle images.
+
+2. Do reviews section important for you? Why?
+
+   Answers:
+
+   1. Yes, because reviews reflect reality about an unknown store. Based on the reviews I can find out if the owner of the shop is a popular one, you know, like how good the pre-sales service is in relation to that. I can also find out about other buyers' shopping experiences, so I can predict my shopping experience and decide whether to deal here or not.  
+   2. Absolutely yes. As online market is huge which led to a lot of scams and frauds, reviews are surely a trustworthy method to minimize that danger. I always check reviews about the agencies in other websites or customers who post for the first time before I pay one penny.
+   3. For the pet store review, I think it's important. Because I need user reviews to know if it's a reliable pet store. But the site was developed by the store and I don't think it will be objective. As for comments about pets, I don't think it matters. Because every pet is an independent individual, I think the pet that users buy will be different from the pet that I buy.
+   4. Absolutely. I could learn a lot from comments on this pet store, such as pet status and services.
+   5. Of course. A pet store with a good reputation will let me rest assured to choose my pet. I will pay attention to the opinions of customers in reviews. This will tell me whether the actual pet is as shown in the image, or whether the price is reasonable.
+
+3. Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
+
+   Answers:
+
+   1. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online.
+   2. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be cautious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
+   3. Optional. I figured when I decided to place an order, I was going to pick it up at a pet store. So just send a confirmation email to my email address. There's no need to log in.
+   4. It depends. When I just skim the information of lovely pets, I do not want to be asked to sign up. But if I choose one to buy, I really need to create an account to follow my order, which might be critical when I need help.
+   5. Optional. I think everyone has the right to browse pet images and information through the website. However, you must register an account to buy pets. This will ensure that the transaction is fair and open.
+
+4. What will make you trust the website to add your personal details for signing up? Positive reviews, Best Selling, or More ads and marketing?
+
+   Answers:
+
+   1. Positive reviews
+   2. I think providing a trustworthy paying methods such as “PayPal” makes feel a bit safe to add my details. Clearly, positive reviews and popularity are pretty important for that matter as well.
+   3. Best Selling.
+   4. Best Selling. Data never tell lies. People will not buy it if the quality disappoint them.
+   5. More ads and marketing. I think advertisements seen in well-known TV programs or magazines will have higher credibility. On this basis, I will pay attention to the sales and evaluation of pet stores.
+
+5. Do you want to see some pets’ food suggestion or other advice for pets? Why?
+
+   Answers:
+
+   1. yes. There are probably two reasons for this. The first is that the time it takes to find the right pet food at the right price and with the right quality is disgusting. There are a lot of similar products on the market and it can be confusing. The second reason comes from my own experience. I had a cat who was a very picky eater and when I adopted her from her previous owner, she stopped eating after getting a new cat food. So it may be necessary to maintain your pet's original diet, so it is best for the shop to share with the customer his choice of pet food.
+   2. I think I do. I believe that getting to know more about the pet who I am going to live with on daily basis is extremely important for me as a customer such as their food, medications, trained or not.
+   3. Yes, but it could be optional. I could search some information from Google. But if the website provides, better.
+   4. Certainly. We could understand their habits by the video.
+   5. It will be better. But I don't think it's necessary.
+
+6. Do you recommend any different feature that you think will value the pets shop website?
+
+   Answers:
+
+   1. Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
+   2. As a customer, I always make sure to see interactions from the website management before, during and after sales. Answering customers’ questions who are planning to buy and also, answering and showing help for customers who has issues after sale such as delivery, medications, refund, deliveries.
+   3. I want to know the details of the pets. Like their birthday, personality and so on.
+   4. Comments on pets from the owner of this pet shop. On the one hand, we can focus on points he emphasizes since he adopts them for a while and know them better. On the other hand, we can discover how patient the owner is. Pets are more lively if them have patient owner.
+   5. Yes. I hope the website can provide rich suggestions about my pet. I think the website should also provide effective quarantine certificates. I need to make sure that pets are free from infectious diseases.
+
+In the first step, after checking a large number of existing similar websites, we had a rough idea of what a website selling pets should have. So we added some leading questions to the user survey, such as preferences for features like Account service and photo showing. Of course, in order to get more perspectives and ideas, we also opened up open questions to get potentially attractive possible features from the potential user survey.
+Thankfully, we found some consistently popular features after the user survey and the site survey. For example, expect pictures of pets to be displayed in the pet listings and a comment section service for those who have purchased to view suggestions for those who have not. However, taking into account the practical capabilities of the API, we chose some of the more feasible features to implement and discarded some features that were attractive but not possible to implement.
+
 # <a name='2.1'></a>Feature 1：User Authentication 
+
+After the above description of thesources of  possible features, we will now discuss the description and justification of the features we have chosen to add. We will not throw them all at you in a holistic manner, nor will we throw them to you one by one. But actually we will first divide them into categories and present them to you according to the categories. For example, if you want to register, log in, change account information, delete accounts, etc., we will put them all together and explain them as User Authentication part. 
+
+There is a reason for this; it is better for the presentation of the report and the reader's understanding if the package of features is explained by functional clusters. Of course, it also helps to recreate and to show the process of doing user research, as we also focus on user research for the relevant categories of questions.
 
 **Sub-features:**
 
@@ -164,7 +370,7 @@ So the final implementation is that on the seller's page, you have to enter an a
 
 On the seller's page, we offer the ability to register users, log in, change account information, delete accounts, etc. The only way to gain access to edit this account information is to enter the correct username and password.
 
-##  1. Justification
+##  Justification
 
 **User story:** 
 
@@ -174,11 +380,11 @@ Story 2: As the owner of this shop, I need a relevant and improved GUI for me mo
 
 **comments:** This can be considered an advanced feature of the site. But in the early stages of building a website, sending order information to an email seems like a good alternative.
 
-**Question 1:**
+**Question:**
 
 Which one do you prefer to sign up to use the website? Compulsory or optional? Why?
 
-**Interviewees 1:** 
+**Interviewees:** 
 
 1. optional, because that is a time-wasting thing to do if I don't really wish to make an order. You know, just walking around is fairly common while people surfing online.
 2. Optional. Because, Data Protection is a big deal nowadays and everybody needs to be cautious when it comes to expose his details to the online world but I don’t mind to put nick name and address for buying process.
@@ -189,6 +395,18 @@ Which one do you prefer to sign up to use the website? Compulsory or optional? W
 **Discuss:**
 
 In the user survey, it was found that the user login function is necessary, but it is not necessary to only be able to log in and then see the website information. Having an account would make transactions more trustworthy and reliable, but if users just want to have a casual look, the login function should lie quietly to the side and not interfere with other actions.
+
+**User feedback:**
+
+Questions:
+
+1. What do you think the feature is?
+2. Do you think you can quickly understand the function of this feature？
+3. Do you think you need some comments when using this feature?
+4. Do you think this feature gives you feedback on every step you take？
+5. What do you dislike about this feature?
+
+Answers:
 
 
 
@@ -207,11 +425,25 @@ In the user survey, it was found that the user login function is necessary, but 
 
 From the seller's point of view, he wanted a more usable user interface to manage the pets. However, in the previous demo from Allison we had already implemented Find, Delete and New, so we added a function to change the pet's information. Undoubtedly this is a seller function and does not require the buyer to have access to it.
 
-##  2. Justification
+##  Justification
 
 **User story:** As the owner of this shop, I need a relevant and improved GUI for me modify the information of pets easily, so that I’m able to make the site more appealing.
 
 Sellers may use this feature to achieve the following visions, change pet names, categories, status, photos, etc. As it is inevitable that there may be times when the first edit is wrong, or later, for some specific reason, some information needs to be changed, then we provide this interface.
+
+**User feedback:**
+
+Questions:
+
+1. What do you think the feature is?
+2. Do you think you can quickly understand the function of this feature？
+3. Do you think you need some comments when using this feature?
+4. Do you think this feature gives you feedback on every step you take？
+5. What do you dislike about this feature?
+
+Answers:
+
+
 
 # <a name='2.3'></a>Feature 3：Searching pets by category or name
 
@@ -219,13 +451,27 @@ The last question in our interview asked potential users what features they woul
 
 However, this feature will not be implemented as the first step in the development process, it is after all the icing on the cake based on other features, we will ensure the user experience of the other basic features before completing the design of this feature.
 
-##  3. Justification
+##  Justification
 
 **Interview Questions:** Do you recommend any different feature that you think will value the pets shop website?
 
 **Interviewee:** Suggested features. I would like to be able to categorize the species so that I can focus more on the type of pet I like.
 
 **User Stories:** As a big fan of dogs, I hope the website could provide the function to search out the list of dogs, so that I focus more on them rather than cats, birds etc.
+
+**User feedback:**
+
+Questions:
+
+1. What do you think the feature is?
+2. Do you think you can quickly understand the function of this feature？
+3. Do you think you need some comments when using this feature?
+4. Do you think this feature gives you feedback on every step you take？
+5. What do you dislike about this feature?
+
+Answers:
+
+
 
 # <a name='2.4'></a>Feature 4：Message Pad
 
@@ -235,11 +481,25 @@ This Message Pad is a feature we added to the user, originally during developmen
 We just needed to replace the feedback string code with user-friendly text or short sentences that a normal person could understand later in development.
 In this way, in addition to the user being able to observe changes in the appearance of the page to see if certain actions have been performed, they can also use this feedback panel to get feedback on their own action history.
 
-##  4. Justification
+##  Justification
 
 One of the keys to UI/UX design is how to design feedback for user actions. Sometimes good feedback reminders are more important than good looks and more intuitive than lots of text cues.
 Feedback can come in the form of press states, activity indicators, progress indicators, live previews, Toast, dialog boxes, other sounds, etc.
 Our Message Pad is a component that brings together some of the ideas from the above and is designed to give feedback to the user and improve the user experience.
+
+**User feedback:**
+
+Questions:
+
+1. What do you think the feature is?
+2. Do you think you can quickly understand the function of this feature？
+3. Do you think you need some comments when using this feature?
+4. Do you think this feature gives you feedback on every step you take？
+5. What do you dislike about this feature?
+
+Answers:
+
+
 
 # <a name='3'></a>Testing
 
