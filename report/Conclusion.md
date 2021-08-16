@@ -10,9 +10,9 @@ The user interface of the website has also been carefully designed and tested fo
 As a result, the site is better accomplished from both a functional and UI perspective, with a high number of APIs used (including the old ones) of nine.
 
 **Team:**
-On the one hand, it has to be mentioned how much agile development helped us to complete the project quickly.On the other hand, test-driven development has been a highlight of our project, one for feature-based API testing and one for overall user testing of the site based on the experience used.  The former guarantees our development schedule and the latter ensures that we do not deviate from our customer-centric development philosophy.
+On the one hand, it has to be mentioned how much agile development helped us to complete the project quickly. On the other hand, test-driven development has been a highlight of our project, one for feature-based API testing and one for overall user testing of the site based on the experience used.  The former guarantees our development schedule and the latter ensures that we do not deviate from our customer-centric development philosophy.
 
-In addition to this, a clear division of labour and careful planning allows the developers to focus more on the use of the Angular framework, the use of the MVC pattern and the practice of modular design. The product specialists focus on collecting user feedback, combining theories of human-computer interaction with proper requirements analysis, and showing the developers the way to avoid detours.
+In addition to this, a clear division of labour and careful planning allows the developers to focus more on the use of the Angular framework, the use of the MVC pattern and the practice of modular design. The product specialists focus on collecting user feedback, combining theories of human-computer interaction with proper requirements' analysis, and showing the developers the way to avoid detours.
 
 The final result was a website with two modes of application (buyer and seller). The seller has a user-friendly GUI and can manage the pet database by adding, deleting, modifying and searching through authentication. The seller has the option to query the pet list through filtering and can even have functions such as managing accounts as well.
 
@@ -26,7 +26,7 @@ Did we meet our project objectives?
 
 Overall, our team successfully achieved the initial objectives and the project is well done to be given to the owner.
 
-1. Design and build a functional pet shop website with questionnaire
+1. Design and build a functional pet shop website with interviews
 
 Absolutely, running a survey is a quick and relatively easy way to get data about users. We made a questionnaire and get valuable resutls (you can find them [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers)), which is essential and important reference of our ground when we make any plans.
 
@@ -36,7 +36,7 @@ Then we follow the four stages below to create the pruduct that delights end-use
 
 2. Complete essential API and fix bug of operations that return inconsistent results
 
-As mentioned before, the petstore API is imperfect and some operations return inconsistent results, which may lead to limitations, such as we cannot request it to add or change functionality. Moreover, there may also be problems with a large number of people accessing it which results in misplaced data.
+As mentioned before, the petstore API is imperfect and some operations return inconsistent results, which may lead to limitations, such as we cannot request it to add or change functionality. Moreover, there may also be problems with many people accessing it which results in misplaced data.
 
 We've thought about all these issues in advance and won't really ignore them because they will affect the overall functionality and we can't hide from them.
 
@@ -44,7 +44,7 @@ Features we've added and fixed are described [here](https://github.com/GuangzheW
 
 3. Develop a relevant and improved graphical user-interface for users
 
-Of course we have done well in building an improved GUI for buyers and sellers. Enjoy the beautiful interface.
+Of course, we have done well in building an improved GUI for buyers and sellers. Enjoy the beautiful interface.
 
 <img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/index.png" width = "70%" />
 
@@ -59,7 +59,7 @@ So we offered our initial website to potential users to collect their opinions a
 - User request to add a search function
 - User request to change the search function from an exact search to a fuzzy search
 - Post an example of input next to the find box
-- FIxed searching input as case insensitive
+- FIxed searching input as case-insensitive
 
 5. Engage in group work to get skills how to build a user-friendly website with group practice
 
@@ -80,7 +80,7 @@ Broadly, we finished the targets we set before. Every task is achieved with suff
 
 # Reflection
 
-The development process has been a valuable learning opportunity for us, and we have learn a lot from this new experience - enjoying developing user-friendly software with others - in this group project, especially affected by the coronavirus pandemic. We totally agree that the creating a positive user experience is the key to developing user-friendly software.
+The development process has been a valuable learning opportunity for us, and we have learnt a lot from this new experience - enjoying developing user-friendly software with others - in this group project, especially affected by the coronavirus pandemic. We totally agree that the creating a positive user experience is the key to developing user-friendly software.
 
 ## Group practice
 
@@ -92,7 +92,7 @@ Here we would like to display our <span id="jump1">group practice</span>.
 
 When our team first got together, we all were confused since we were assigned randomly after receiving the resit email. Gang advised we could have an online meeting to get familiar with each other. But just as Jiangqi once said:" We likely sit around in front of the computers and look at each other, not knowing how to begin in our first meeting." Initially we are not likely a team.
 
-However, team effectiveness is enhanced by daily meeting at the beginning. Over time we were getting to know each other, to know what to expect from each other, and to know how to divide the labor and assign tasks. Through this process, we begin to operate as a team instead of a collection of individuals.
+However, team effectiveness is enhanced by daily meeting at the beginning. Over time, we were getting to know each other, to know what to expect from each other, and to know how to divide the labor and assign tasks. Through this process, we begin to operate as a team instead of a collection of individuals.
 
 Although we cannot organize daily meeting as planned because of the fact it will affect our normal work progress, we still try our best to have regular meeting which is recorded by Gang in [Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md).
 
@@ -100,11 +100,11 @@ Although we cannot organize daily meeting as planned because of the fact it will
 
 Continuous Integration (CI) is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily. Luckily, we were committing the work to a version control system during the coding process.
 
-We use GitHub's remote repository to keep our code and we think that GitHub is perfect for team development, where members can share contributions on it. In our opinion, GitHub is more than just a web cloud drive, it is a platform for multiple people to work simultaneously, providing sharing features, version control features, and member contribution statistics.
+We use GitHub's remote repository to keep our code and agree that GitHub is perfect for team development, where members can share contributions to it. In our opinion, GitHub is more than just a web cloud drive, it is a platform for multiple people to work simultaneously, providing sharing features, version control features, and member contribution statistics.
 
 ### User research
 
-To ensure that a new software is successful, the area that developers need to focus on most is user experience. User research is the methodic study of target users so we are able have the sharpest possible insights to coordinate our work to make a user-friendly product.
+To ensure that a new software is successful, the area that developers need to focus on most is user experience. User research is the methodic study of target users, so we are able to have the sharpest possible insights to coordinate our work to make a user-friendly product.
 
 To maximize the profits of pet stores, we must really understand the needs of users, not only the customers, but also the owner.
 
@@ -133,14 +133,14 @@ On the one hand, people can not have a face-to-face talk owning to relevant rule
 
 On the other hand, the pandemic impacted our physical and psychological health indeed. Some left the Bristol and returned to their home may face the self-isolation, which made it more difficult to stay enthusiastic and motivated throughout the project, specially in front of the computer screen for a whole day. Alfymore even felt uncomfortable after vaccine.
 
-Under this difficult period, we have tried our best to tackle the problems. Regular meeting prevented us from feelings of isolation lonely as all group members were able to think aloud study and talk with each other online if he like. If somebody feel uncomfortable today, we'd like to comfort him, persuade him to have a rest with the absence for today's meeting. He will get the information and his assigned task from the meeting log or the chat on Teams.
+Under this difficult period, we have tried our best to tackle the problems. Regular meeting prevented us from feelings of isolation lonely as all group members were able to think aloud study and talk with each other online if he wants. If somebody feels uncomfortable today, we'd like to comfort him, persuade him to have a rest with the absence for today's meeting. He will get the information and his assigned task from the meeting log or the chat on Teams.
 
 In a conclusion, COVID-19 cause troubles for us, but we share our feelings and encourage each other to face the problems through this tough period.
 
 
 ### Communication Tools
 
-In spite of covid restrictions and working remotely, we found that our communication channels worked fluently and finished our teamwork after all.
+In spite of COVID-19 restrictions and working remotely, we found that our communication channels worked fluently and finished our teamwork after all.
 
 - Microsoft Teams is main communication channels for us to discuss and organize daily meeting. We arrange the regular meeting at proper time in order that everyone could be full of energy to participate it geiven the different time zones.
 
@@ -176,7 +176,7 @@ In spite of covid restrictions and working remotely, we found that our communica
 > 
 > -- Jiangqi Lou
 
-> What was different this time compared to the last group project was that I had an extremely strong sense of involvement. With the help of Gang's plan, each of us successfully completed our part of the project. It gave me a taste of the sweetness of teamwork, which is the happiness of having your head buried in a job you love and are good at. In the past, I had I had a fluke mentality, expecting my teammates to do more, this time I adjusted my mindset and tried to do what I could to contribute to the team, and it was in this team spirit that each of us got the job done. I also saw how we helped each other out, for example, discussing bugs when we didn't know how to fix them, helping someone upload a GitHub CLI when it wasn't working well, and so on. This Resit has allowed me to discover new possibilities for my future work, and thankfully, it has been worthwhile and has made me feel that I am more deserving of this degree.
+> What was different this time compared to the last group project was that I had an extremely strong sense of involvement. With the help of Gang's plan, each of us successfully completed our part of the project. It gave me a taste of the sweetness of teamwork, which is the happiness of having your head buried in a job you love and are good at. In the past, I had a fluke mentality, expecting my teammates to do more, this time I adjusted my mindset and tried to do what I could to contribute to the team, and it was in this team spirit that each of us got the job done. I also saw how we helped each other out, for example, discussing bugs when we didn't know how to fix them, helping someone upload a GitHub CLI when it wasn't working well, and so on. This Resit has allowed me to discover new possibilities for my future work, and thankfully, it has been worthwhile and has made me feel that I am more deserving of this degree.
 > 
 > -- Guangzhe Wen
 
