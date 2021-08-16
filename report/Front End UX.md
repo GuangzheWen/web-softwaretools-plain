@@ -580,31 +580,250 @@ The interactive user experience is the experience that the interface gives to th
 
 In practice, different feedback methods need to be chosen for different scenarios and at the appropriate locations to help users understand and have a better product experience. References: *iOS Human Interface Guide, Under Design, Micro Interaction, About Face, The Essence of Interaction Design.*
 
-After the initial completion of the site, a self-assessment by the development team was necessary, but to lighten this part of the workload, we front-loaded some of the testing and validation work. This meant that at this point, we could simply consult the minutes of previous meetings or technical logs to draw preliminary conclusions and the vision we had discussed up front was largely realised.
+After the initial completion of each feature, a self-assessment by the development team was necessary, but to lighten this part of the workload, we front-loaded some of the testing and validation work. This meant that at this point, we could simply consult the minutes of previous meetings or technical logs to draw preliminary conclusions and the vision we had discussed up front was largely realised.
 
 However, self-assessment within the development team is often not sufficient. It's like being a psychiatrist but having a hard time seeing yourself. We, as developers, are often imprisoned in our own minds and do not see the fuller picture. This is also the case in every part of the development team, where we find that everyone can think of different starting points and directions for the main points. If we rely on the arbitrary decisions of one person, then the results obtained are often one-sided; if we rely on the members working together, then the results will be more comprehensive and dialectical.
 
-Then, looking beyond the perspective of the development team, if we develop a website that has potential users to experience and evaluate it, then they must be able to see a view that we cannot. So we offered our every feature in website to potential users to experience it and to give us their opinions and suggestions. Based on their ideas, we discuss them internally and if we agree that they are reasonable, then we decide to add or modify the sections accordingly. Here is an analysis of our experience, from a technical point of view.
+Then, looking beyond the perspective of the development team, if we develop a website that has potential users to experience and evaluate it, then they must be able to see a view that we cannot. So we offered our each feature in website to potential users to experience it and to give us their opinions and suggestions. Based on their ideas, we discuss them internally and if we agree that they are reasonable, then we decide to add or modify the sections accordingly. Here is an analysis of our experience, from a technical point of view.
 
-#########
+We have designed the interview problems for features in advance. After the development of each feature is completed, we will use it:
 
-autheration
+1. What do you think the function of this feature is?
 
-interview:
+2. Do you think you can quickly understand the function of this feature？
 
-modify information
+3. Do you think you need some comments when using this feature?
 
-interview:
+4. Do you think this feature gives you feedback on every step you take？
 
-......
+5. What do you dislike about this feature?
+
+   
+
+The answer is:
+
+**Feature 1 : Authentication**
+
+Interviewee1:
+
+- I think this feature is used to keep a record of my actions, such as when I like or buy a pet, and when I log back on the site, I can find the traces of my actions.
+
+- Of course, there are many websites that do this now
+
+- No, this feature is quite routine
+
+- Yes. When I registered successfully, there was a prompt. When I enter a wrong password, there is also a prompt.
+
+- This is a very basic function. In my country, it takes a lot of steps to register an account, but this App makes it very simple and easy. Well done!
+
+Interviewee 2:
+
+- I think it is a straightforward feature as the owner can sign in/out and edit their pets easily as well as the user is able to manage his profile smoothly.
+
+- Yes, I think it is easy to figure out.
+
+-  No, I don’t think so, as it is a common feature online.
+
+- Yes. Any action will be taken by users, they will get a prompt.
+
+- I think we have more time we would have made it more secure when you sign in as adding some questions before signing in to make sure it is not a robotic action.
+
+Interviewee 3:
+
+- I think this feature is like the feature that is available on most websites to have your account. But the seller mode password authentication is quite interesting.
+- Yes, it is possible. This is a common feature and this site is made to look like a popular one, no learning cost.
+- No need, the simple interface is very nice.
+- I can see the difference in the feedback between incorrect and empty input and correct input. Pop-ups and stuff.
+- It would be nice if this feature was more robust, such as having a favourites feature under my account.
+
+Interviewee 4:
+
+- It would be safe when using personal account. And I believe it is essential when shopping online since you may make an order.
+
+- Surely. It is quite common when registering an account.
+
+- Not at all. The icons are enough for me to understand.
+
+- Yes. I can figure out which stage I am in when registering.
+
+- It could be improved by using two-factor user authentication.
+
+Interviewee 5:
+
+- I think this is a very important function. I can register my account to buy pets safely. If there is a problem, I can also accurately communicate with the merchant.
+- Of course, this is the requirement to standardize online stores.
+- No. This function interface is very intuitive and easy to understand.
+- Yes, I can see the results when I log in successfully or modify the information.
+- I think a password duplicate authentication function should be set to ensure that my password is what I think.
 
 
 
+**Feature 2 : Modify pets' information**
+
+Interviewee 1:
+
+- Yes, I would know that if I was a seller, I would use these features to display pets from the pet store on the website. Of course pets also need some information, such as a name. But why change a pet's name?
+
+- Yes, although I have no experience in selling things, the operation seems very easy to understand and I can do this part without instructions.
+
+- When I touch the individual pet panel, I want it to change color to indicate that it is clickable.
+
+- If they were clickable, every time I clicked on them, they would work. If I can't click, it's obvious, and usually I don't need a hint.
+
+- It would be nice if we could add more images, one may not be enough.
+
+Interviewee 2:
+
+- I think it is a manageable feature for the seller to change the name or the photo of the pet.
+
+- Yes, it is easy to find and edit.
+
+- Maybe we need to add some comments to explain what each function does.
+
+- Yes, I think with every step you will get a confirmation message as it is done.
+
+- I think we could have taken it further and providing some ideas for editing to the seller.
+
+Interviewee 3:
+
+- a function to manage the pet's inventory.
+- it's ok, the ability to add pets is obvious at the top, and the pet cards can be displayed, clicked on, and edited, all good.
+- not used.
+- not all, for example when deleting, I don't know if it's deleted or not. Or, I accidentally click the delete pet button and it just deletes it without any warning.
+- it would be nice to be able to search for pets by id exactly.
+
+Interviewee 4:
+
+- It is an important feature for the owner of the pet shop as he need to change pets’ information almost every day.
+
+- No problem. All steps give a simple, clear message.
+
+- No. There is no difference between the pet shop website from others. I can get started quickly.
+
+- There is no message or prompt presented when I delete pets.
+
+- There is no double-check when I delete pets which may cause data lost if I delete something by mistake.
+
+Interviewee 5:
+
+- This function is very convenient, so that the seller can easily manage the pet list.
+- Yes. Each pet can be simply added and deleted, which is very simple.
+- No, I think the operation interface is very easy to understand.
+- I think this function should have more prompts, such as the prompt when the mouse touches the button.
+- I don't think the pet information is detailed enough. The age and health status of pets should be explained, and more perspective pet photos should be added. In this way, the buyer's experience will be better.
 
 
 
+**Feature 3 : Searching pets**
+
+Interviewee 1:
+
+- Yes, I would know that if I was a seller, I would use these features to display pets from the pet store on the website. Of course pets also need some information, such as a name. But why change a pet's name?
+
+- Yes, although I have no experience in selling things, the operation seems very easy to understand and I can do this part without instructions.
+
+- When I touch the individual pet panel, I want it to change color to indicate that it is clickable.
+
+- If they were clickable, every time I clicked on them, they would work. If I can't click, it's obvious, and usually I don't need a hint.
+
+- It would be nice if we could add more images, one may not be enough.
+
+Interviewee 2:
+
+- it saves a lot of time for customers in finding what they are looking for.
+
+- Yes, as it is obvious and easy to spot it.
+
+- No, as it is a common feature and has been used in a lot of websites.
+
+- Yes, the tracking process is very efficient on the website.
+- If we have more time, we would have added other search tools as location, and colour.
+
+Interviewee 3:
+
+- Show all pets without input, with filters to refresh the list of pets based on the criteria
+- good, it works.
+- needed because I wanted to know what kind of fields I could enter and the site actually provides them.
+- sure! The list is refreshed very quickly.
+- names can of course be searched by entering text. But for categories I would like to have drop down boxes.
+
+Interviewee 4:
+
+- The feature makes it easy and convenient to search the target pet.
+
+- Obviously. I just need to input keywords and click the button to search.
+
+- I do not think so. The function is easy to use.
+
+- Yes. I could get the results quickly.
+
+- Up to now, I’m satisfied with the feature.
+
+Interviewee 5:
+
+- This function is the basis for buyers to use. It is also reasonable to search pets according to different conditions.
+- Yes. I just need to search for pets according to my ideas.
+- Need. Searching for different case letters may affect the search results, and the seller should explain the format.
+- Of course, this function will quickly find the content I entered.
+- I think since the seller provides Pet ID, it should be allowed to search through pet ID. In addition, I think the pet list is too long and can be shortened when not searched.
 
 
+
+**Feature 4 : message box**
+
+Interviewee 1:
+
+To tell me if my action is valid.
+
+I actually didn't know what the box was for at first.
+
+Student: Yeah, I think at the beginning when there's no operation, there should be text on it to tell me what is this box for.
+
+Which, of course, is exactly what he does.
+
+In fact, I've never seen this information board on any other website, and I think it's nice, it's a novelty for me.
+
+Interviewee 2:
+
+- It is essential and give the website more functionality.
+
+- It is a basic feature and important for any website, so that it is easy to use it.
+
+- No, it explains itself as it is useful for either the user and the seller to checking their messages or sending a message.
+
+- Yes, you always get a notification about any action you take such as “sent/unsent”
+
+- I don’t think that there is any issues with the message box as it is clear enough and easy to use.
+
+Interviewee 3:
+
+- a reminder of my actions.
+- not really possible, I don't know if there is any hidden function, but when I use it I find that it is just a message box.
+- after familiarising myself with the component, I found that I didn't really need it. There are some small details that are still well designed, the scroll bar and the display of multiple lines of text can both be dragged and dropped with the mouse.
+- It is itself giving feedback to other actions, so it is not needed.
+- it's fine nothing to dislike.
+
+Interviewee 4:
+
+- It would just knock your socks off, I believe.
+
+- To be honest, I don’t know why there is a box in the bottom right at first. Only when I make an action on the website, I understand the functionality. 
+
+- Indeed. I’m confused at the beginning since it’s not a common component when surfing the Internet.
+
+- Yes. Giving users feedback is just the reason that message box is designed.
+
+- I dislike the color and sometimes think it is annoying
+
+Interviewee 5:
+
+- This function can record my operation and tell me what I have done before.
+- Yes, although it is relatively small.
+- Need. I think the box can explain the operation in more detail, otherwise it is not of great value.
+- This is a function of recording behavior and giving feedback all the time.
+- I think this is more like supervision and observation for web page creators, which is of little significance to sellers and buyers.
+
+The conversation with users provided new ideas for both the optimization and update of existing features and the development of new features. However, due to the limitations of technology and time, we could not bring all suggestions into the scope of development. After discussion among team members, we picked the following high priority optimization points from each conversation with users.
 
 1. User request to add a search function
 
