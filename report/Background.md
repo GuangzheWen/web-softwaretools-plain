@@ -55,30 +55,67 @@ We believe creating a positive user experience is the key to developing user-fri
 
 As what is illustrated by the analysis, the pet shop website should consist of two parts — the buyer mode and the sellers' mode. The seller mode is designed for the owner to manage shop pets, like adding or removing them, or even changing their information, while the buyer mode is designed for customers to view pets list or to make transactions by this mode.
 
-## User-interface
-
-Overall <span id="jump">user-interface</span> based on user stories and user feedback could be showed in the diagram below, while boxes with a blue background are new pages or alerts, and underlined boxes are components, and green dashed lines indicate interaction events and response links.
-
-![layout_and_interaction](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/layout_and_interaction_logic.png)
-
-
-## Buyer and Seller Mode
+## Highlight: Buyer and Seller Mode
 
 We set a pair of buttons in the top right corner of the index, "Buyer" and "Seller", to change the mode where users should log in based on their identity (only the owner could get administrator password), which could be found in the screenshot below.
 
-<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/two-modes.png" width = "30%" />
+<img src="../images/modebutton.png" alt="image-20210816130628554" width="200px" />
 
-## Interaction flow diagram for User Authentication
+| Features In Buyer Mode                          |
+| ----------------------------------------------- |
+| User account registering                        |
+| User account login                              |
+| User account information showing                |
+| User account information modifying              |
+| User account Deleting                           |
+| Pets list showing with details, incluging photo |
+| Pets list re-rendering by category              |
+| Pets list re-rendering by name                  |
 
-For decades, the password has been the standard means for user authentication on computers. So, we still choose this common but lowest-hanging method. Here is its interaction flow diagram.
+| Features In Seller Mode                                |
+| ------------------------------------------------------ |
+| Authentication page, seller access only with passsword |
+| Adding new pets                                        |
+| Deleting pets                                          |
+| Showing pet's details as card                          |
+| Modifying pet's information                            |
 
-<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/User-Authentication.png" width = "50%" />
+## Overall Interaction logic
 
-## Sequence Diagrams for features
+The diagram below shows the overall user interaction logic roadmap for our website, broken down by buyer mode and seller mode respectively. It can be clearly seen that if you start from the top left corner, there are a series of branches to the right and a series of branches downwards, following different routes that will achieve different functions. We have written the details in the UX section, click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#1.2) to jump to view them.
 
-As waht is showed in [User-interface](#jump), we add lots of features to this website trying to make it functional. While the post api is to manage pets' information of the system, the user api is to manage the login and signup function of the application ect. Take one feature - searching pets by names - for example:
+<img src="../images/layout_and_interaction_logic.png" alt="image-20210816130628554" />
 
-<img src="https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Sequence-Diagrams.png" width = "50%" />
+## Interaction flow diagram
+
+We have presented the above diagram as a flow chart, a more familiar method of diagramming, on which we have divided the four areas with dotted lines and colours. At the same time, all the functions we want to implement are divided into four categories, and similar functions are put together under one big function. As follows.
+
+| Feature 1 Authentication            | Feature 2 Modify pets      | Feature 3 Searching pets      | Feature 4 Message box                      |
+| ----------------------------------- | -------------------------- | ----------------------------- | ------------------------------------------ |
+| Buyer account registering           | Seller adding pets         | Buyer pets list               | Feedback for all operations which used API |
+| Buyer account login                 | Seller deleting pets       | Buyer search pets by name     |                                            |
+| Buyer account info showing          | Seller pets list           | Buyer search pets by category |                                            |
+| Buyer account info modifying        | Seller modifying pets info |                               |                                            |
+| Buyer account deleting              |                            |                               |                                            |
+| Seller managing page Authentication |                            |                               |                                            |
+
+<img src="../images/flow_separate.png" alt="image-20210816130628554" />
+
+## System design
+
+1. Data model
+
+   By building the data model, we are able to better process the data obtained from the responses to the API requests. We have created three data interfaces, Pet, User and APIResponse. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+
+2. Data Service
+
+   We created 3 data services, which are in Angular's framework and are responsible for unifying the processing of data, because if this is done, components and pages will not have to think about whether the data is true or false and where it is coming from. This needs to be used with confidence and boldness just fine. And in the data service, we implement calls to the API. Six of these new API's are used, for a total of nine API's. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+
+3. Components implementing features
+
+   We use components to wrap small functions, which facilitates the neatness of the code, and future development, and increases the readability and maintainability of the code with this modular development approach. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+
+
 
 # Description of all features 
 
