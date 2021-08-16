@@ -546,42 +546,65 @@ Finally, all the components are shown in the screenshots and are basically expla
 In the UX design philosophy there is one, visual unity. The visual aspect of the website should be consistent and have a visual connection to the business or product. For this project, we decided to continue with the Petstore page on the Swagger Public API website, using green and black as the main colour scheme to maintain a uniformity on the page. In our pages, some of the components with similar functionality are also designed in the same style to give the user the right guidance and avoid misinformation.
 Our team initially conceived of arranging all the contents on the web page in turn, so that users can realize all the functions on the same page. However, according to the feedback of test users, lengthy web pages complicate the operation. So we deleted some unnecessary pictures and words. The separation of user interface and seller interface makes the web page concise and clear.
 
-# <a name="4"></a>Evaluation 
+# <a name="4"></a>Evaluation
+
+Our team evaluated the process of HCI mainly by means of user interview.
+
+The interview method can obtain more real information, because the interview method is the direct language communication between the researcher and the interviewees. Through the efforts of the researcher, the interviewees can relax their mood, eliminate their defensive mentality and express their real thoughts. The interview method basically adopts the question-and-answer method. The interviewees need to respond to the questions in a very short time and cannot think for a long time. At this time, the answers they give are usually spontaneous responses. Interview method can effectively avoid the interviewees do not answer questions or omit questions. Because this is a face-to-face communication between researchers and interviewees, questions are not easy to be rejected.
+
+Members of our group usually conduct user interviews through telephone, so when the interviewees encounter some questions, we will guide them appropriately. After each question, we also have the opportunity to further inquire, so we can discuss some deep-seated questions with the interviewees. In addition, we can also feel the emotions of the other side through the tone of the other side, so as to better grasp our interview.
+
+In the previous study life, members of our group rarely had the opportunity to interview users. As a result, I am not an expert in this area, and some circumstances may not be fully considered when designing the interview outline beforehand. Therefore, in the actual interview process, we can adjust or improve the outline according to the specific responses of the interviewees. If the interviewees do not understand the meaning of the question clearly, misunderstanding the meaning of the question, we can also further explain the question.
+
+Our team members also discussed whether we could explore the needs of users through questionnaire survey. That's certainly one way to do it. However, the design of questionnaire questions needs a lot of experience to control the reliability and validity, and the design of the main contents of the questionnaire directly affects the value of the whole thematic survey. Due to the lack of relevant experience, our team members worry that the questionnaire design is not reasonable and the quality of the questionnaire results cannot be guaranteed. In addition, we cannot find many eligible subjects to participate in the questionnaire survey in a short time. If we post a questionnaire online, are the people who fill it out really our ideal users? Do they really have the patience to configure the environment and so forth to run our site?
+
+Combining the abilities and experience of our team members and the background of the project, we agreed that consistent user interviews were the most effective approach. It is worth mentioning that we not only conducted HCI process evaluation before and after full development, but also conducted small-stage HCI process evaluation after each feature development, so as to timely adjust our feature.
 
 ## <a name="4.1"></a>Before prgramming
 
 In fact, our user research and API testing were done in parallel, and the details are documented in the Process.md file.
-The core of UX design is to understand the real needs of users. Even if your pages are beautiful and your interactions are attractive, as long as you do not provide users with the functions they want, everything is for nothing.
-Therefore, before development, we did sufficient user research in the form of questionnaires, polls and interviews. We had questions about what features you expect from the website as a pet buyer and what features you expect as a pet buyer.
-In reality, we should leave no stone unturned to fulfil the needs of our users. But being forced to use the public API, we did some feasibility analysis in conjunction with our preliminary API testing. the functionality of the API is limited and we cannot implement all the features that users want. So we chose to develop the features that the users expected, either through the API or through the front-end code. This way we can maximise the functionality that the user wants.
-Once the user's functional requirements were met, we then focused on the visual design and interactive experience of the page.  [We put evidence inside Process.md](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md/#3.3.1)
 
-## <a name="4.2"></a>Within prgramming
+The core of UX design is to understand the real needs of users. Even if your pages are beautiful and your interactions are attractive, as long as you do not provide users with the functions they want, everything is for nothing.
+
+Therefore, before development, we did sufficient user research in the form of interviews. We had questions about what features you expect from the website as a pet buyer and what features you expect as a pet buyer.
+
+In reality, we should leave no stone unturned to fulfil the needs of our users. But being forced to use the public API, we did some feasibility analysis in conjunction with our preliminary API testing. the functionality of the API is limited and we cannot implement all the features that users want. So we chose to develop the features that the users expected, either through the API or through the front-end code. This way we can maximise the functionality that the user wants.
+
+Once the user's functional requirements were met, we then focused on the visual design and interactive experience of the page. We have documented the detailed data of pre-development user surveys in [3.3.1 Sprint 1: In User Research and API Bug Fixed](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md/#3.3.1) in *Process. md*. We conducted interviews with five users, working to extract user stories to guide the sprints. Because we want to make our reports more concise and less repetitive, we will not show them here, but you can easily access them through the hyperlink.
+
+## <a name="4.2"></a>Evaluation for Each Sprint
 
 The first of Nielsen's Ten Usability Principles, an important reference for product design and user experience design, is the "state of visibility principle": the idea that any action the user takes on a web page, whether it is a click, a scroll or a keystroke, should result in immediate feedback from the page. "Immediate" means that the response time is less than the user can tolerate. The "state visibility principle" is what is often referred to as "feedback".
 
 The interactive user experience is the experience that the interface gives to the user in the process of using and communicating, emphasising the interactive and interactive characteristics. The process of interactive experience runs through the process of browsing, clicking, inputting and outputting to give visitors an experience. The feedback that users get is the most direct interaction, so we take feedback as a key indicator. For example, if the user hovers over a component that can be manipulated, there should be a corresponding response: Curser: pointer, we also designed the animation of the card becoming bigger and changing colour when the user hovers over the pet list card, and so on. We have also designed a special component, Message box, to give feedback to the user. These messages are set up to prompt a phrase in the Message box when the user's website uses an HTTP request to the API and retrieves the data.
 
-In practice, different feedback methods need to be chosen for different scenarios and at the appropriate locations to help users understand and have a better product experience. References: iOS Human Interface Guide, Under Design, Micro Interaction, About Face, The Essence of Interaction Design.
-
-## <a name="4.3"></a>After feedback from users
+In practice, different feedback methods need to be chosen for different scenarios and at the appropriate locations to help users understand and have a better product experience. References: *iOS Human Interface Guide, Under Design, Micro Interaction, About Face, The Essence of Interaction Design.*
 
 After the initial completion of the site, a self-assessment by the development team was necessary, but to lighten this part of the workload, we front-loaded some of the testing and validation work. This meant that at this point, we could simply consult the minutes of previous meetings or technical logs to draw preliminary conclusions and the vision we had discussed up front was largely realised.
 
 However, self-assessment within the development team is often not sufficient. It's like being a psychiatrist but having a hard time seeing yourself. We, as developers, are often imprisoned in our own minds and do not see the fuller picture. This is also the case in every part of the development team, where we find that everyone can think of different starting points and directions for the main points. If we rely on the arbitrary decisions of one person, then the results obtained are often one-sided; if we rely on the members working together, then the results will be more comprehensive and dialectical.
 
-Then, looking beyond the perspective of the development team, if we develop a website that has potential users to experience and evaluate it, then they must be able to see a view that we cannot. So we offered our initial website to potential users to experience it and to give us their opinions and suggestions. Based on their ideas, we discuss them internally and if we agree that they are reasonable, then we decide to add or modify the sections accordingly. Here is an analysis of our experience, from a technical point of view.
+Then, looking beyond the perspective of the development team, if we develop a website that has potential users to experience and evaluate it, then they must be able to see a view that we cannot. So we offered our every feature in website to potential users to experience it and to give us their opinions and suggestions. Based on their ideas, we discuss them internally and if we agree that they are reasonable, then we decide to add or modify the sections accordingly. Here is an analysis of our experience, from a technical point of view.
 
-No matter before the development, during the development of each Feature, or in the final evaluation, our team has always used the method of user interview to obtain users' ideas. There's a reason for the relentless user interviews.
+#########
 
-Compared with the questionnaire, the interview method can obtain more real information, because the interview method is the direct language communication between the researcher and the interviewees. Through the efforts of the researcher, the interviewees can relax their mood, eliminate their defensive mentality and express their real thoughts. The interview method basically adopts the question-and-answer method. The interviewees need to respond to the questions in a very short time and cannot think for a long time. At this time, the answers they give are usually spontaneous responses. Interview method can effectively avoid the interviewees do not answer questions or omit questions. Because this is a face-to-face communication between researchers and interviewees, questions are not easy to be rejected.
+autheration
 
-Members of our group usually conduct user interviews through telephone, so when the interviewees encounter some questions, we will guide them appropriately. After each question, we also have the opportunity to further inquire, so we can discuss some deep-seated questions with the interviewees. In addition, we can also feel the emotions of the other side through the tone of the other side, so as to better grasp our interview.
-In the previous study life, members of our group rarely had the opportunity to interview users. As a result, I am not an expert in this area, and some circumstances may not be fully considered when designing the interview outline beforehand. Therefore, in the actual interview process, we can adjust or improve the outline according to the specific responses of the interviewees. If the interviewees do not understand the meaning of the question clearly, misunderstanding the meaning of the question, we can also further explain the question.
+interview:
 
-Our team members also discussed whether we could explore the needs of users through questionnaire survey. That's certainly one way to do it. However, the design of questionnaire questions needs a lot of experience to control the reliability and validity, and the design of the main contents of the questionnaire directly affects the value of the whole thematic survey. Due to the lack of relevant experience, our team members worry that the questionnaire design is not reasonable and the quality of the questionnaire results cannot be guaranteed. In addition, we cannot find many eligible subjects to participate in the questionnaire survey in a short time. If we post a questionnaire online, are the people who fill it out really our ideal users? Do they really have the patience to configure the environment and so forth to run our site?
+modify information
 
-Combining the abilities and experience of our team members and the background of the project, we agreed that consistent user interviews were the most effective approach.
+interview:
+
+......
+
+
+
+
+
+
+
+
 
 1. User request to add a search function
 
@@ -599,5 +622,101 @@ Combining the abilities and experience of our team members and the background of
 
    Help user by increasing false input tolerance when they are searching for pets.
 
-   
+## <a name="4.3"></a>After programming
+
+After the HCI evaluation for each Sprint, we completed all development of the site. But remember, users haven't seen the whole site yet! Therefore, we still need to conduct user interviews to get users' feedback on the completed site, which will be used as reference for future development.
+
+**Qustion 1**: 
+
+What features of our site do you like best? Why?
+
+Answer:
+
+- I like searching, it allows me to find the pet I want very quickly.
+
+- I like the image feature as it is very essential for me to see the pet and feel the connection before I decide to buy it.
+
+- I think the search function of the website is very accurate and convenient. It's also great to see pet pictures intuitively.
+
+-  I like the photo-showing feature most, because when I heard of this website, I was expecting to see the photos of the pets. The pets are really cute and this feature definitely provides visual enjoyment.
+-  Showing images is the feature attract me the most. I enjoy skimming pictures of cute pets and have a better understanding of their living habits.2.  User authentication. I don’t think it’s safe enough without Two-factor user authentication. If the safety of shopping cannot be guaranteed, I will give it up in the end.
+
+Comment:
+
+Photos and search function by everyone's love, you can see that we pay attention to these two points, so in the follow-up optimization, can be targeted to ask you whether these two functions have room for improvement.
+
+
+
+**Question 2**: 
+
+What features of our site do you dislike the most? Why?
+
+Answer:
+
+- The featrue I dislike the most is when I registered and after login, I can't do anything but modify personal information. What I expect here is some features like, "my favorite pets list" or something like "make an order".
+- I noticed that every pet has an ID, but the function of searching pets by ID is not used in the search function. In addition, what I don't like is that although the website is intuitive, it is monotonous. Maybe you can add more content.
+- I think we needed to work more on the search feature as we could have been able to make it more efficient with adding more tools in search such as the colour or age.
+- In fact, the current feature is very basic, I hope you can enrich the site, make it more comprehensive.
+- User authentication. I don’t think it’s safe enough without Two-factor user authentication. If the safety of shopping cannot be guaranteed, I will give it up in the end.
+
+Comment:
+
+If the previous question is used to detect whether there is room for improvement on the website, then this question is undoubtedly used to detect what problems must be modified on the website, and the priority of solving this problem is very high. The "List of my favorite pets" and "order" functions are advanced features of the site that enrich the ordering process for users. As for using ID to search for pets, after group discussion, we felt that this problem was not so bad as described by the interviewees, because no buyer knew the ID of pets in advance. Search for more tag content, this is really an area that can be improved, if there is an opportunity to continue to complete the site, this is what we are working towards. Different users seem to have different opinions about the security of websites. Some users want to minimize the number of authentication steps, but there is a loss of security. Our team is reserving this question and will focus on it in the next phase of our user survey.
+
+
+
+**Question 3**: 
+
+ Is our website working well? 1-10, please give me a number? Why?
+
+Answer:
+
+- I will give 6. As a preliminary version of your site, I think your site has found some of the features I most need. But as I said, you still have a long way to go to make your site competitive in the marketplace.
+- I think it works perfectly and I give it 8/10,  because, the website is very basic and I wished we can make it more professional and add extra features as the possibility to add a video of the pet.
+- 7 points. The website runs normally and is easy to use.
+- 8, Everything work well, I mean, All the existing features work well, but the reason why I cut down 2 points is that I am expecting some features of making real orders. I know that must be further work, there is a long way to go. So it totally runs well, pretty good.
+- 7, The index page is not beautiful enough to catch my eyes compared to the e-commerce sites like Amazon.
+
+Comment:
+
+To be honest, these scores completely exceeded our group's expectations and we were very excited about the results. It's not just the pet videos, but the next stage our group wants to support sellers to upload more pictures to show their cute pets. It really takes a long way to place an order. Maybe this project is the topic given to us by the teacher. It is difficult to go to a pet shop website that really needs us. However, this project has provided us with some ideas and methods, which we believe will be used in the future work. As for how to make the index page more appealing, we're going to look at more similar sites for inspiration.
+
+
+
+**Question 4**:
+
+After using our website, can you use a few words to describe how you feel about our website？
+
+Answer:
+
+- Cute, Lovely
+
+- Colorful, Clear, Attractive.
+- I can easily find my favorite pet type. If there are more functions, such as user evaluation, it will be better.
+- Simple and efficient as I think everybody can use it and the owner is able to show and edit his available pets smoothly without complications.
+- It would be a nice chance to enjoy the shopping online through the website.
+
+Comment:
+
+This is the question we want to get the user's first impression of the site's UI, but the answer doesn't seem to go quite the way we want it to. But there are some things we can learn from these adjectives, like what the user is saying is not just how they feel, but what they care about. In the future, we will focus on making the website simple and lovely. Simplicity is because less is more. Cute because of our pet theme.
+
+
+
+**Question 5**:
+
+Do you like our website visually? Why?
+
+Answer:
+
+- I like, I like green. The overall green tone makes me feel relaxed. I also love that when I first enter the website, I can see so many pictures of cute pets.
+- I think I am very happy with the simplicity of the website and I would love to add extra features and make it more functional.
+- The website looks very simple and the style is very unified. The separation of seller and buyer pages is particularly comfortable. But it would be better if there were richer content.
+- Oh, that's for sure, the style and colours used on this site are fresh, the layout is clear, I know what is displayed where and all the features are clearly visible, easy to find and understand what it does.
+- Absolutely. The website is colourful, and the pictures really trigger my emotion at first.
+
+Commet:
+
+Users haven't added much to the UI, and maybe they don't care. This also let us know the direction of the future work, to constantly improve the function! After all, the function of a website is the foundation, Ui can only be icing on the cake, not timely help. If we want to add more features, our team thinks it is necessary to conduct another detailed and in-depth user interview to explore the possibility of more features.
+
+
 
