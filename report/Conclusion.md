@@ -28,7 +28,7 @@ Overall, our team successfully achieved the initial objectives and the project i
 
 1. Design and build a functional pet shop website with interviews
 
-Absolutely, running a survey is a quick and relatively easy way to get data about users. We made a questionnaire and get valuable resutls (you can find them [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers)), which is essential and important reference of our ground when we make any plans.
+Absolutely, running a survey is a quick and relatively easy way to get data about users. We did interviews with users and get valuable resutls (you can find them [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Process.md#the-answers)), which is essential and important reference of our ground when we make any plans.
 
 Then we follow the four stages below to create the pruduct that delights end-users.
 ![Survey-Process](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/images/Survey-Process.png)
@@ -129,7 +129,7 @@ During this process, we learned to listen to users’ words in their perspective
 
 As the coronavirus outbreak has intensified last year, the negative consequential effects begins to appear. Obviously, our team work was affected by the COVID-19, which could be concluded in two aspects.
 
-On the one hand, people can not have a face-to-face talk owning to relevant rules, and some members have returned to their country rather than staying in the Bristol. This increased the cost of exchanging ideas and discussion with team members. Besides, it has presented challenges when we did user research over time through questionnaires.
+On the one hand, people can not have a face-to-face talk owning to relevant rules, and some members have returned to their country rather than staying in the Bristol. This increased the cost of exchanging ideas and discussion with team members. Besides, it has presented challenges when we did user research over time through interviews.
 
 On the other hand, the pandemic impacted our physical and psychological health indeed. Some left the Bristol and returned to their home may face the self-isolation, which made it more difficult to stay enthusiastic and motivated throughout the project, specially in front of the computer screen for a whole day. Alfymore even felt uncomfortable after vaccine.
 
@@ -148,7 +148,7 @@ In spite of COVID-19 restrictions and working remotely, we found that our commun
 
 - Before the meeting starts, each member needs to send his recent progress and discovery to the chat box, so that everyone is familiar with the content in advance. When we are not in meetings, we will also discuss the trivial issues arising from the project in the chat box at any time.
 
-- The questionnaire was designed and shared by Microsoft 365, so we could edit it together and comment whatever we prefer to express own thoughts.
+- The questions of interviews was designed and shared by Microsoft 365, so we could edit it together and comment whatever we prefer to express own thoughts.
 
 - We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 
