@@ -61,7 +61,7 @@ Before the meeting starts, each member needs to send his recent progress and dis
 
 **Special Methods**
 
-- We use Microsoft 365 to design the questionnaire. Team members could edit it together and comment it to express own thoughts.
+- We use Microsoft 365 to design the questions of interviews. Team members could edit it together and comment it to express own thoughts.
 - We use Gantt chart to plan the whole project. Team members could update the actual task start and end times.
 - We use "Technical Log" to record development process to allow other members to better understand the progress of the project.
 - Owing to the fact that most of our teams are chinese, the chinese people use Wechat, one kind of immediate communication tool which is popular in China, to share opinions. Although immediate communication sometimes seem to be annoying, but it quite suits during short-time development.
@@ -72,7 +72,7 @@ Before the meeting starts, each member needs to send his recent progress and dis
 - **Gang Li**: Responsible for process supervision and promotion, meeting record and summary, ensure that each stage of the task on time and quality completion.
 - **Jiangqi Lou**: Responsible for the background investigation of the project, as well as the collection and collation of relevant information.
 - **Chongyan Qi**: Responsible for front-end design and human-computer interaction evaluation.
-- **Alfymora Joseph**: Responsible for user survey, questionnaire design and collection.
+- **Alfymora Joseph**: Responsible for user survey, questions of interviews design and collection.
 
 # <a name='3'></a>Sprints
 
@@ -135,7 +135,7 @@ The Meeting Point:
 
 1. Shared the findings of the members, Guangzhe has found a bug on the site to which it was sent, which cannot be added or removed due to the long ID.
 2. Discussed agile development methods, Finally chose Scrum.
-3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews and questionnaires, and then the feature to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
+3. The goal of the first Sprint is clarified, that is, the list of features that users want to add is obtained through interviews, and then the feature to be developed is determined through research and discussion. The first sprint is scheduled to be completed in two days.
 4. Determined the work of the day: Guangzhe fixed the bug that couldn't add or remove pets, Alfymora designed the list of questions needed for the interview, and after the list was obtained, everyone on the team needed to find at least one potential user to conduct the actual interview and Keep a written record.
 
 #### Technical Log
