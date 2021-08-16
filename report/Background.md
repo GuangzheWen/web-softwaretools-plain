@@ -105,15 +105,15 @@ We have presented the above diagram as a flow chart, a more familiar method of d
 
 1. Data model
 
-   By building the data model, we are able to better process the data obtained from the responses to the API requests. We have created three data interfaces, Pet, User and APIResponse. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+   By building the data model, we are able to better process the data obtained from the responses to the API requests. We have created three data interfaces, Pet, User and APIResponse. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md), then click Documents.
 
 2. Data Service
 
-   We created 3 data services, which are in Angular's framework and are responsible for unifying the processing of data, because if this is done, components and pages will not have to think about whether the data is true or false and where it is coming from. This needs to be used with confidence and boldness just fine. And in the data service, we implement calls to the API. Six of these new API's are used, for a total of nine API's. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+   We created 3 data services, which are in Angular's framework and are responsible for unifying the processing of data, because if this is done, components and pages will not have to think about whether the data is true or false and where it is coming from. This needs to be used with confidence and boldness just fine. And in the data service, we implement calls to the API. Six of these new API's are used, for a total of nine API's. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md), then click Documents.
 
 3. Components implementing features
 
-   We use components to wrap small functions, which facilitates the neatness of the code, and future development, and increases the readability and maintainability of the code with this modular development approach. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md/#2.3).
+   We use components to wrap small functions, which facilitates the neatness of the code, and future development, and increases the readability and maintainability of the code with this modular development approach. For more information, please click [here](https://github.com/GuangzheWen/web-softwaretools-plain/blob/main/report/Front%20End%20UX.md), then click Documents.
 
 
 
